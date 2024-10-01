@@ -30,7 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);//farin change koreche
 
 
-            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
+            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);//hoiseeeee
         }
 
 
