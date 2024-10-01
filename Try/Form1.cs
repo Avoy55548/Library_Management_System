@@ -20,17 +20,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance//uyuy
+        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
         private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
         public AddStudentInfo()
         {
             InitializeComponent();
 
             //Subscribe to the Validating event for email validation
-            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);//farin change koreche
+            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
 
 
-            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);//hoiseeeee
+            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
         }
 
 
