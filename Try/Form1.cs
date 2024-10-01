@@ -27,7 +27,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             InitializeComponent();
 
             //Subscribe to the Validating event for email validation
-            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
+            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);//farin change koreche
 
 
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
