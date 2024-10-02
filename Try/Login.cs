@@ -16,7 +16,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         public static string StudentName = "";  // Store student name for borrow history
         public static string StudentPassword = "";  // Store student enrollment for borrow history
-
         public Login()
         {
             InitializeComponent();
@@ -53,6 +52,34 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     }
 
 
+                    else
+                    {
+                        // Check for Student if not a Librarian
+                        con.Open();
+                        cmd.CommandText = "SELECT * FROM Student WHERE Name = @UserID AND Password = @Password";
+                        da = new SqlDataAdapter(cmd);
+                        ds = new DataSet();
+                        da.Fill(ds);
+                        con.Close();
+
+                        if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                        {
+                            DataRow student = ds.Tables[0].Rows[0];
+                            StudentName = student["Name"].ToString();  // Store student name
+                            StudentPassword = student["Password"].ToString();  // Store student password
+
+
+                            // If Student found
+                            StudentDashboard sd = new StudentDashboard(); // Assuming there's a StudentDashboard form
+                            sd.Show();
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect Username or Password", "Information");
+                        }
+                    }
 
 
                 }
