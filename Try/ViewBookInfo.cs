@@ -160,24 +160,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             pnlURViewBooks.Visible = false;
         }
 
-
-
-        private void pnlURViewBooks_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dgvViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvViewBooks_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

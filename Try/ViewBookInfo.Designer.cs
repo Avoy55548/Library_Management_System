@@ -325,7 +325,7 @@
             this.dgvViewBooks.RowTemplate.Height = 28;
             this.dgvViewBooks.Size = new System.Drawing.Size(785, 239);
             this.dgvViewBooks.TabIndex = 10;
-            this.dgvViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewBooks_CellContentClick_1);
+            this.dgvViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewBooks_CellContentClick);
             // 
             // pnlURViewBooks
             // 
