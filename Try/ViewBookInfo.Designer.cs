@@ -1,4 +1,4 @@
-﻿namespace Try
+﻿namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     partial class ViewBookInfo
     {

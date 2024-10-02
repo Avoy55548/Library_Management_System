@@ -90,6 +90,12 @@
     <Compile Include="ReturnBook.Designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard.Designer.cs">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="ReturnBook.resx">
       <DependentUpon>ReturnBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBookInfo.resx">
       <DependentUpon>ViewBookInfo.cs</DependentUpon>
