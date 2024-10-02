@@ -205,6 +205,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrintAS_Click(object sender, EventArgs e)
         {
+
+
+            if (!IsValidToSave())
+            {
+                MessageBox.Show("Please fill all the information");
+                return;
+            }
+
             printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
             printPreviewDialog1.ShowDialog(); // Show the print preview
 
@@ -233,6 +241,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void pnlInfoAC_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPrintAS_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -95,6 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrintAS.TabIndex = 35;
             this.btnPrintAS.Text = "Print";
             this.btnPrintAS.UseVisualStyleBackColor = false;
+            this.btnPrintAS.Click += new System.EventHandler(this.btnPrintAS_Click_1);
             // 
             // lblPasswordAS
             // 
@@ -102,7 +103,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblPasswordAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordAS.Location = new System.Drawing.Point(32, 80);
             this.lblPasswordAS.Name = "lblPasswordAS";
-            this.lblPasswordAS.Size = new System.Drawing.Size(74, 20);
+            this.lblPasswordAS.Size = new System.Drawing.Size(93, 23);
             this.lblPasswordAS.TabIndex = 28;
             this.lblPasswordAS.Text = "Password";
             // 
@@ -115,7 +116,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPasswordAS.Location = new System.Drawing.Point(209, 73);
             this.txtPasswordAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPasswordAS.Name = "txtPasswordAS";
-            this.txtPasswordAS.Size = new System.Drawing.Size(252, 22);
+            this.txtPasswordAS.Size = new System.Drawing.Size(252, 26);
             this.txtPasswordAS.TabIndex = 27;
             this.txtPasswordAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -128,7 +129,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.dtpDateOfBirthAS.Location = new System.Drawing.Point(207, 224);
             this.dtpDateOfBirthAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateOfBirthAS.Name = "dtpDateOfBirthAS";
-            this.dtpDateOfBirthAS.Size = new System.Drawing.Size(251, 22);
+            this.dtpDateOfBirthAS.Size = new System.Drawing.Size(251, 26);
             this.dtpDateOfBirthAS.TabIndex = 26;
             // 
             // lblDate_of_BirthAS
@@ -137,7 +138,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblDate_of_BirthAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate_of_BirthAS.Location = new System.Drawing.Point(35, 229);
             this.lblDate_of_BirthAS.Name = "lblDate_of_BirthAS";
-            this.lblDate_of_BirthAS.Size = new System.Drawing.Size(95, 20);
+            this.lblDate_of_BirthAS.Size = new System.Drawing.Size(119, 23);
             this.lblDate_of_BirthAS.TabIndex = 25;
             this.lblDate_of_BirthAS.Text = "Date of Birth";
             // 
@@ -174,7 +175,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblTitleAB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lblTitleAB.Location = new System.Drawing.Point(500, 26);
             this.lblTitleAB.Name = "lblTitleAB";
-            this.lblTitleAB.Size = new System.Drawing.Size(207, 28);
+            this.lblTitleAB.Size = new System.Drawing.Size(256, 35);
             this.lblTitleAB.TabIndex = 0;
             this.lblTitleAB.Text = "Add Student Info";
             // 
@@ -195,7 +196,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblStudentNameAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudentNameAS.Location = new System.Drawing.Point(32, 28);
             this.lblStudentNameAS.Name = "lblStudentNameAS";
-            this.lblStudentNameAS.Size = new System.Drawing.Size(105, 20);
+            this.lblStudentNameAS.Size = new System.Drawing.Size(132, 23);
             this.lblStudentNameAS.TabIndex = 14;
             this.lblStudentNameAS.Text = "Student Name";
             // 
@@ -208,7 +209,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddressAS.Location = new System.Drawing.Point(208, 319);
             this.txtAddressAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressAS.Name = "txtAddressAS";
-            this.txtAddressAS.Size = new System.Drawing.Size(252, 22);
+            this.txtAddressAS.Size = new System.Drawing.Size(252, 26);
             this.txtAddressAS.TabIndex = 10;
             this.txtAddressAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -221,7 +222,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAS.Location = new System.Drawing.Point(207, 270);
             this.txtEmailAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailAS.Name = "txtEmailAS";
-            this.txtEmailAS.Size = new System.Drawing.Size(252, 22);
+            this.txtEmailAS.Size = new System.Drawing.Size(252, 26);
             this.txtEmailAS.TabIndex = 9;
             this.txtEmailAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -234,7 +235,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberAS.Location = new System.Drawing.Point(208, 171);
             this.txtPhoneNumberAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumberAS.Name = "txtPhoneNumberAS";
-            this.txtPhoneNumberAS.Size = new System.Drawing.Size(252, 22);
+            this.txtPhoneNumberAS.Size = new System.Drawing.Size(252, 26);
             this.txtPhoneNumberAS.TabIndex = 8;
             this.txtPhoneNumberAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -247,7 +248,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEnrollNoAS.Location = new System.Drawing.Point(208, 117);
             this.txtEnrollNoAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEnrollNoAS.Name = "txtEnrollNoAS";
-            this.txtEnrollNoAS.Size = new System.Drawing.Size(252, 22);
+            this.txtEnrollNoAS.Size = new System.Drawing.Size(252, 26);
             this.txtEnrollNoAS.TabIndex = 7;
             this.txtEnrollNoAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -257,7 +258,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblAddressAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressAS.Location = new System.Drawing.Point(31, 326);
             this.lblAddressAS.Name = "lblAddressAS";
-            this.lblAddressAS.Size = new System.Drawing.Size(64, 20);
+            this.lblAddressAS.Size = new System.Drawing.Size(82, 23);
             this.lblAddressAS.TabIndex = 6;
             this.lblAddressAS.Text = "Address";
             // 
@@ -267,7 +268,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblEmailAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailAS.Location = new System.Drawing.Point(35, 277);
             this.lblEmailAS.Name = "lblEmailAS";
-            this.lblEmailAS.Size = new System.Drawing.Size(47, 20);
+            this.lblEmailAS.Size = new System.Drawing.Size(61, 23);
             this.lblEmailAS.TabIndex = 3;
             this.lblEmailAS.Text = "Email";
             // 
@@ -277,7 +278,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblPhoneNumberAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumberAS.Location = new System.Drawing.Point(31, 174);
             this.lblPhoneNumberAS.Name = "lblPhoneNumberAS";
-            this.lblPhoneNumberAS.Size = new System.Drawing.Size(110, 20);
+            this.lblPhoneNumberAS.Size = new System.Drawing.Size(139, 23);
             this.lblPhoneNumberAS.TabIndex = 2;
             this.lblPhoneNumberAS.Text = "Phone Number";
             // 
@@ -287,7 +288,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblEnrollNoAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnrollNoAS.Location = new System.Drawing.Point(31, 119);
             this.lblEnrollNoAS.Name = "lblEnrollNoAS";
-            this.lblEnrollNoAS.Size = new System.Drawing.Size(73, 20);
+            this.lblEnrollNoAS.Size = new System.Drawing.Size(94, 23);
             this.lblEnrollNoAS.TabIndex = 1;
             this.lblEnrollNoAS.Text = "Enroll No";
             // 
@@ -300,7 +301,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtStudentNameAS.Location = new System.Drawing.Point(209, 28);
             this.txtStudentNameAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStudentNameAS.Name = "txtStudentNameAS";
-            this.txtStudentNameAS.Size = new System.Drawing.Size(252, 22);
+            this.txtStudentNameAS.Size = new System.Drawing.Size(252, 26);
             this.txtStudentNameAS.TabIndex = 0;
             this.txtStudentNameAS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -351,7 +352,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlInfoAC);
             this.Controls.Add(this.pnlTitleAb);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddStudentInfo";
             this.Text = "AddStudentInfo";
             this.Load += new System.EventHandler(this.AddStudentInfo_Load);
