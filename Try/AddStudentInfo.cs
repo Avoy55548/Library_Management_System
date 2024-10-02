@@ -76,11 +76,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     return;
                 }
 
-                if (!IsValidToSave())
-                {
-                    MessageBox.Show("Please fill all the information");
-                    return;
-                }
 
                 // ======= New Code Added for Age Validation ======= //
                 // Check if age is above 18
