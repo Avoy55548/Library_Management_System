@@ -125,7 +125,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             e.Graphics.DrawString("Librarian Name: " + txtUserIDAL.Text, printFont, printBrush, 100, 100);
             e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAL.Text, printFont, printBrush, 100, 130);
             e.Graphics.DrawString("Email: " + txtEmailAL.Text, printFont, printBrush, 100, 160);
-            e.Graphics.DrawString("Dath Of Birth: " + dtpDateOfBirthAL.Text, printFont, printBrush, 100, 190);
+            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAL.Text, printFont, printBrush, 100, 190);
             e.Graphics.DrawString("Gender: " + cmbGenderAL.Text, printFont, printBrush, 100, 220);
             e.Graphics.DrawString("Salary: " + txtSalaryAL.Text, printFont, printBrush, 100, 250);
 
@@ -141,7 +141,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             int leftMargin = 50;
 
             // Print the header
-            g.DrawString("Congratilation!!!!! You have been apointed", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
+            g.DrawString("Congratulation!!!!! You have been apointed", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
             yPos += 40;
 
             // Print data from all text boxes

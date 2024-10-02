@@ -54,7 +54,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=LAPTOP-P9NRKPUV\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
