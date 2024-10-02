@@ -99,6 +99,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberIsB.Clear();
             this.txtEmailIsB.Clear();
             this.txtAddressIsB.Clear();
+            this.txtFine.Clear();
+            this.txtTotal.Clear();
+            this.txtPrice.Clear();
         }
 
 
@@ -107,7 +110,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void btnRefreshIsB_Click(object sender, EventArgs e)
         {
             txtEnrollNumberIsB.Clear();
-
+            this.ClearAll();
 
         }
 

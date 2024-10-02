@@ -322,6 +322,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnRefreshIsB.TabIndex = 29;
             this.btnRefreshIsB.Text = "Refresh";
             this.btnRefreshIsB.UseVisualStyleBackColor = false;
+//            this.btnRefreshIsB.Click += new System.EventHandler(this.btnRefreshIsB_Click_1);
             // 
             // btnSearchIsB
             // 
