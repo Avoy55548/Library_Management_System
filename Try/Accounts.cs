@@ -255,6 +255,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             try
             {
+                if (!IsValidToSave())
+                {
+                    MessageBox.Show("Please fill all the information");
+                    return;
+                }
 
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
