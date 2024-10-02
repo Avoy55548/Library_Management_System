@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class ViewLibrarianInfo : Form
     {
-        private readonly string connectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
 
         public ViewLibrarianInfo()
         {
@@ -29,7 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             pnlInfoVLI.Visible = false;
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -55,7 +56,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
                 pnlInfoVLI.Visible = true;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -90,7 +91,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (txtSearchViewLibrarian.Text != "")
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -104,7 +105,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -139,10 +140,33 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+
+            // Validate email
+            string email = txtEmailAL.Text;
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email format. Please enter a valid email address.");
+                return;
+            }
+
+            // Validate age (Librarian should be at least 18 years old)
+            DateTime dob;
+            if (!DateTime.TryParse(dtpDateOfBirthAL.Text, out dob))
+            {
+                MessageBox.Show("Invalid date of birth. Please enter a valid date.");
+                return;
+            }
+
+            int age = CalculateAge(dob);
+            if (age < 18)
+            {
+                MessageBox.Show("Librarian must be at least 18 years old.");
+                return;
+            }
             if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
@@ -154,7 +178,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Parameters.AddWithValue("@DOB", this.dtpDateOfBirthAL.Value);
                 cmd.Parameters.AddWithValue("@Salary", Convert.ToDouble(this.txtSalaryAL.Text));
                 cmd.Parameters.AddWithValue("@UserID", rowid);
-
 
 
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -171,13 +194,25 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
             }
         }
+        private bool IsValidEmail(string email)
+        {
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
 
+        private int CalculateAge(DateTime dob)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - dob.Year;
+            if (dob > today.AddYears(-age)) age--;
+            return age;
+        }
         private void btnRemoveVLI_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Data will be Updated. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -201,7 +236,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Close();
             }
-
 
 
         }
