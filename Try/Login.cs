@@ -14,8 +14,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class Login : Form
     {
 
-        public static string StudentName = "";  // Store student name for borrow history
-        public static string StudentPassword = "";  // Store student enrollment for borrow history
+        public static string StudentName = "";
+        public static string StudentPassword = "";
+        public static string adminName = "";
+        public static string adminPassword = "";
         public Login()
         {
             InitializeComponent();
@@ -27,6 +29,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
                 if (this.tbxUNLogin.Text == "admin" && this.tbxPassLogin.Text == "admin")
                 {
+                    adminName = tbxUNLogin.Text;
+                    adminPassword = tbxPassLogin.Text;
                     AdminDashboard ad = new AdminDashboard();
                     ad.Show();
                 }
@@ -65,8 +69,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                         {
                             DataRow student = ds.Tables[0].Rows[0];
-                            StudentName = student["Name"].ToString();  // Store student name
-                            StudentPassword = student["Password"].ToString();  // Store student password
+                            StudentName = student["Name"].ToString();
+                            StudentPassword = student["Password"].ToString();
 
 
                             // If Student found
