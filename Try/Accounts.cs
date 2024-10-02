@@ -227,6 +227,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+
+            if (!IsValidToSave())
+            {
+                MessageBox.Show("Please fill all the information");
+                return;
+            }
+
             printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
             printPreviewDialog1.ShowDialog(); // Show the print preview
 
