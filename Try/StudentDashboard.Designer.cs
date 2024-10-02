@@ -1,6 +1,6 @@
 ﻿namespace LIBRARY_MANAGEMENT_SYSTEM
 {
-    partial class StudentDashboard
+    partial class IssueReturnBookInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueReturnBookInfo));
             this.btnBH = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,7 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1204, 627);
             this.panel1.TabIndex = 16;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // btnLogOut
             // 
@@ -90,7 +89,7 @@
             this.btnViewBooks.Text = "View Books";
             this.btnViewBooks.UseVisualStyleBackColor = false;
             // 
-            // StudentDashboard
+            // IssueReturnBookInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +100,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnViewBooks);
-            this.Name = "StudentDashboard";
+            this.Name = "IssueReturnBookInfo";
             this.Text = "StudentDashboard";
+            //this.Load += new System.EventHandler(this.IssueReturnBookInfo_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,6 +53,7 @@
             this.dgvReturnBooksInfo.RowTemplate.Height = 28;
             this.dgvReturnBooksInfo.Size = new System.Drawing.Size(1063, 196);
             this.dgvReturnBooksInfo.TabIndex = 7;
+            this.dgvReturnBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReturnBooksInfo_CellContentClick);
             // 
             // dgvIssueBooksInfo
             // 
@@ -70,7 +71,6 @@
             this.dgvIssueBooksInfo.RowTemplate.Height = 28;
             this.dgvIssueBooksInfo.Size = new System.Drawing.Size(1063, 196);
             this.dgvIssueBooksInfo.TabIndex = 6;
-            //this.dgvIssueBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIssueBooksInfo_CellContentClick);
             // 
             // lblReturnBooksInfo
             // 
