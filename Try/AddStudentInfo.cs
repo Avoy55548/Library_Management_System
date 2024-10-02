@@ -33,7 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
         }
 
-        //ekhane change korsi
+      
 
         private void txtEmailAS_Validating(object sender, CancelEventArgs e)
         {
