@@ -1,5 +1,5 @@
 ﻿
-namespace Try
+namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     partial class ReturnBook
     {
@@ -217,7 +217,7 @@ namespace Try
             // 
             this.dgvReturnBook.AllowUserToAddRows = false;
             this.dgvReturnBook.AllowUserToDeleteRows = false;
-            this.dgvReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReturnBook.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvReturnBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

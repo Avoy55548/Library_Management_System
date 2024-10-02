@@ -1,4 +1,4 @@
-﻿namespace Try
+﻿namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     partial class StudentDashboard
     {
@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1204, 627);
             this.panel1.TabIndex = 16;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // btnLogOut
             // 
@@ -102,7 +103,6 @@
             this.Controls.Add(this.btnViewBooks);
             this.Name = "StudentDashboard";
             this.Text = "StudentDashboard";
-            this.Load += new System.EventHandler(this.StudentDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
