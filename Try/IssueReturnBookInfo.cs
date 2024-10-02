@@ -27,7 +27,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
+
                 con.Open();
+
 
                 // Get issued book information
                 cmd.CommandText = "SELECT BID, Stu_enroll, Stu_Name, PhoneNo, Email, Address, Book_Name, Book_issue_date, Book_return_date FROM IRBook WHERE Book_return_date IS NOT NULL";
@@ -35,6 +37,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dgvIssueBooksInfo.DataSource = ds.Tables[0];
+
 
                 // Business logic to calculate fine for each book and update the database
                 foreach (DataRow row in ds.Tables[0].Rows)
@@ -47,11 +50,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                     int fine = 0;
 
+
                     // If overdue, calculate fine
                     if (daysOverdue > 0)
                     {
                         fine = daysOverdue * 20; // 20 Taka per day
                     }
+
 
                     // Update the fine in the IRBook table
                     cmd.CommandText = "UPDATE IRBook SET Fine = @Fine WHERE BID = @BID";
@@ -60,6 +65,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@BID", row["BID"]);
                     cmd.ExecuteNonQuery(); // Execute the update command
                 }
+
 
                 // Now that fines are updated, retrieve the updated data and show in DataGridView
                 cmd.CommandText = "SELECT * FROM IRBook WHERE Book_return_date IS NOT NULL";
@@ -70,6 +76,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Close();
             }
+
+
             catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
@@ -77,21 +85,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void dgvIssueBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle cell content click event if necessary
-        }
-
-        private void dgvReturnBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle cell content click event if necessary
-        }
-
-        private void dgvIssueBooksInfo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvReturnBooksInfo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -40,8 +40,8 @@
             // 
             this.dgvReturnBooksInfo.AllowUserToAddRows = false;
             this.dgvReturnBooksInfo.AllowUserToDeleteRows = false;
-            this.dgvReturnBooksInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvReturnBooksInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReturnBooksInfo.BackgroundColor = System.Drawing.Color.RosyBrown;
             this.dgvReturnBooksInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -53,13 +53,12 @@
             this.dgvReturnBooksInfo.RowTemplate.Height = 28;
             this.dgvReturnBooksInfo.Size = new System.Drawing.Size(1063, 196);
             this.dgvReturnBooksInfo.TabIndex = 7;
-            this.dgvReturnBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReturnBooksInfo_CellContentClick);
             // 
             // dgvIssueBooksInfo
             // 
             this.dgvIssueBooksInfo.AllowUserToAddRows = false;
             this.dgvIssueBooksInfo.AllowUserToDeleteRows = false;
-            this.dgvIssueBooksInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvIssueBooksInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIssueBooksInfo.BackgroundColor = System.Drawing.Color.RosyBrown;
             this.dgvIssueBooksInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -71,6 +70,7 @@
             this.dgvIssueBooksInfo.RowTemplate.Height = 28;
             this.dgvIssueBooksInfo.Size = new System.Drawing.Size(1063, 196);
             this.dgvIssueBooksInfo.TabIndex = 6;
+            this.dgvIssueBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIssueBooksInfo_CellContentClick);
             // 
             // lblReturnBooksInfo
             // 
