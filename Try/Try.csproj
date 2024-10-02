@@ -82,6 +82,12 @@
     <Compile Include="BorrowHistory.Designer.cs">
       <DependentUpon>BorrowHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBooks.Designer.cs">
+      <DependentUpon>IssueBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="IssueReturnBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowHistory.resx">
       <DependentUpon>BorrowHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBooks.resx">
+      <DependentUpon>IssueBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueReturnBookInfo.resx">
       <DependentUpon>IssueReturnBookInfo.cs</DependentUpon>
