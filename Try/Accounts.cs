@@ -99,8 +99,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberIsB.Clear();
             this.txtEmailIsB.Clear();
             this.txtAddressIsB.Clear();
-            this.txtFine.Clear();
-            this.txtTotal.Clear();
             this.txtPrice.Clear();
         }
 
@@ -136,7 +134,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 string selectedBook = cmbBookNameIsB.SelectedItem.ToString();
 
                 double price = 0;
-                double fine = 0;
+
 
                 // Database connection setup
                 SqlConnection con = new SqlConnection();
@@ -157,31 +155,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
                 sdrBook.Close();  // Close the first reader
 
-                // Query to get the fine from IRBook table
-                SqlCommand cmdIRBook = new SqlCommand("SELECT Fine FROM IRBook WHERE Book_Name = @BookName", con);
-                cmdIRBook.Parameters.AddWithValue("@BookName", selectedBook);
-                SqlDataReader sdrIRBook = cmdIRBook.ExecuteReader();
-
-                if (sdrIRBook.Read() && !string.IsNullOrEmpty(sdrIRBook["Fine"].ToString()))
-                {
-                    txtFine.Text = sdrIRBook["Fine"].ToString();
-                    txtFine.ReadOnly = true;
-                    fine = Convert.ToDouble(sdrIRBook["Fine"]);
-                }
-                else
-                {
-                    // Set default fine value to 0
-                    txtFine.Text = "0";
-                    fine = 0;
-                }
-                sdrIRBook.Close();
-
-                // Close the connection
                 con.Close();
-
-                // Calculate the total and set it in txtTotal
-                double total = price + fine;  // Calculate total
-                txtTotal.Text = total.ToString();  // Set total in txtTotal
             }
             catch (Exception ex)
             {
@@ -201,9 +175,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             e.Graphics.DrawString("Phone Number: " + txtPhoneNumberIsB.Text, printFont, printBrush, 100, 130);
             e.Graphics.DrawString("Email: " + txtEmailIsB.Text, printFont, printBrush, 100, 160);
             e.Graphics.DrawString("Address: " + txtAddressIsB.Text, printFont, printBrush, 100, 190);
-            e.Graphics.DrawString("Price: " + txtPrice.Text, printFont, printBrush, 100, 220);
-            e.Graphics.DrawString("Fine: " + txtFine.Text, printFont, printBrush, 100, 250);
-            e.Graphics.DrawString("Total: " + txtTotal.Text, printFont, printBrush, 100, 280);
+            e.Graphics.DrawString("Book Name: " + cmbBookNameIsB.Text, printFont, printBrush, 100, 220);
+            e.Graphics.DrawString("Price: " + txtPrice.Text, printFont, printBrush, 100, 250);
+
 
             // If you have more textboxes, print them similarly with e.Graphics.DrawString
         }
@@ -228,12 +202,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             yPos += 25;
             g.DrawString("Address: " + txtAddressIsB.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
+            g.DrawString("Book Name: " + cmbBookNameIsB.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
             g.DrawString("Price: " + txtPrice.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
-            g.DrawString("Fine: " + txtFine.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Total: " + txtTotal.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
+
 
             // You can add more textboxes similarly
         }
@@ -270,15 +243,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 con.Open();
 
                 // ======= Change to Parameterized Query to Avoid SQL Injection ======= //
-                cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price, Fine,Total ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price,@Fine,@Total)";
+                cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
                 cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
                 cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text);
                 cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text);
                 cmd.Parameters.AddWithValue("@book", this.cmbBookNameIsB.Text);
                 cmd.Parameters.AddWithValue("@Price", this.txtPrice.Text);
-                cmd.Parameters.AddWithValue("@Fine", this.txtFine.Text);
-                cmd.Parameters.AddWithValue("@Total", this.txtTotal.Text);
+
 
                 cmd.ExecuteNonQuery();
                 con.Close();
