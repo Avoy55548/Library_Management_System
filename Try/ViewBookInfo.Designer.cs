@@ -325,7 +325,6 @@
             this.dgvViewBooks.RowTemplate.Height = 28;
             this.dgvViewBooks.Size = new System.Drawing.Size(785, 239);
             this.dgvViewBooks.TabIndex = 10;
-            this.dgvViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewBooks_CellContentClick);
             // 
             // pnlURViewBooks
             // 
@@ -374,6 +373,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ViewBookInfo";
             this.Text = "ViewBookInfo";
+           // this.Load += new System.EventHandler(this.ViewBookInfo_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

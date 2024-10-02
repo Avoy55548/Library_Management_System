@@ -26,6 +26,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 btnUpdateViewBooks.Visible = false; // Hide the Update button for students
                 btnRemoveVBI.Visible = false;       // Hide the Remove button for students
             }
+            else if (!string.IsNullOrEmpty(Login.adminName) && !string.IsNullOrEmpty(Login.adminPassword))
+            {
+                btnUpdateViewBooks.Visible = true;
+                btnRemoveVBI.Visible = true;
+            }
             else
             {
                 // Admins or librarians have full access, so the buttons are visible
@@ -160,9 +165,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             pnlURViewBooks.Visible = false;
         }
 
-        private void dgvViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }
