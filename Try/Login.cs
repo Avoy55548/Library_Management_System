@@ -14,8 +14,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class Login : Form
     {
 
-        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
+        public static string StudentName = "";  // Store student name for borrow history
+        public static string StudentPassword = "";  // Store student enrollment for borrow history
 
         public Login()
         {
