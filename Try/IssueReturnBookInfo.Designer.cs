@@ -70,7 +70,7 @@
             this.dgvIssueBooksInfo.RowTemplate.Height = 28;
             this.dgvIssueBooksInfo.Size = new System.Drawing.Size(1063, 196);
             this.dgvIssueBooksInfo.TabIndex = 6;
-            this.dgvIssueBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIssueBooksInfo_CellContentClick);
+            //this.dgvIssueBooksInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIssueBooksInfo_CellContentClick);
             // 
             // lblReturnBooksInfo
             // 

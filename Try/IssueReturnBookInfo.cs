@@ -84,9 +84,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void dgvIssueBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }
