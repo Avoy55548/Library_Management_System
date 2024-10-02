@@ -76,6 +76,12 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorrowHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowHistory.Designer.cs">
+      <DependentUpon>BorrowHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="IssueReturnBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowHistory.resx">
+      <DependentUpon>BorrowHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueReturnBookInfo.resx">
       <DependentUpon>IssueReturnBookInfo.cs</DependentUpon>
