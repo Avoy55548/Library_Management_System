@@ -49,6 +49,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
                 this.Close();
                 Login lg = new Login();
+                lg.Show();
             }
         }
 

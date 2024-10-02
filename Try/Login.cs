@@ -33,6 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     adminPassword = tbxPassLogin.Text;
                     AdminDashboard ad = new AdminDashboard();
                     ad.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -53,6 +54,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     {
                         LibrarianDashboard ld = new LibrarianDashboard();
                         ld.Show();
+                        this.Hide();
                     }
 
 
@@ -76,6 +78,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                             // If Student found
                             StudentDashboard sd = new StudentDashboard(); // Assuming there's a StudentDashboard form
                             sd.Show();
+                            this.Hide();
 
 
                         }
