@@ -133,6 +133,7 @@ namespace Try
             this.Controls.Add(this.lblNameBH);
             this.Name = "BorrowHistory";
             this.Text = "BorrowHistory";
+            this.Load += new System.EventHandler(this.BorrowHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
