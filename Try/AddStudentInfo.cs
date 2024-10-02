@@ -18,7 +18,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class AddStudentInfo : Form
     {
 
-        
+
 
         private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
         private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
@@ -26,25 +26,25 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
 
-            //Subscribe to the Validating event for email validation
+
             this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
 
 
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
         }
 
-      
+
 
         private void txtEmailAS_Validating(object sender, CancelEventArgs e)
         {
-            // Regular expression pattern to check for a valid email format
+
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
-            // If the email doesn't match the pattern, show an error message
+
             if (!Regex.IsMatch(txtEmailAS.Text, emailPattern))
             {
                 MessageBox.Show("Please enter a valid email address (e.g., xxxxx@gmail.com).", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true;  // Prevents moving to the next control if the email is invalid
+                e.Cancel = true;
             }
         }
 
@@ -77,27 +77,25 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
 
 
-                // ======= New Code Added for Age Validation ======= //
-                // Check if age is above 18
-                DateTime dateOfBirth = DateTime.Parse(dtpDateOfBirthAS.Text); // Get the date of birth from DatePicker
-                int age = CalculateAge(dateOfBirth); // Calculate the age based on the birth date
+                DateTime dateOfBirth = DateTime.Parse(dtpDateOfBirthAS.Text);
+                int age = CalculateAge(dateOfBirth);
 
 
-                if (age < 8) // If the age is less than 8
+                if (age < 8)
                 {
                     MessageBox.Show("You are underage. Age must be 8 or above.", "Underage", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Stop the saving process
+                    return;
                 }
-                // ================================================ //
+
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
                 con.Open();
 
-                // ======= Change to Parameterized Query to Avoid SQL Injection ======= //
+
                 cmd.CommandText = "INSERT INTO Student (Name, enroll, Contact, email, address, Date_Of_Birth,Password) VALUES (@Name, @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Password)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                 cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
@@ -121,11 +119,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private int CalculateAge(DateTime birthDate)
         {
-            DateTime today = DateTime.Today; // Get the current date
-            int age = today.Year - birthDate.Year; // Calculate the basic age by subtracting years
+            DateTime today = DateTime.Today;
+            int age = today.Year - birthDate.Year;
 
 
-            // If the user's birthday hasn't occurred yet this year, subtract one from the age
+
             if (birthDate.Date > today.AddYears(-age))
                 age--;
             return age;
@@ -153,11 +151,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Define font and brush for printing
+
             Font printFont = new Font("Arial", 12);
             Brush printBrush = Brushes.Black;
 
-            // Print data from all text boxes
+
             e.Graphics.DrawString("Student Name: " + txtStudentNameAS.Text, printFont, printBrush, 100, 100);
             e.Graphics.DrawString("Enroll Number: " + txtEnrollNoAS.Text, printFont, printBrush, 100, 130);
             e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAS.Text, printFont, printBrush, 100, 160);
@@ -167,21 +165,21 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-            // If you have more textboxes, print them similarly with e.Graphics.DrawString
+
         }
 
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
-            Font font = new Font("Times New Roman", 20); // Change to Times New Roman
-            float yPos = 100; // Starting position for printing
+            Font font = new Font("Times New Roman", 20);
+            float yPos = 100;
             int leftMargin = 50;
 
-            // Print the header
+
             g.DrawString("Membership Card", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
             yPos += 40;
 
-            // Print data from all text boxes
+
             g.DrawString("Student Name:  " + txtStudentNameAS.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
             g.DrawString("Enroll Number: " + txtEnrollNoAS.Text, font, Brushes.Black, leftMargin, yPos);
@@ -195,29 +193,26 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             g.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
 
-            // You can add more textboxes similarly
+
         }
 
         private void btnPrintAS_Click(object sender, EventArgs e)
         {
-
-
             if (!IsValidToSave())
             {
                 MessageBox.Show("Please fill all the information");
                 return;
             }
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
 
-            printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
-            printPreviewDialog1.ShowDialog(); // Show the print preview
 
-            // If user confirms from preview, proceed to print
             if (printPreviewDialog1.DialogResult == DialogResult.OK)
             {
                 PrintDialog printDialog = new PrintDialog();
                 printDialog.Document = printDocument1;
 
-                // Show print dialog
+
                 if (printDialog.ShowDialog() == DialogResult.OK)
                 {
                     printDocument1.Print();
@@ -231,16 +226,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void AddStudentInfo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlInfoAC_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnPrintAS_Click_1(object sender, EventArgs e)
         {
 
         }
