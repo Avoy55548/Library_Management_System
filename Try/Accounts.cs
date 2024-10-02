@@ -26,6 +26,20 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
+        private bool IsValidToSave()
+        {
+            if (String.IsNullOrEmpty(this.txtStudentNameIsB.Text) || String.IsNullOrEmpty(this.txtPhoneNumberIsB.Text) ||
+                String.IsNullOrEmpty(this.txtEmailIsB.Text) || String.IsNullOrEmpty(this.txtAddressIsB.Text) ||
+                 String.IsNullOrEmpty(this.cmbBookNameIsB.Text) || String.IsNullOrEmpty(this.txtPrice.Text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
 
         private void Accounts_Load(object sender, EventArgs e)
         {
