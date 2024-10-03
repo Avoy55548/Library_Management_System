@@ -81,9 +81,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             ac.Show();
         }
 
-        private void LibrarianDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

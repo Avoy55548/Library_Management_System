@@ -1,5 +1,5 @@
 ﻿
-namespace Try
+namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     partial class LibrarianDashboard
     {
@@ -182,7 +182,7 @@ namespace Try
             this.Controls.Add(this.menuStrip1);
             this.Name = "LibrarianDashboard";
             this.Text = "LibrarianDashboard";
-            this.Load += new System.EventHandler(this.LibrarianDashboard_Load);
+            //this.Load += new System.EventHandler(this.LibrarianDashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
