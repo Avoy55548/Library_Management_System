@@ -373,7 +373,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ViewBookInfo";
             this.Text = "ViewBookInfo";
-           // this.Load += new System.EventHandler(this.ViewBookInfo_Load_1);
+            //this.Load += new System.EventHandler(this.ViewBookInfo_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
