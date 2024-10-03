@@ -142,7 +142,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 da.Fill(ds);
             }
         }
-
+        //dataadapter = da
+        //dataset=ds
         private void btnRemoveVBI_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Data will be Updated. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
