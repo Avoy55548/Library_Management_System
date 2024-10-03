@@ -57,33 +57,29 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     // Based on UserType, open the corresponding dashboard
                     if (userType == 1)
                     {
+                        UserName = user["UserName"].ToString();   // Store UserName
+                        Password = user["Password"].ToString();   // Store Password
+                        Type = userType;                          // Store UserType
                         AdminDashboard ad = new AdminDashboard();
-                        UserName = user["UserName"].ToString();
-                        Password = user["Password"].ToString();
-
-                        Type = userType;
                         ad.Show();
                         this.Hide();
                     }
                     else if (userType == 2)
                     {
+                        UserName = user["UserName"].ToString();   // Store UserName
+                        Password = user["Password"].ToString();   // Store Password
+                        Type = userType;                          // Store UserType
                         LibrarianDashboard ld = new LibrarianDashboard();
-                        UserName = user["UserName"].ToString();
-                        Password = user["Password"].ToString();
-
-                        Type = userType;
                         ld.Show();
                         this.Hide();
                     }
                     else if (userType == 3)
                     {
-                        StudentName = user["UserName"].ToString();
-                        StudentPassword = user["Password"].ToString();
 
-                        UserName = user["UserName"].ToString();
-                        Password = user["Password"].ToString();
 
-                        Type = userType;
+                        UserName = user["UserName"].ToString();   // Store UserName
+                        Password = user["Password"].ToString();   // Store Password
+                        Type = userType;                          // Store UserType
                         StudentDashboard sd = new StudentDashboard();
                         sd.Show();
                         this.Hide();
@@ -94,7 +90,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     MessageBox.Show("Incorrect Username or Password", "Information");
                 }
 
-                this.tbxUNLogin.Clear();
+
                 this.tbxPassLogin.Clear();
             }
             catch (Exception exc)
