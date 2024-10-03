@@ -21,10 +21,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             InitializeComponent();
         }
 
-        //private void panel5_Paint(object sender, PaintEventArgs e)
-        //{
-
-        //}
+        
 
         private void ViewLibrarianInfo_Load(object sender, EventArgs e)
         {
