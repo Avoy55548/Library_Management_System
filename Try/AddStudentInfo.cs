@@ -220,14 +220,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void dtpDateOfBirthAS_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddStudentInfo_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

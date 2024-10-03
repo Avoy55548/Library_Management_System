@@ -95,7 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrintAS.TabIndex = 35;
             this.btnPrintAS.Text = "Print";
             this.btnPrintAS.UseVisualStyleBackColor = false;
-            this.btnPrintAS.Click += new System.EventHandler(this.btnPrintAS_Click_1);
+//            this.btnPrintAS.Click += new System.EventHandler(this.btnPrintAS_Click_1);
             // 
             // lblPasswordAS
             // 
@@ -331,7 +331,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAC.Name = "pnlInfoAC";
             this.pnlInfoAC.Size = new System.Drawing.Size(483, 506);
             this.pnlInfoAC.TabIndex = 21;
-            this.pnlInfoAC.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInfoAC_Paint);
+//            this.pnlInfoAC.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInfoAC_Paint);
             // 
             // pnlTitleAb
             // 
@@ -355,7 +355,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddStudentInfo";
             this.Text = "AddStudentInfo";
-            this.Load += new System.EventHandler(this.AddStudentInfo_Load);
+//            this.Load += new System.EventHandler(this.AddStudentInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTitlePicAB)).EndInit();
             this.pnlInfoAC.ResumeLayout(false);

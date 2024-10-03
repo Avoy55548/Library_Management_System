@@ -20,11 +20,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         public Accounts()
         {
             InitializeComponent();
-            // Hook up the PrintPage event to the printDocument
+
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
 
         }
-
 
         private bool IsValidToSave()
         {
@@ -44,7 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void Accounts_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -69,9 +68,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             if (this.txtEnrollNumberIsB.Text != "")
             {
-                //String eid = txtEnrollNumberIsB.Text;
+
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -144,30 +143,30 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             try
             {
 
-                // Get the selected book name
+
                 string selectedBook = cmbBookNameIsB.SelectedItem.ToString();
 
                 double price = 0;
 
 
-                // Database connection setup
+
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 con.Open();
 
-                // Query to get the book price from Book table
+
                 SqlCommand cmdBook = new SqlCommand("SELECT Price FROM Book WHERE Name = @BookName", con);
                 cmdBook.Parameters.AddWithValue("@BookName", selectedBook);
                 SqlDataReader sdrBook = cmdBook.ExecuteReader();
 
-                // If book is found, set the price in txtPrice
+
                 if (sdrBook.Read())
                 {
                     txtPrice.Text = sdrBook["Price"].ToString();
                     txtPrice.ReadOnly = true;
                     price = Convert.ToDouble(sdrBook["Price"]);
                 }
-                sdrBook.Close();  // Close the first reader
+                sdrBook.Close();
 
                 con.Close();
             }
@@ -193,7 +192,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             e.Graphics.DrawString("Price: " + txtPrice.Text, printFont, printBrush, 100, 250);
 
 
-            // If you have more textboxes, print them similarly with e.Graphics.DrawString
+
         }
 
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -222,18 +221,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             yPos += 25;
 
 
-            // You can add more textboxes similarly
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
             if (!IsValidToSave())
             {
                 MessageBox.Show("Please fill all the information");
                 return;
             }
-
             printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
             printPreviewDialog1.ShowDialog(); // Show the print preview
 
@@ -262,13 +259,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
                 con.Open();
 
-                // ======= Change to Parameterized Query to Avoid SQL Injection ======= //
+
                 cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
                 cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
