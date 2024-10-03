@@ -252,10 +252,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
        
 
-        private void pnlURViewStudent_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         // The unchanged methods below
 
