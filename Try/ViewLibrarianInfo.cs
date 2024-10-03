@@ -146,7 +146,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 return;
             }
 
-            // Validate age (Librarian should be at least 18 years old)
+            
             DateTime dob;
             if (!DateTime.TryParse(dtpDateOfBirthAL.Text, out dob))
             {
@@ -222,7 +222,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Data Updated Successfully");
-                    // Refresh DataGridView after successful update
+                    
                     RefreshDataGridView();
                 }
                 else
