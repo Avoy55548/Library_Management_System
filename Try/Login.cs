@@ -14,10 +14,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class Login : Form
     {
 
+
         public static string StudentName = "";
         public static string StudentPassword = "";
         public static string adminName = "";
         public static string adminPassword = "";
+
+        public static string UserName = "";
+        public static string Password = "";
+        public static string Type = "";
+
         public Login()
         {
             InitializeComponent();
@@ -52,12 +58,20 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     if (userType == 1)
                     {
                         AdminDashboard ad = new AdminDashboard();
+                        UserName = user["UserName"].ToString();
+                        Password = user["Password"].ToString();
+
+                        Type = Convert.ToString(userType);
                         ad.Show();
                         this.Hide();
                     }
                     else if (userType == 2)
                     {
                         LibrarianDashboard ld = new LibrarianDashboard();
+                        UserName = user["UserName"].ToString();
+                        Password = user["Password"].ToString();
+
+                        Type = Convert.ToString(userType);
                         ld.Show();
                         this.Hide();
                     }
@@ -66,6 +80,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         StudentName = user["UserName"].ToString();
                         StudentPassword = user["Password"].ToString();
 
+                        UserName = user["UserName"].ToString();
+                        Password = user["Password"].ToString();
+
+                        Type = Convert.ToString(userType);
                         StudentDashboard sd = new StudentDashboard();
                         sd.Show();
                         this.Hide();
