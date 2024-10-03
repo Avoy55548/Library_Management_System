@@ -88,6 +88,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void btnUpdateViewBooks_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Data will be updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
@@ -106,6 +107,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                     MessageBox.Show("Book details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error while updating book details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -197,7 +199,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             pnlURViewBooks.Visible = false;
             RefreshDataGridView();
         }
-
 
     }
 }
