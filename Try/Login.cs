@@ -27,72 +27,54 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             try
             {
-                if (this.tbxUNLogin.Text == "admin" && this.tbxPassLogin.Text == "admin")
-                {
-                    adminName = tbxUNLogin.Text;
-                    adminPassword = tbxPassLogin.Text;
-                    AdminDashboard ad = new AdminDashboard();
-                    ad.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    con.Open();
-                    cmd.Parameters.AddWithValue("@UserID", this.tbxUNLogin.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Password", this.tbxPassLogin.Text.Trim());
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                con.Open();
 
-                    cmd.CommandText = "SELECT * FROM Librarian where UserID = @UserID AND Password = @Password";
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-                    con.Close();
-                    if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                // Check in the User table for the specific UserType
+                cmd.Parameters.AddWithValue("@UserID", this.tbxUNLogin.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", this.tbxPassLogin.Text.Trim());
+
+                cmd.CommandText = "SELECT * FROM [Users] WHERE UserName = @UserID AND Password = @Password";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                con.Close();
+
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    DataRow user = ds.Tables[0].Rows[0];
+                    int userType = Convert.ToInt32(user["UserType"]); // Get the UserType from the User table
+
+                    // Based on UserType, open the corresponding dashboard
+                    if (userType == 1)
+                    {
+                        AdminDashboard ad = new AdminDashboard();
+                        ad.Show();
+                        this.Hide();
+                    }
+                    else if (userType == 2)
                     {
                         LibrarianDashboard ld = new LibrarianDashboard();
                         ld.Show();
                         this.Hide();
                     }
-
-
-                    else
+                    else if (userType == 3)
                     {
-                        // Check for Student if not a Librarian
-                        con.Open();
-                        cmd.CommandText = "SELECT * FROM Student WHERE Name = @UserID AND Password = @Password";
-                        da = new SqlDataAdapter(cmd);
-                        ds = new DataSet();
-                        da.Fill(ds);
-                        con.Close();
+                        StudentName = user["UserName"].ToString();
+                        StudentPassword = user["Password"].ToString();
 
-                        if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-                        {
-                            DataRow student = ds.Tables[0].Rows[0];
-                            StudentName = student["Name"].ToString();
-                            StudentPassword = student["Password"].ToString();
-
-
-                            // If Student found
-                            StudentDashboard sd = new StudentDashboard(); // Assuming there's a StudentDashboard form
-                            sd.Show();
-                            this.Hide();
-
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Incorrect Username or Password", "Information");
-                        }
+                        StudentDashboard sd = new StudentDashboard();
+                        sd.Show();
+                        this.Hide();
                     }
-
-
                 }
-
-
-
+                else
+                {
+                    MessageBox.Show("Incorrect Username or Password", "Information");
+                }
 
                 this.tbxUNLogin.Clear();
                 this.tbxPassLogin.Clear();
@@ -109,7 +91,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             Application.Exit();
         }
 
-        private void pnlLogin2_Paint(object sender, PaintEventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
