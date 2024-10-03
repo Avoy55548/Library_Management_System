@@ -96,7 +96,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlLogin2.Name = "pnlLogin2";
             this.pnlLogin2.Size = new System.Drawing.Size(390, 419);
             this.pnlLogin2.TabIndex = 38;
-            this.pnlLogin2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin2_Paint);
+//            this.pnlLogin2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin2_Paint);
             // 
             // btnClose
             // 

@@ -15,10 +15,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     {
 
 
-        public static string StudentName = "";
-        public static string StudentPassword = "";
-        public static string adminName = "";
-        public static string adminPassword = "";
+
 
         public static string UserName = "";
         public static string Password = "";
@@ -34,7 +31,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 con.Open();
