@@ -22,7 +22,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         public static string UserName = "";
         public static string Password = "";
-        public static string Type = "";
+        public static int Type = 0;
 
         public Login()
         {
@@ -61,7 +61,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         UserName = user["UserName"].ToString();
                         Password = user["Password"].ToString();
 
-                        Type = Convert.ToString(userType);
+                        Type = userType;
                         ad.Show();
                         this.Hide();
                     }
@@ -71,7 +71,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         UserName = user["UserName"].ToString();
                         Password = user["Password"].ToString();
 
-                        Type = Convert.ToString(userType);
+                        Type = userType;
                         ld.Show();
                         this.Hide();
                     }
@@ -83,7 +83,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         UserName = user["UserName"].ToString();
                         Password = user["Password"].ToString();
 
-                        Type = Convert.ToString(userType);
+                        Type = userType;
                         StudentDashboard sd = new StudentDashboard();
                         sd.Show();
                         this.Hide();
