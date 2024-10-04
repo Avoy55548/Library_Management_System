@@ -72,13 +72,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void btnCancelAB_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("This will Remove you all unsaved data", "Are you sure to perform this??", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                this.Close();
-            }
-        }
+        
 
 
     }
