@@ -23,7 +23,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             try
             {
-                
+                SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
