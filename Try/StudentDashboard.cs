@@ -19,6 +19,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void IssueReturnBookInfo_Load(object sender, EventArgs e)
+
         {
 
 
@@ -42,6 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 // Business logic to calculate fine for each book and update the database
                 foreach (DataRow row in ds.Tables[0].Rows)
+
                 {
                     DateTime issueDate = DateTime.Parse(row["Book_issue_date"].ToString());
                     DateTime returnDate = DateTime.Parse(row["Book_return_date"].ToString());
