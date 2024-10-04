@@ -109,7 +109,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
                     cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
                     cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text); 
-                    cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text); // Address
+                    cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text); 
                     cmd.Parameters.AddWithValue("@BookName", this.cmbBookNameIsB.Text); // Book name
                     cmd.Parameters.AddWithValue("@IssueDate", this.dtpIssueDateIsB.Value); // DatePicker value
                     cmd.ExecuteNonQuery();
