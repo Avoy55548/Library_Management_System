@@ -95,7 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Open();
 
-
+                //Insert query  which has been updated for a single user table
                 cmd.CommandText = "INSERT INTO Users (UserName,Password, Enroll, Contact, Email, Address, DOB,Gender,UserType) VALUES (@Name,@Password , @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Gender,3)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                 cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
