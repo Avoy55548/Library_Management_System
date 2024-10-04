@@ -56,9 +56,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
             {
                 if (dgvViewBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+
                 {
                     BookID = int.Parse(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    //MessageBox.Show(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
+                   
                 }
                 pnlURViewBooks.Visible = true;
                 SqlConnection con = new SqlConnection();
