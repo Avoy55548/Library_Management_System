@@ -30,6 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Open();
 
+
                 // Get issued book information
                 cmd.CommandText = "SELECT BID, Stu_enroll, Stu_Name, PhoneNo, Email, Address, Book_Name, Book_issue_date, Book_return_date FROM IRBook WHERE Book_return_date IS NOT NULL";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -37,8 +38,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 da.Fill(ds);
                 dgvIssueBooksInfo.DataSource = ds.Tables[0];
 
+
                 // Business logic to calculate fine for each book and update the database
                 foreach (DataRow row in ds.Tables[0].Rows)
+
                 {
                     DateTime issueDate = DateTime.Parse(row["Book_issue_date"].ToString());
                     DateTime returnDate = DateTime.Parse(row["Book_return_date"].ToString());
@@ -70,7 +73,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Close();
             }
-            catch (Exception exc)
+
+            //if that was error 
+
+          catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
