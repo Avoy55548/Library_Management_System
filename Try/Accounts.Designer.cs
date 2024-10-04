@@ -43,9 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbBookNameIsB = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lblFine = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.txtFine = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEnterIsB = new System.Windows.Forms.Label();
@@ -216,17 +214,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPrice.TabIndex = 34;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblFine
-            // 
-            this.lblFine.AutoSize = true;
-            this.lblFine.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFine.Location = new System.Drawing.Point(63, 307);
-            this.lblFine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFine.Name = "lblFine";
-            this.lblFine.Size = new System.Drawing.Size(40, 20);
-            this.lblFine.TabIndex = 35;
-            this.lblFine.Text = "Fine";
-            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
@@ -237,18 +224,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblTotal.Size = new System.Drawing.Size(46, 20);
             this.lblTotal.TabIndex = 36;
             this.lblTotal.Text = "Total";
-            // 
-            // txtFine
-            // 
-            this.txtFine.BackColor = System.Drawing.Color.Linen;
-            this.txtFine.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFine.Location = new System.Drawing.Point(176, 301);
-            this.txtFine.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFine.Name = "txtFine";
-            this.txtFine.ReadOnly = true;
-            this.txtFine.Size = new System.Drawing.Size(178, 22);
-            this.txtFine.TabIndex = 37;
-            this.txtFine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTotal
             // 
@@ -266,9 +241,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
             this.panel3.Controls.Add(this.txtTotal);
-            this.panel3.Controls.Add(this.txtFine);
             this.panel3.Controls.Add(this.lblTotal);
-            this.panel3.Controls.Add(this.lblFine);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.cmbBookNameIsB);
@@ -322,7 +295,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnRefreshIsB.TabIndex = 29;
             this.btnRefreshIsB.Text = "Refresh";
             this.btnRefreshIsB.UseVisualStyleBackColor = false;
-//            this.btnRefreshIsB.Click += new System.EventHandler(this.btnRefreshIsB_Click_1);
             // 
             // btnSearchIsB
             // 
@@ -447,9 +419,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.ComboBox cmbBookNameIsB;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lblFine;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.TextBox txtFine;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEnterIsB;
