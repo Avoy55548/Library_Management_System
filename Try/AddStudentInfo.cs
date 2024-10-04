@@ -142,6 +142,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnClearAS_Click(object sender, EventArgs e)
         {
+            //this is for cleaning all the txtbox
             this.txtStudentNameAS.Clear();
             this.txtPasswordAS.Clear();
             this.txtEnrollNoAS.Clear();
