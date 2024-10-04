@@ -66,57 +66,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-        private void btnSaveAB_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!IsValidToSave())
-                {
-                    MessageBox.Show("Please fill all the information");
-                    return;
-                }
-
-
-                DateTime dateOfBirth = DateTime.Parse(dtpDateOfBirthAS.Text);
-                int age = CalculateAge(dateOfBirth);
-
-
-                if (age < 8)
-                {
-                    MessageBox.Show("You are underage. Age must be 8 or above.", "Underage", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                con.Open();
-
-
-                cmd.CommandText = "INSERT INTO Student (Name, enroll, Contact, email, address, Date_Of_Birth,Password) VALUES (@Name, @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Password)";
-                cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
-                cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
-                cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNoAS.Text);
-                cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAS.Text);
-                cmd.Parameters.AddWithValue("@Email", this.txtEmailAS.Text);
-                cmd.Parameters.AddWithValue("@Address", this.txtAddressAS.Text);
-                cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("There is an error in your input: " + exc.Message);
-            }
-        }
-
         private int CalculateAge(DateTime birthDate)
         {
             DateTime today = DateTime.Today;
@@ -127,14 +76,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (birthDate.Date > today.AddYears(-age))
                 age--;
             return age;
-        }
-
-        private void btnCancelAB_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("This will Remove you all unsaved data", "Are you sure to perform this??", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                this.Close();
-            }
         }
 
 
@@ -194,30 +135,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             yPos += 25;
 
 
-        }
-
-        private void btnPrintAS_Click(object sender, EventArgs e)
-        {
-            if (!IsValidToSave())
-            {
-                MessageBox.Show("Please fill all the information");
-                return;
-            }
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
-
-
-            if (printPreviewDialog1.DialogResult == DialogResult.OK)
-            {
-                PrintDialog printDialog = new PrintDialog();
-                printDialog.Document = printDocument1;
-
-
-                if (printDialog.ShowDialog() == DialogResult.OK)
-                {
-                    printDocument1.Print();
-                }
-            }
         }
 
         
