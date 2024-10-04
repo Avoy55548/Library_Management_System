@@ -51,7 +51,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select * from Users where UserType=3 AND Enroll = '" + this.txtEnrollNumberIsB.Text + "'";
+                cmd.CommandText = "select * from Users where UserType=3 AND Enroll = '" + this.txtEnrollNumberIsB.Text + "'"; //UserType=3 for student
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
