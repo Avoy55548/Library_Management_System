@@ -21,7 +21,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void IssueBooks_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -47,11 +47,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
                 //String eid = txtEnrollNumberIsB.Text;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select * from Student where enroll = '" + this.txtEnrollNumberIsB.Text + "'";
+                cmd.CommandText = "select * from Users where UserType=3 AND Enroll = '" + this.txtEnrollNumberIsB.Text + "'";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -96,11 +96,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 if (cmbBookNameIsB.SelectedIndex != -1 && count <= 2)
                 {
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+                    con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
                     con.Open();
-                    cmd.CommandText = "insert into IRBook(Stu_enroll,Stu_name,PhoneNo, Email, Address, Book_name, Book_issue_date) values ('" + this.txtEnrollNumberIsB.Text + "', '" + this.txtStudentNameIsB.Text + "'," + this.txtPhoneNumberIsB.Text + ",'" + this.txtEmailIsB.Text + "','" + this.txtAddressIsB.Text + "', '" + this.cmbBookNameIsB.Text + "','" + this.dtpIssueDateIsB.Text + "')";
+                    cmd.CommandText = @"
+                INSERT INTO IRBook (Stu_enroll, Stu_name, PhoneNo, Email, Address, Book_name, Book_issue_date) 
+                VALUES (@Enroll, @Name, @Phone, @Email, @Address, @BookName, @IssueDate)";
+
+                    // Add parameters to the SQL command
+                    cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNumberIsB.Text); // Enrollment number
+                    cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text); // Student name
+                    cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text); // Phone number
+                    cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text); // Email
+                    cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text); // Address
+                    cmd.Parameters.AddWithValue("@BookName", this.cmbBookNameIsB.Text); // Book name
+                    cmd.Parameters.AddWithValue("@IssueDate", this.dtpIssueDateIsB.Value); // DatePicker value
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Book Issued", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
