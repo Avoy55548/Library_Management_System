@@ -27,7 +27,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             InitializeComponent();
 
 
-            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);//Handles email regular expression
+            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
 
 
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
@@ -38,7 +38,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void txtEmailAS_Validating(object sender, CancelEventArgs e)
         {
             
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";//Regular Email Enpression
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
 
             if (!Regex.IsMatch(txtEmailAS.Text, emailPattern))
@@ -95,7 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Open();
 
-                //Insert query  which has been updated for a single user table
+                
                 cmd.CommandText = "INSERT INTO Users (UserName,Password, Enroll, Contact, Email, Address, DOB,Gender,UserType) VALUES (@Name,@Password , @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Gender,3)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                 cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
@@ -142,7 +142,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnClearAS_Click(object sender, EventArgs e)
         {
-            //this is for cleaning all the txtbox
+            
             this.txtStudentNameAS.Clear();
             this.txtPasswordAS.Clear();
             this.txtEnrollNoAS.Clear();
@@ -226,10 +226,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void dtpDateOfBirthAS_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void AddStudentInfo_Load(object sender, EventArgs e)
         {
