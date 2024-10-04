@@ -77,14 +77,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void dgvIssueBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle cell content click event if necessary
-        }
-
-        private void dgvReturnBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle cell content click event if necessary
-        }
+  
+       
     }
 }
