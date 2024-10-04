@@ -10,15 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM
+
 {
     public partial class ViewBookInfo : Form
+
     {
         public ViewBookInfo()
         {
             InitializeComponent();
         }
 
+
         private void ViewBookInfo_Load(object sender, EventArgs e)
+        
         {
             pnlURViewBooks.Visible = false;
 
@@ -60,6 +64,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     BookID = int.Parse(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
                     //MessageBox.Show(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
                 }
+
                 pnlURViewBooks.Visible = true;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
