@@ -43,7 +43,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbBookNameIsB = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEnterIsB = new System.Windows.Forms.Label();
             this.txtEnrollNumberIsB = new System.Windows.Forms.TextBox();
@@ -213,22 +212,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPrice.TabIndex = 34;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTotal
-            // 
-            this.txtTotal.BackColor = System.Drawing.Color.Linen;
-            this.txtTotal.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(176, 335);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(178, 22);
-            this.txtTotal.TabIndex = 38;
-            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.cmbBookNameIsB);
@@ -406,7 +392,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.ComboBox cmbBookNameIsB;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEnterIsB;
         private System.Windows.Forms.TextBox txtEnrollNumberIsB;
