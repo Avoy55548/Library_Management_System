@@ -68,7 +68,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 txtBookQuantityVB.Text = ds.Tables[0].Rows[0][5].ToString();
 
             }
-           
+            catch (Exception exc)
+            {
+                MessageBox.Show("There is an error in your input: " + exc.Message);
+            }
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
