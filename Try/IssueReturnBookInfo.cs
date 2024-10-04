@@ -42,6 +42,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 // Business logic to calculate fine for each book and update the database
                 foreach (DataRow row in ds.Tables[0].Rows)
 
+
                 {
                     DateTime issueDate = DateTime.Parse(row["Book_issue_date"].ToString());
                     DateTime returnDate = DateTime.Parse(row["Book_return_date"].ToString());
@@ -50,11 +51,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     int daysOverdue = (returnDate - issueDate).Days - 7; // 7 days allowed
                     int fine = 0;
 
+
                     // If overdue, calculate fine
                     if (daysOverdue > 0)
                     {
                         fine = daysOverdue * 20; // 20 Taka per day
                     }
+
 
                     // Update the fine in the IRBook table
                     cmd.CommandText = "UPDATE IRBook SET Fine = @Fine WHERE BID = @BID";
@@ -62,7 +65,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Fine", fine);
                     cmd.Parameters.AddWithValue("@BID", row["BID"]);
                     cmd.ExecuteNonQuery(); // Execute the update command
-                }
+                    }
+
 
                 // Now that fines are updated, retrieve the updated data and show in DataGridView
                 cmd.CommandText = "SELECT * FROM IRBook WHERE Book_return_date IS NOT NULL";
@@ -70,16 +74,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 DataSet ds1 = new DataSet();
                 da1.Fill(ds1);
                 dgvReturnBooksInfo.DataSource = ds1.Tables[0]; // Display the updated table
-
                 con.Close();
             }
 
-            //if that was error 
+            
+            //if that was error & show that with the message
 
           catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
+
         }
 
         private void dgvIssueBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
