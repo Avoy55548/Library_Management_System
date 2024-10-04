@@ -75,6 +75,23 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
+                txtStudentNameIsB.ReadOnly = true;
+
+
+                txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtPhoneNumberIsB.ReadOnly = true;
+
+
+                txtEmailIsB.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtEmailIsB.ReadOnly = true;
+
+
+                txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtAddressIsB.ReadOnly = true;
+            }
         }
 
         private void ClearAll()
