@@ -27,7 +27,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             InitializeComponent();
 
 
-            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
+            this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);//Handles email regular expression
 
 
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
@@ -37,8 +37,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void txtEmailAS_Validating(object sender, CancelEventArgs e)
         {
-
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";//Regular Email Enpression
 
 
             if (!Regex.IsMatch(txtEmailAS.Text, emailPattern))
