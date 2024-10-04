@@ -45,7 +45,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                     // Calculate the number of days overdue
                     int daysOverdue = (returnDate - issueDate).Days - 7; // 7 days allowed
-
                     int fine = 0;
 
                     // If overdue, calculate fine
