@@ -30,14 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            if (ds.Tables[0].Rows.Count != 0)
-            {
-                dgvReturnBook.DataSource = ds.Tables[0];
-            }
-            else
-            {
-                MessageBox.Show("Invalid ID or no Book Issued", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         String bdate;
