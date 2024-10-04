@@ -20,8 +20,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
+        private PrintDocument printDocument1 = new PrintDocument(); 
+        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); 
         public AddStudentInfo()
         {
             InitializeComponent();
