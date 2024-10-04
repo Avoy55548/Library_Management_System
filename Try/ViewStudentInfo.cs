@@ -33,7 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             cmd.Connection = con;
 
 
-            cmd.CommandText = "SELECT * FROM Users  where UserType=3";
+            cmd.CommandText = "SELECT * FROM Users  where UserType=3"; //UserType=3 for student
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
