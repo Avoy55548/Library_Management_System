@@ -58,6 +58,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSearchViewStudent = new System.Windows.Forms.TextBox();
             this.lblNameViewStudentInfo = new System.Windows.Forms.Label();
             this.dgvViewStudent = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbGenderAS = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlURViewStudent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -96,7 +98,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtPasswordAS
             // 
-            this.txtPasswordAS.Location = new System.Drawing.Point(199, 218);
+            this.txtPasswordAS.Location = new System.Drawing.Point(200, 214);
             this.txtPasswordAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPasswordAS.Name = "txtPasswordAS";
             this.txtPasswordAS.Size = new System.Drawing.Size(255, 22);
@@ -104,6 +106,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // pnlURViewStudent
             // 
+            this.pnlURViewStudent.Controls.Add(this.cmbGenderAS);
+            this.pnlURViewStudent.Controls.Add(this.label5);
             this.pnlURViewStudent.Controls.Add(this.txtDateOfBirth);
             this.pnlURViewStudent.Controls.Add(this.label3);
             this.pnlURViewStudent.Controls.Add(this.txtPasswordAS);
@@ -131,7 +135,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 222);
+            this.label2.Location = new System.Drawing.Point(23, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 30;
@@ -378,6 +382,28 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.dgvViewStudent.Size = new System.Drawing.Size(1001, 294);
             this.dgvViewStudent.TabIndex = 12;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 269);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 25);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Gender";
+            // 
+            // cmbGenderAS
+            // 
+            this.cmbGenderAS.FormattingEnabled = true;
+            this.cmbGenderAS.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
+            this.cmbGenderAS.Location = new System.Drawing.Point(200, 269);
+            this.cmbGenderAS.Name = "cmbGenderAS";
+            this.cmbGenderAS.Size = new System.Drawing.Size(256, 24);
+            this.cmbGenderAS.TabIndex = 37;
+            // 
             // ViewStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -434,5 +460,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox txtSearchViewStudent;
         private System.Windows.Forms.Label lblNameViewStudentInfo;
         private System.Windows.Forms.DataGridView dgvViewStudent;
+        private System.Windows.Forms.ComboBox cmbGenderAS;
+        private System.Windows.Forms.Label label5;
     }
 }

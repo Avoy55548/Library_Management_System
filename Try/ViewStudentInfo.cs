@@ -14,7 +14,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class ViewStudentInfo : Form
     {
-        private readonly string connectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
         private int StdID;
         private Int64 rowid;
 
@@ -22,6 +22,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
         }
+
 
         private void ViewStudentInfo_Load(object sender, EventArgs e)
         {
@@ -31,12 +32,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "SELECT * FROM Student";
+
+            cmd.CommandText = "SELECT * FROM Users  where UserType=3";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
 
             dgvViewStudent.DataSource = ds.Tables[0];
+
         }
 
         // Method to refresh student information
@@ -67,7 +70,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM Student where StudentID = " + StdID + "";
+                cmd.CommandText = "SELECT * FROM Users where Id = " + StdID + " AND UserType=3";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -75,12 +78,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
 
                 txtStudentNameAS.Text = ds.Tables[0].Rows[0][1].ToString();
-                txtEnrollNoAS.Text = ds.Tables[0].Rows[0][2].ToString();
-                txtPhoneNumberAS.Text = ds.Tables[0].Rows[0][3].ToString();
-                txtEmailAS.Text = ds.Tables[0].Rows[0][4].ToString();
-                txtAddressAS.Text = ds.Tables[0].Rows[0][5].ToString();
-                txtDateOfBirth.Text = DateTime.Parse(ds.Tables[0].Rows[0][6].ToString()).ToShortDateString(); // Date of Birth field
-                txtPasswordAS.Text = ds.Tables[0].Rows[0][7].ToString();
+                txtEnrollNoAS.Text = ds.Tables[0].Rows[0][3].ToString();
+                txtPhoneNumberAS.Text = ds.Tables[0].Rows[0][4].ToString();
+                txtEmailAS.Text = ds.Tables[0].Rows[0][5].ToString();
+                txtAddressAS.Text = ds.Tables[0].Rows[0][6].ToString();
+                txtDateOfBirth.Text = DateTime.Parse(ds.Tables[0].Rows[0][7].ToString()).ToShortDateString(); // Date of Birth field
+                txtPasswordAS.Text = ds.Tables[0].Rows[0][2].ToString();
+                cmbGenderAS.Text = ds.Tables[0].Rows[0][8].ToString();
+
 
             }
             catch (Exception exc)
@@ -123,7 +128,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "update Student set Name = @Name, enroll = @Enroll, Contact = @Contact, email = @Email, address = @Address, Date_Of_Birth = @DateOfBirth, Password = @Password where StudentID = @StudentID";
+                    cmd.CommandText = "update Users set UserName = @Name, Enroll = @Enroll, Contact = @Contact, Email = @Email, Address = @Address, DOB = @DateOfBirth, Password = @Password, Gender = @Gender where Id = @ID";
 
                     cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                     cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNoAS.Text);
@@ -132,7 +137,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Address", this.txtAddressAS.Text);
                     cmd.Parameters.AddWithValue("@DateOfBirth", dob); // Use parsed DateTime value
                     cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
-                    cmd.Parameters.AddWithValue("@StudentID", rowid);
+                    cmd.Parameters.AddWithValue("@Gender", cmbGenderAS.Text);
+                    cmd.Parameters.AddWithValue("@ID", rowid);
 
                     con.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -160,7 +166,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Student", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Users  where UserType=3", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -195,7 +201,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                         SqlCommand cmd = new SqlCommand();
                         cmd.Connection = con;
 
-                        cmd.CommandText = "delete from Student where StudentID = @StudentID";
+                        cmd.CommandText = "delete from Users where Id = @StudentID";
                         cmd.Parameters.AddWithValue("@StudentID", rowid);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
@@ -227,7 +233,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM Student where Name LIKE '" + txtSearchViewStudent.Text + "%'";
+                cmd.CommandText = "SELECT * FROM Users where   UserType=3  AND UserName LIKE '" + txtSearchViewStudent.Text + "%' ";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -241,7 +247,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM Student";
+                cmd.CommandText = "SELECT * FROM Users where UserType=3";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -250,11 +256,23 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void pnlURViewStudent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPasswordAS_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
 
         // The unchanged methods below
 
     }
 }
+
