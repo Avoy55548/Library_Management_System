@@ -71,6 +71,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
+            cmd.CommandText = "select * from Users where UserType=3  AND  Enroll = '" + this.txtEnrollNumberIsB.Text + "'";
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
         }
 
         private void ClearAll()
