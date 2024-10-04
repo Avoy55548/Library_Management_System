@@ -42,7 +42,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         }
 
-        // Method to refresh student information
+        // Method to refresh student info
         private void btnRefreshViewStudent_Click(object sender, EventArgs e)
         {
             txtSearchViewStudent.Clear();
