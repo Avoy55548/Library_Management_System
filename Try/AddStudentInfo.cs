@@ -20,8 +20,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
+       
         public AddStudentInfo()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
 
 
-            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
+            
         }
 
 
@@ -90,51 +89,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddressAS.Clear();
         }
 
-        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {
+       
 
-            Font printFont = new Font("Arial", 12);
-            Brush printBrush = Brushes.Black;
-
-
-            e.Graphics.DrawString("Student Name: " + txtStudentNameAS.Text, printFont, printBrush, 100, 100);
-            e.Graphics.DrawString("Enroll Number: " + txtEnrollNoAS.Text, printFont, printBrush, 100, 130);
-            e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAS.Text, printFont, printBrush, 100, 160);
-            e.Graphics.DrawString("Address: " + txtAddressAS.Text, printFont, printBrush, 100, 190);
-            e.Graphics.DrawString("Email: " + txtEmailAS.Text, printFont, printBrush, 100, 220);
-            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, printFont, printBrush, 100, 250);
-
-
-
-
-        }
-
-        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Font font = new Font("Times New Roman", 20);
-            float yPos = 100;
-            int leftMargin = 50;
-
-
-            g.DrawString("Membership Card", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
-            yPos += 40;
-
-
-            g.DrawString("Student Name:  " + txtStudentNameAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Enroll Number: " + txtEnrollNoAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Phone Number: " + txtPhoneNumberAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Address: " + txtAddressAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Email: " + txtEmailAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-
-
+        
         }
 
         
