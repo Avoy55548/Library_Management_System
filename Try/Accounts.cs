@@ -43,7 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void Accounts_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -66,32 +66,39 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnSearchIsB_Click(object sender, EventArgs e)
         {
-
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from Users where UserType=3  AND  Enroll = '" + this.txtEnrollNumberIsB.Text + "'";
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            if (ds.Tables[0].Rows.Count != 0)
+            if (this.txtEnrollNumberIsB.Text != "")
             {
-                txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
-                txtStudentNameIsB.ReadOnly = true;
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "select * from Users where UserType=3  AND  Enroll = '" + this.txtEnrollNumberIsB.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
 
 
-                txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][3].ToString();
-                txtPhoneNumberIsB.ReadOnly = true;
+
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
+                    txtStudentNameIsB.ReadOnly = true;
 
 
-                txtEmailIsB.Text = ds.Tables[0].Rows[0][4].ToString();
-                txtEmailIsB.ReadOnly = true;
+                    txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][3].ToString();
+                    txtPhoneNumberIsB.ReadOnly = true;
 
 
-                txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
-                txtAddressIsB.ReadOnly = true;
-                 else
+                    txtEmailIsB.Text = ds.Tables[0].Rows[0][4].ToString();
+                    txtEmailIsB.ReadOnly = true;
+
+
+                    txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
+                    txtAddressIsB.ReadOnly = true;
+                }
+                else
                 {
                     this.ClearAll();
                     MessageBox.Show("Invalid Enrollment Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -219,6 +226,30 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            if (!IsValidToSave())
+            {
+                MessageBox.Show("Please fill all the information");
+                return;
+            }
+            printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
+            printPreviewDialog1.ShowDialog(); // Show the print preview
+
+            // If user confirms from preview, proceed to print
+            if (printPreviewDialog1.DialogResult == DialogResult.OK)
+            {
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.Document = printDocument1;
+
+                // Show print dialog
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.Print();
+                }
+            }
+        }
+
+        private void btnBuyAC_Click(object sender, EventArgs e)
+        {
             try
             {
                 if (!IsValidToSave())
@@ -250,11 +281,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-        }
-
-        private void btnBuyAC_Click(object sender, EventArgs e)
-        {
-
+            catch (Exception exc)
+            {
+                MessageBox.Show("There is an error in your input: " + exc.Message);
+            }
         }
     }
 }
