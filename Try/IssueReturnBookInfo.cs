@@ -23,7 +23,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -70,14 +70,20 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Close();
             }
-
             catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
         }
 
-  
-       
+        private void dgvIssueBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Handle cell content click event if necessary
+        }
+
+        private void dgvReturnBooksInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Handle cell content click event if necessary
+        }
     }
 }
