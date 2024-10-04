@@ -105,7 +105,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 VALUES (@Enroll, @Name, @Phone, @Email, @Address, @BookName, @IssueDate)";
 
                     // Add parameters to the SQL command
-                    cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNumberIsB.Text); // Enrollment number
+                    cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNumberIsB.Text); 
                     cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text); // Student name
                     cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text); // Phone number
                     cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text); // Email
