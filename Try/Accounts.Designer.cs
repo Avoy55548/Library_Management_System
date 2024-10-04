@@ -43,7 +43,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbBookNameIsB = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEnterIsB = new System.Windows.Forms.Label();
@@ -214,17 +213,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPrice.TabIndex = 34;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(63, 341);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(46, 20);
-            this.lblTotal.TabIndex = 36;
-            this.lblTotal.Text = "Total";
-            // 
             // txtTotal
             // 
             this.txtTotal.BackColor = System.Drawing.Color.Linen;
@@ -241,7 +229,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
             this.panel3.Controls.Add(this.txtTotal);
-            this.panel3.Controls.Add(this.lblTotal);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.cmbBookNameIsB);
@@ -419,7 +406,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.ComboBox cmbBookNameIsB;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEnterIsB;
