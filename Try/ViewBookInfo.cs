@@ -84,18 +84,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             if (txtSearchViewBook.Text != "")
 
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "SELECT * FROM Book where Name LIKE '" + txtSearchViewBook.Text + "%'";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                dgvViewBooks.DataSource = ds.Tables[0];
             }
             else
             {
