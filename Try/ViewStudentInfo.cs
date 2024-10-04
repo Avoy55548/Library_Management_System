@@ -258,13 +258,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         
 
-        
-
-        private void txtPasswordAS_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
        
 
     }
