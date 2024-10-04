@@ -91,6 +91,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
                 txtAddressIsB.ReadOnly = true;
+                 else
+                {
+                    this.ClearAll();
+                    MessageBox.Show("Invalid Enrollment Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
