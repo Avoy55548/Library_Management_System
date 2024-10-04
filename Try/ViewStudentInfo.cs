@@ -266,7 +266,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         }
 
-        private void txtPasswordAS_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void txtPasswordAS_MaskInputRejected(object sender, MaskInputRejectedEventArgs e) //opened due to clicking
         {
 
         }
