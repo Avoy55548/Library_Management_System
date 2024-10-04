@@ -66,77 +66,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-        private int CalculateAge(DateTime birthDate)
-        {
-            DateTime today = DateTime.Today;
-            int age = today.Year - birthDate.Year;
-
-
-
-            if (birthDate.Date > today.AddYears(-age))
-                age--;
-            return age;
-        }
-
-
-        private void btnClearAS_Click(object sender, EventArgs e)
-        {
-            this.txtStudentNameAS.Clear();
-            this.txtPasswordAS.Clear();
-            this.txtEnrollNoAS.Clear();
-            this.txtPhoneNumberAS.Clear();
-            this.dtpDateOfBirthAS.Text = "";
-            this.txtEmailAS.Clear();
-            this.txtAddressAS.Clear();
-        }
-
-        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {
-
-            Font printFont = new Font("Arial", 12);
-            Brush printBrush = Brushes.Black;
-
-
-            e.Graphics.DrawString("Student Name: " + txtStudentNameAS.Text, printFont, printBrush, 100, 100);
-            e.Graphics.DrawString("Enroll Number: " + txtEnrollNoAS.Text, printFont, printBrush, 100, 130);
-            e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAS.Text, printFont, printBrush, 100, 160);
-            e.Graphics.DrawString("Address: " + txtAddressAS.Text, printFont, printBrush, 100, 190);
-            e.Graphics.DrawString("Email: " + txtEmailAS.Text, printFont, printBrush, 100, 220);
-            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, printFont, printBrush, 100, 250);
-
-
-
-
-        }
-
-        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Font font = new Font("Times New Roman", 20);
-            float yPos = 100;
-            int leftMargin = 50;
-
-
-            g.DrawString("Membership Card", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
-            yPos += 40;
-
-
-            g.DrawString("Student Name:  " + txtStudentNameAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Enroll Number: " + txtEnrollNoAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Phone Number: " + txtPhoneNumberAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Address: " + txtAddressAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Email: " + txtEmailAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-
-
-        }
-
         private void btnSaveAB_Click(object sender, EventArgs e)
         {
             try
@@ -188,6 +117,127 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
+        }
+
+        private int CalculateAge(DateTime birthDate)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - birthDate.Year;
+
+
+
+            if (birthDate.Date > today.AddYears(-age))
+                age--;
+            return age;
+        }
+
+        private void btnCancelAB_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This will Remove you all unsaved data", "Are you sure to perform this??", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+
+        private void btnClearAS_Click(object sender, EventArgs e)
+        {
+            this.txtStudentNameAS.Clear();
+            this.txtPasswordAS.Clear();
+            this.txtEnrollNoAS.Clear();
+            this.txtPhoneNumberAS.Clear();
+            this.dtpDateOfBirthAS.Text = "";
+            this.txtEmailAS.Clear();
+            this.txtAddressAS.Clear();
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+            Font printFont = new Font("Arial", 12);
+            Brush printBrush = Brushes.Black;
+
+
+            e.Graphics.DrawString("Student Name: " + txtStudentNameAS.Text, printFont, printBrush, 100, 100);
+            e.Graphics.DrawString("Enroll Number: " + txtEnrollNoAS.Text, printFont, printBrush, 100, 130);
+            e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAS.Text, printFont, printBrush, 100, 160);
+            e.Graphics.DrawString("Address: " + txtAddressAS.Text, printFont, printBrush, 100, 190);
+            e.Graphics.DrawString("Email: " + txtEmailAS.Text, printFont, printBrush, 100, 220);
+            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, printFont, printBrush, 100, 250);
+            e.Graphics.DrawString("Gender: " + cmbGenderAS.Text, printFont, printBrush, 100, 250);
+
+
+
+
+        }
+
+        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Font font = new Font("Times New Roman", 20);
+            float yPos = 100;
+            int leftMargin = 50;
+
+
+            g.DrawString("Membership Card", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+
+            g.DrawString("Student Name:  " + txtStudentNameAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Enroll Number: " + txtEnrollNoAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Phone Number: " + txtPhoneNumberAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Address: " + txtAddressAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Email: " + txtEmailAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Gender: " + cmbGenderAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+
+
+        }
+
+        private void btnPrintAS_Click(object sender, EventArgs e)
+        {
+            if (!IsValidToSave())
+            {
+                MessageBox.Show("Please fill all the information");
+                return;
+            }
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+
+
+            if (printPreviewDialog1.DialogResult == DialogResult.OK)
+            {
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.Document = printDocument1;
+
+
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.Print();
+                }
+            }
+        }
+
+        private void dtpDateOfBirthAS_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddStudentInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGenderAS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
