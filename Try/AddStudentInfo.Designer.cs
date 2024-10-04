@@ -204,6 +204,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnSaveAB.TabIndex = 23;
             this.btnSaveAB.Text = "Save";
             this.btnSaveAB.UseVisualStyleBackColor = false;
+            this.btnSaveAB.Click += new System.EventHandler(this.btnSaveAB_Click);
             // 
             // lblStudentNameAS
             // 

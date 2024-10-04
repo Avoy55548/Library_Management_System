@@ -20,7 +20,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-       
+        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
+        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
         public AddStudentInfo()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAS.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAS_Validating);
 
 
-            
+            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
         }
 
 
@@ -89,11 +90,104 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddressAS.Clear();
         }
 
-       
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
 
-        
+            Font printFont = new Font("Arial", 12);
+            Brush printBrush = Brushes.Black;
+
+
+            e.Graphics.DrawString("Student Name: " + txtStudentNameAS.Text, printFont, printBrush, 100, 100);
+            e.Graphics.DrawString("Enroll Number: " + txtEnrollNoAS.Text, printFont, printBrush, 100, 130);
+            e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAS.Text, printFont, printBrush, 100, 160);
+            e.Graphics.DrawString("Address: " + txtAddressAS.Text, printFont, printBrush, 100, 190);
+            e.Graphics.DrawString("Email: " + txtEmailAS.Text, printFont, printBrush, 100, 220);
+            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, printFont, printBrush, 100, 250);
+
+
+
+
         }
 
-        
+        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Font font = new Font("Times New Roman", 20);
+            float yPos = 100;
+            int leftMargin = 50;
+
+
+            g.DrawString("Membership Card", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+
+            g.DrawString("Student Name:  " + txtStudentNameAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Enroll Number: " + txtEnrollNoAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Phone Number: " + txtPhoneNumberAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Address: " + txtAddressAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Email: " + txtEmailAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+            g.DrawString("Date Of Birth: " + dtpDateOfBirthAS.Text, font, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+
+
+        }
+
+        private void btnSaveAB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsValidToSave())
+                {
+                    MessageBox.Show("Please fill all the information");
+                    return;
+                }
+
+
+                DateTime dateOfBirth = DateTime.Parse(dtpDateOfBirthAS.Text);
+                int age = CalculateAge(dateOfBirth);
+
+
+                if (age < 8)
+                {
+                    MessageBox.Show("You are underage. Age must be 8 or above.", "Underage", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                con.Open();
+
+
+                cmd.CommandText = "INSERT INTO Users (UserName,Password, Enroll, Contact, Email, Address, DOB,Gender,UserType) VALUES (@Name,@Password , @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Gender,3)";
+                cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
+                cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
+                cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNoAS.Text);
+                cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAS.Text);
+                cmd.Parameters.AddWithValue("@Email", this.txtEmailAS.Text);
+                cmd.Parameters.AddWithValue("@Address", this.txtAddressAS.Text);
+                cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                cmd.Parameters.AddWithValue("@Gender", cmbGenderAS.Text);
+
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("There is an error in your input: " + exc.Message);
+            }
+        }
     }
 }
