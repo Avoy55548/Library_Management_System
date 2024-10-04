@@ -95,6 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
+
         {
             pnlURViewBooks.Visible = false;
         }
@@ -118,6 +119,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
 
             else
+
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
@@ -174,10 +176,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private void pnlURViewBooks_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
