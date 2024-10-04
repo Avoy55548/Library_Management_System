@@ -20,8 +20,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private PrintDocument printDocument1 = new PrintDocument(); 
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); 
+        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
+        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
         public AddStudentInfo()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void txtEmailAS_Validating(object sender, CancelEventArgs e)
         {
-            
+
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
 
@@ -95,7 +95,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Open();
 
-                
+
                 cmd.CommandText = "INSERT INTO Users (UserName,Password, Enroll, Contact, Email, Address, DOB,Gender,UserType) VALUES (@Name,@Password , @Enroll, @Contact, @Email, @Address, @DateOfBirth,@Gender,3)";
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                 cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
@@ -142,7 +142,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnClearAS_Click(object sender, EventArgs e)
         {
-            
             this.txtStudentNameAS.Clear();
             this.txtPasswordAS.Clear();
             this.txtEnrollNoAS.Clear();
@@ -226,9 +225,19 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-       
+        private void dtpDateOfBirthAS_ValueChanged(object sender, EventArgs e)
+        {
 
-       
+        }
 
+        private void AddStudentInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGenderAS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
