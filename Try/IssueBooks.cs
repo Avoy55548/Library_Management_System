@@ -45,7 +45,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             if (this.txtEnrollNumberIsB.Text != "")
             {
-                //String eid = txtEnrollNumberIsB.Text;
+                
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
