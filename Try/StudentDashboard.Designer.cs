@@ -1,6 +1,6 @@
 ﻿namespace LIBRARY_MANAGEMENT_SYSTEM
 {
-    partial class IssueReturnBookInfo
+    partial class StudentDashboard
     {
         /// <summary>
         /// Required designer variable.

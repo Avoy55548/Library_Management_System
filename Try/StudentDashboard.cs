@@ -12,7 +12,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class StudentDashboard : Form
     {
-
+        //here btn for studentdashboard
         public StudentDashboard()
         {
             InitializeComponent();
@@ -21,18 +21,21 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnBH_Click(object sender, EventArgs e)
+
         {
             BorrowHistory BH = new BorrowHistory();
             BH.Show();
         }
 
         private void btnViewBooks_Click(object sender, EventArgs e)
+
         {
             ViewBookInfo vb = new ViewBookInfo();
             vb.Show();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
+
         {
             Login l = new Login();
             l.Show();
@@ -40,6 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+
         {
 
         }
