@@ -77,7 +77,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 txtBookQuantityVB.Text = ds.Tables[0].Rows[0][5].ToString();
 
             }
-            catch (Exception exc)
+
+         catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
@@ -88,6 +89,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             pnlURViewBooks.Visible = false;
         }
+
 
         private void txtSearchViewBook_TextChanged(object sender, EventArgs e)
         {
@@ -105,6 +107,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 dgvViewBooks.DataSource = ds.Tables[0];
             }
+
             else
             {
                 SqlConnection con = new SqlConnection();
