@@ -43,6 +43,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbBookNameIsB = new System.Windows.Forms.ComboBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.btnBuyAC = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEnterIsB = new System.Windows.Forms.Label();
             this.txtEnrollNumberIsB = new System.Windows.Forms.TextBox();
@@ -88,7 +89,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblEmailIsB.AutoSize = true;
             this.lblEmailIsB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailIsB.Location = new System.Drawing.Point(63, 132);
+            this.lblEmailIsB.Location = new System.Drawing.Point(54, 129);
             this.lblEmailIsB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmailIsB.Name = "lblEmailIsB";
             this.lblEmailIsB.Size = new System.Drawing.Size(51, 20);
@@ -99,7 +100,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblAddressIsB.AutoSize = true;
             this.lblAddressIsB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressIsB.Location = new System.Drawing.Point(63, 180);
+            this.lblAddressIsB.Location = new System.Drawing.Point(54, 180);
             this.lblAddressIsB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddressIsB.Name = "lblAddressIsB";
             this.lblAddressIsB.Size = new System.Drawing.Size(69, 20);
@@ -110,7 +111,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.txtPhoneNumberIsB.BackColor = System.Drawing.Color.Linen;
             this.txtPhoneNumberIsB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumberIsB.Location = new System.Drawing.Point(176, 80);
+            this.txtPhoneNumberIsB.Location = new System.Drawing.Point(176, 82);
             this.txtPhoneNumberIsB.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumberIsB.Name = "txtPhoneNumberIsB";
             this.txtPhoneNumberIsB.ReadOnly = true;
@@ -122,7 +123,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.txtEmailIsB.BackColor = System.Drawing.Color.Linen;
             this.txtEmailIsB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailIsB.Location = new System.Drawing.Point(176, 127);
+            this.txtEmailIsB.Location = new System.Drawing.Point(176, 129);
             this.txtEmailIsB.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailIsB.Name = "txtEmailIsB";
             this.txtEmailIsB.ReadOnly = true;
@@ -134,7 +135,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.txtAddressIsB.BackColor = System.Drawing.Color.Linen;
             this.txtAddressIsB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressIsB.Location = new System.Drawing.Point(176, 175);
+            this.txtAddressIsB.Location = new System.Drawing.Point(176, 180);
             this.txtAddressIsB.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddressIsB.Name = "txtAddressIsB";
             this.txtAddressIsB.ReadOnly = true;
@@ -157,7 +158,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBooksNameIsB.AutoSize = true;
             this.lblBooksNameIsB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBooksNameIsB.Location = new System.Drawing.Point(63, 226);
+            this.lblBooksNameIsB.Location = new System.Drawing.Point(54, 233);
             this.lblBooksNameIsB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBooksNameIsB.Name = "lblBooksNameIsB";
             this.lblBooksNameIsB.Size = new System.Drawing.Size(100, 20);
@@ -168,7 +169,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(63, 270);
+            this.lblPrice.Location = new System.Drawing.Point(60, 276);
             this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(45, 20);
@@ -181,7 +182,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbBookNameIsB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBookNameIsB.Font = new System.Drawing.Font("Book Antiqua", 9F);
             this.cmbBookNameIsB.FormattingEnabled = true;
-            this.cmbBookNameIsB.Location = new System.Drawing.Point(176, 218);
+            this.cmbBookNameIsB.Location = new System.Drawing.Point(176, 229);
             this.cmbBookNameIsB.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBookNameIsB.Name = "cmbBookNameIsB";
             this.cmbBookNameIsB.Size = new System.Drawing.Size(178, 24);
@@ -192,7 +193,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrint.BackColor = System.Drawing.Color.Peru;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(201, 373);
+            this.btnPrint.Location = new System.Drawing.Point(279, 352);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(121, 31);
@@ -204,7 +205,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.txtPrice.BackColor = System.Drawing.Color.Linen;
             this.txtPrice.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(176, 264);
+            this.txtPrice.Location = new System.Drawing.Point(176, 278);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
@@ -212,9 +213,23 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPrice.TabIndex = 34;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnBuyAC
+            // 
+            this.btnBuyAC.BackColor = System.Drawing.Color.Peru;
+            this.btnBuyAC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuyAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyAC.Location = new System.Drawing.Point(58, 352);
+            this.btnBuyAC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuyAC.Name = "btnBuyAC";
+            this.btnBuyAC.Size = new System.Drawing.Size(121, 31);
+            this.btnBuyAC.TabIndex = 39;
+            this.btnBuyAC.Text = "Buy";
+            this.btnBuyAC.UseVisualStyleBackColor = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel3.Controls.Add(this.btnBuyAC);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.cmbBookNameIsB);
@@ -392,6 +407,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.ComboBox cmbBookNameIsB;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Button btnBuyAC;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblEnterIsB;
         private System.Windows.Forms.TextBox txtEnrollNumberIsB;

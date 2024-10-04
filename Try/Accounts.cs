@@ -66,44 +66,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnSearchIsB_Click(object sender, EventArgs e)
         {
-            if (this.txtEnrollNumberIsB.Text != "")
-            {
 
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "select * from Student where enroll = '" + this.txtEnrollNumberIsB.Text + "'";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-
-
-                if (ds.Tables[0].Rows.Count != 0)
-                {
-                    txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
-                    txtStudentNameIsB.ReadOnly = true;
-
-
-                    txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][3].ToString();
-                    txtPhoneNumberIsB.ReadOnly = true;
-
-
-                    txtEmailIsB.Text = ds.Tables[0].Rows[0][4].ToString();
-                    txtEmailIsB.ReadOnly = true;
-
-
-                    txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
-                    txtAddressIsB.ReadOnly = true;
-                }
-                else
-                {
-                    this.ClearAll();
-                    MessageBox.Show("Invalid Enrollment Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
 
         private void ClearAll()
@@ -140,40 +103,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void cmbBookNameIsB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
 
-
-                string selectedBook = cmbBookNameIsB.SelectedItem.ToString();
-
-                double price = 0;
-
-
-
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                con.Open();
-
-
-                SqlCommand cmdBook = new SqlCommand("SELECT Price FROM Book WHERE Name = @BookName", con);
-                cmdBook.Parameters.AddWithValue("@BookName", selectedBook);
-                SqlDataReader sdrBook = cmdBook.ExecuteReader();
-
-
-                if (sdrBook.Read())
-                {
-                    txtPrice.Text = sdrBook["Price"].ToString();
-                    txtPrice.ReadOnly = true;
-                    price = Convert.ToDouble(sdrBook["Price"]);
-                }
-                sdrBook.Close();
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
 
@@ -226,65 +156,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (!IsValidToSave())
-            {
-                MessageBox.Show("Please fill all the information");
-                return;
-            }
-            printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
-            printPreviewDialog1.ShowDialog(); // Show the print preview
 
-            // If user confirms from preview, proceed to print
-            if (printPreviewDialog1.DialogResult == DialogResult.OK)
-            {
-                PrintDialog printDialog = new PrintDialog();
-                printDialog.Document = printDocument1;
-
-                // Show print dialog
-                if (printDialog.ShowDialog() == DialogResult.OK)
-                {
-                    printDocument1.Print();
-                }
-            }
         }
 
         private void btnBuyAC_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (!IsValidToSave())
-                {
-                    MessageBox.Show("Please fill all the information");
-                    return;
-                }
 
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-CI2P4KU\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                con.Open();
-
-
-                cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price)";
-                cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
-                cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
-                cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text);
-                cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text);
-                cmd.Parameters.AddWithValue("@book", this.cmbBookNameIsB.Text);
-                cmd.Parameters.AddWithValue("@Price", this.txtPrice.Text);
-
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("There is an error in your input: " + exc.Message);
-            }
         }
     }
 }
