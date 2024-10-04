@@ -45,11 +45,15 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
             dgvViewBooks.DataSource = ds.Tables[0];
         }
+
         int BookID;
         Int64 rowid;
+
         private void dgvViewBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+
         {
             try
+
             {
                 if (dgvViewBooks.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
