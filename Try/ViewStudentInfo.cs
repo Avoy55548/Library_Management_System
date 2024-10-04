@@ -166,7 +166,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Users  where UserType=3", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Users  where UserType=3", con); //UserType=3 for student
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
