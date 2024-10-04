@@ -10,29 +10,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LIBRARY_MANAGEMENT_SYSTEM
-
 {
     public partial class ViewBookInfo : Form
-
     {
         public ViewBookInfo()
         {
             InitializeComponent();
         }
 
-
         private void ViewBookInfo_Load(object sender, EventArgs e)
-        
         {
             pnlURViewBooks.Visible = false;
-
             if (Login.Type == 3)
-
             {
                 btnUpdateViewBooks.Visible = false; // Hide the Update button for students
                 btnRemoveVBI.Visible = false;       // Hide the Remove button for students
             }
-
             else
             {
                 btnUpdateViewBooks.Visible = true;
@@ -41,7 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+            con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -55,7 +48,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         int BookID;
         Int64 rowid;
         private void dgvViewBooks_CellClick(object sender, DataGridViewCellEventArgs e)
-
         {
             try
             {
@@ -64,10 +56,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     BookID = int.Parse(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
                     //MessageBox.Show(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
                 }
-
                 pnlURViewBooks.Visible = true;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -86,8 +77,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 txtBookQuantityVB.Text = ds.Tables[0].Rows[0][5].ToString();
 
             }
-
-         catch (Exception exc)
+            catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
@@ -95,18 +85,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
-
         {
             pnlURViewBooks.Visible = false;
         }
-
 
         private void txtSearchViewBook_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchViewBook.Text != "")
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -117,12 +105,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 dgvViewBooks.DataSource = ds.Tables[0];
             }
-
             else
-
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -141,7 +127,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -157,7 +143,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (MessageBox.Show("Data will be Updated. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=new;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -176,7 +162,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-      
+        private void pnlURViewBooks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
