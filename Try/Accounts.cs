@@ -227,7 +227,27 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     return;
                 }
 
-               
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                con.Open();
+
+
+                cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price)";
+                cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
+                cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
+                cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text);
+                cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text);
+                cmd.Parameters.AddWithValue("@book", this.cmbBookNameIsB.Text);
+                cmd.Parameters.AddWithValue("@Price", this.txtPrice.Text);
+
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
