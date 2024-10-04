@@ -229,9 +229,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
        
 
-        private void cmbGenderAS_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
