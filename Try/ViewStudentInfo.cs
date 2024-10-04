@@ -82,7 +82,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 txtPhoneNumberAS.Text = ds.Tables[0].Rows[0][4].ToString();
                 txtEmailAS.Text = ds.Tables[0].Rows[0][5].ToString();
                 txtAddressAS.Text = ds.Tables[0].Rows[0][6].ToString();
-                txtDateOfBirth.Text = DateTime.Parse(ds.Tables[0].Rows[0][7].ToString()).ToShortDateString(); // Date of Birth field
+                txtDateOfBirth.Text = DateTime.Parse(ds.Tables[0].Rows[0][7].ToString()).ToShortDateString();
                 txtPasswordAS.Text = ds.Tables[0].Rows[0][2].ToString();
                 cmbGenderAS.Text = ds.Tables[0].Rows[0][8].ToString();
 
