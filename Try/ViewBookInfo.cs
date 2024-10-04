@@ -60,9 +60,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
 
-                txtBookNameVB.Text = ds.Tables[0].Rows[0][1].ToString();
-                txtBookAuthorVB.Text = ds.Tables[0].Rows[0][2].ToString();
-                txtBookPublicationVB.Text = ds.Tables[0].Rows[0][3].ToString();
+               
                 txtISBNNoVB.Text = ds.Tables[0].Rows[0][4].ToString();
                 txtBookPriceVB.Text = ds.Tables[0].Rows[0][6].ToString();
                 txtBookQuantityVB.Text = ds.Tables[0].Rows[0][5].ToString();
