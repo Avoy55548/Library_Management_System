@@ -14,7 +14,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class ViewStudentInfo : Form
     {
-        private readonly string connectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True"; //readonly because it cannot be modified
         private int StdID;
         private Int64 rowid;
 
