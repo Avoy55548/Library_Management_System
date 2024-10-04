@@ -219,7 +219,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (!IsValidToSave())
+                {
+                    MessageBox.Show("Please fill all the information");
+                    return;
+                }
 
+               
+
+            }
         }
 
         private void btnBuyAC_Click(object sender, EventArgs e)
