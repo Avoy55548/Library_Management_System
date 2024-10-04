@@ -59,7 +59,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 
                 //Code to count how many books has been issued on this enrollment number
-                cmd.CommandText = "select count(Stu_enroll) from IRBook where Stu_enroll = '" + this.txtEnrollNumberIsB.Text + "'and Book_return_date is null";
+                cmd.CommandText = "select count(Stu_enroll) from IRBook where Stu_enroll = '" + this.txtEnrollNumberIsB.Text + "'and Book_return_date is null"; //UserType=3 for student
                 SqlDataAdapter da1 = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();
                 da.Fill(ds1);
