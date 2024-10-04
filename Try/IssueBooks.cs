@@ -45,7 +45,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             if (this.txtEnrollNumberIsB.Text != "")
             {
-                
+                //String eid = txtEnrollNumberIsB.Text;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
@@ -57,7 +57,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 da.Fill(ds);
 
 
-                
+                //......................................
                 //Code to count how many books has been issued on this enrollment number
                 cmd.CommandText = "select count(Stu_enroll) from IRBook where Stu_enroll = '" + this.txtEnrollNumberIsB.Text + "'and Book_return_date is null";
                 SqlDataAdapter da1 = new SqlDataAdapter(cmd);
@@ -65,7 +65,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 da.Fill(ds1);
 
                 count = int.Parse(ds1.Tables[0].Rows[0][0].ToString());
-                
+                //........................................
 
                 if (ds.Tables[0].Rows.Count != 0)
                 {
@@ -150,8 +150,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        
+        private void cmbBookNameIsB_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
