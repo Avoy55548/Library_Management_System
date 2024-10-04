@@ -111,7 +111,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text); 
                     cmd.Parameters.AddWithValue("@Address", this.txtAddressIsB.Text); 
                     cmd.Parameters.AddWithValue("@BookName", this.cmbBookNameIsB.Text); 
-                    cmd.Parameters.AddWithValue("@IssueDate", this.dtpIssueDateIsB.Value); // DatePicker value
+                    cmd.Parameters.AddWithValue("@IssueDate", this.dtpIssueDateIsB.Value); 
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Book Issued", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
