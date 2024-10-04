@@ -128,7 +128,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "update Users set UserName = @Name, Enroll = @Enroll, Contact = @Contact, Email = @Email, Address = @Address, DOB = @DateOfBirth, Password = @Password, Gender = @Gender where Id = @ID";
+                    cmd.CommandText = "update Users set UserName = @Name, Enroll = @Enroll, Contact = @Contact, Email = @Email, Address = @Address, DOB = @DateOfBirth, Password = @Password, Gender=@Gender where Id = @ID";
 
                     cmd.Parameters.AddWithValue("@Name", this.txtStudentNameAS.Text);
                     cmd.Parameters.AddWithValue("@Enroll", this.txtEnrollNoAS.Text);
@@ -137,7 +137,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Address", this.txtAddressAS.Text);
                     cmd.Parameters.AddWithValue("@DateOfBirth", dob); // Use parsed DateTime value
                     cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
-                    cmd.Parameters.AddWithValue("@Gender", cmbGenderAS.Text);
+                    cmd.Parameters.AddWithValue("@Gender", this.cmbGenderAS.Text);
                     cmd.Parameters.AddWithValue("@ID", rowid);
 
                     con.Open();
@@ -256,10 +256,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void pnlURViewStudent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPasswordAS_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        // The unchanged methods below
 
     }
 }
-
