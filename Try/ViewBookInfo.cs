@@ -84,6 +84,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
+
         {
             pnlURViewBooks.Visible = false;
         }
@@ -154,6 +155,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnRefreshViewBook_Click(object sender, EventArgs e)
+
         {
             txtSearchViewBook.Clear();
             pnlURViewBooks.Visible = false;
