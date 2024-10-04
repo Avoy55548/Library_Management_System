@@ -19,7 +19,20 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             InitializeComponent();
         }
 
-       
+        private bool IsValidToSave()
+        {
+            if (String.IsNullOrEmpty(this.txtBookPubAB.Text) || String.IsNullOrEmpty(this.txtBookAuthorAB.Text) ||
+                String.IsNullOrEmpty(this.txtBookNameAB.Text) || String.IsNullOrEmpty(this.txtISBNNoAB.Text) ||
+                String.IsNullOrEmpty(this.txtBookQuantityAB.Text) || String.IsNullOrEmpty(this.txtBookPriceAB.Text))
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+        }
 
         private void ClearAll()
         {
