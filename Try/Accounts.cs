@@ -67,6 +67,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void btnSearchIsB_Click(object sender, EventArgs e)
         {
 
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
         }
 
         private void ClearAll()
