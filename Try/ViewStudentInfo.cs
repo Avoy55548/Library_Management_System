@@ -135,7 +135,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAS.Text);
                     cmd.Parameters.AddWithValue("@Email", this.txtEmailAS.Text);
                     cmd.Parameters.AddWithValue("@Address", this.txtAddressAS.Text);
-                    cmd.Parameters.AddWithValue("@DateOfBirth", dob); // Use parsed DateTime value
+                    cmd.Parameters.AddWithValue("@DateOfBirth", dob); 
                     cmd.Parameters.AddWithValue("@Password", this.txtPasswordAS.Text);
                     cmd.Parameters.AddWithValue("@Gender", this.cmbGenderAS.Text);
                     cmd.Parameters.AddWithValue("@ID", rowid);
