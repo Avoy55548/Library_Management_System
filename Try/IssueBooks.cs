@@ -155,7 +155,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e) //opened due to clicking
         {
 
         }
