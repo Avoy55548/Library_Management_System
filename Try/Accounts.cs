@@ -133,7 +133,40 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void cmbBookNameIsB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
 
+
+                string selectedBook = cmbBookNameIsB.SelectedItem.ToString();
+
+                double price = 0;
+
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
+                con.Open();
+
+
+                SqlCommand cmdBook = new SqlCommand("SELECT Price FROM Book WHERE Name = @BookName", con);
+                cmdBook.Parameters.AddWithValue("@BookName", selectedBook);
+                SqlDataReader sdrBook = cmdBook.ExecuteReader();
+
+
+                if (sdrBook.Read())
+                {
+                    txtPrice.Text = sdrBook["Price"].ToString();
+                    txtPrice.ReadOnly = true;
+                    price = Convert.ToDouble(sdrBook["Price"]);
+                }
+                sdrBook.Close();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
