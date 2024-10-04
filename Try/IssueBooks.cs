@@ -150,7 +150,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void cmbBookNameIsB_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbBookNameIsB_SelectedIndexChanged(object sender, EventArgs e) //opened due to clicking
         {
 
         }
