@@ -53,6 +53,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblEnrollNoAS = new System.Windows.Forms.Label();
             this.txtStudentNameAS = new System.Windows.Forms.TextBox();
             this.pnlInfoAC = new System.Windows.Forms.Panel();
+            this.lblGenderAS = new System.Windows.Forms.Label();
+            this.cmbGenderAS = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitleAb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTitlePicAB)).BeginInit();
@@ -326,6 +328,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // pnlInfoAC
             // 
             this.pnlInfoAC.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlInfoAC.Controls.Add(this.cmbGenderAS);
+            this.pnlInfoAC.Controls.Add(this.lblGenderAS);
             this.pnlInfoAC.Controls.Add(this.btnClearAS);
             this.pnlInfoAC.Controls.Add(this.btnPrintAS);
             this.pnlInfoAC.Controls.Add(this.lblPasswordAS);
@@ -349,6 +353,29 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAC.Name = "pnlInfoAC";
             this.pnlInfoAC.Size = new System.Drawing.Size(362, 411);
             this.pnlInfoAC.TabIndex = 21;
+            // 
+            // lblGenderAS
+            // 
+            this.lblGenderAS.AutoSize = true;
+            this.lblGenderAS.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderAS.Location = new System.Drawing.Point(23, 299);
+            this.lblGenderAS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGenderAS.Name = "lblGenderAS";
+            this.lblGenderAS.Size = new System.Drawing.Size(58, 20);
+            this.lblGenderAS.TabIndex = 37;
+            this.lblGenderAS.Text = "Gender";
+            // 
+            // cmbGenderAS
+            // 
+            this.cmbGenderAS.FormattingEnabled = true;
+            this.cmbGenderAS.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
+            this.cmbGenderAS.Location = new System.Drawing.Point(155, 298);
+            this.cmbGenderAS.Name = "cmbGenderAS";
+            this.cmbGenderAS.Size = new System.Drawing.Size(191, 21);
+            this.cmbGenderAS.TabIndex = 38;
             // 
             // AddStudentInfo
             // 
@@ -395,6 +422,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblEnrollNoAS;
         private System.Windows.Forms.TextBox txtStudentNameAS;
         private System.Windows.Forms.Panel pnlInfoAC;
+        private System.Windows.Forms.ComboBox cmbGenderAS;
+        private System.Windows.Forms.Label lblGenderAS;
     }
 }
 
