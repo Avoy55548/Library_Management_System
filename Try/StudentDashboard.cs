@@ -47,5 +47,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
 
         }
+
+        private void StudentDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
