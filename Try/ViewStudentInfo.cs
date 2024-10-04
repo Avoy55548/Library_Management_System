@@ -261,7 +261,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         }
 
-        private void pnlURViewStudent_Paint(object sender, PaintEventArgs e)
+        private void pnlURViewStudent_Paint(object sender, PaintEventArgs e)  //opened due to clicking
         {
 
         }
