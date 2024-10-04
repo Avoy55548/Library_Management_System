@@ -228,10 +228,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
        
 
-        private void AddStudentInfo_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void cmbGenderAS_SelectedIndexChanged(object sender, EventArgs e)
         {
