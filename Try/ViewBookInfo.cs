@@ -75,6 +75,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
+
         {
             pnlURViewBooks.Visible = false;
         }
@@ -82,6 +83,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void txtSearchViewBook_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchViewBook.Text != "")
+
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
@@ -134,6 +136,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void btnRemoveVBI_Click(object sender, EventArgs e)
+
         {
             if (MessageBox.Show("Data will be deleted. Confirm?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
@@ -179,6 +182,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             cmd.Connection = con;
 
             cmd.CommandText = "SELECT * FROM Book";
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
