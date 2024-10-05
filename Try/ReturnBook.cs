@@ -99,9 +99,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.Close();
         }
 
-        private void btnCancelRB_Click(object sender, EventArgs e)
-        {
-            pnlInfoRB.Visible = false;
-        }
+       
     }
 }
