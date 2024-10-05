@@ -33,8 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
            
             
-            e.Graphics.DrawString("Librarian Name: " + txtUserIDAL.Text, printFont, printBrush, 100, 100);
-            e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAL.Text, printFont, printBrush, 100, 130);
+            
             e.Graphics.DrawString("Email: " + txtEmailAL.Text, printFont, printBrush, 100, 160);
             e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAL.Text, printFont, printBrush, 100, 190);
             e.Graphics.DrawString("Gender: " + cmbGenderAL.Text, printFont, printBrush, 100, 220);
