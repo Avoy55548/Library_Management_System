@@ -30,6 +30,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewLibrarianInfo));
+            this.cmbGenderAL = new System.Windows.Forms.ComboBox();
+            this.txtEnrollAL = new System.Windows.Forms.TextBox();
+            this.txtAddressAL = new System.Windows.Forms.TextBox();
+            this.lblGenderAL = new System.Windows.Forms.Label();
+            this.lblEnrollAL = new System.Windows.Forms.Label();
+            this.lblAddressAL = new System.Windows.Forms.Label();
             this.btnCancelVLI = new System.Windows.Forms.Button();
             this.btnRemoveVLI = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -43,7 +49,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblDateofBirthAL = new System.Windows.Forms.Label();
             this.lblEmailAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
-            this.pnlInfoVLI = new System.Windows.Forms.Panel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,23 +60,87 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlInfoVLI = new System.Windows.Forms.Panel();
             this.dgvViewLibrarian = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlInfoVLI.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlInfoVLI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewLibrarian)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cmbGenderAL
+            // 
+            this.cmbGenderAL.FormattingEnabled = true;
+            this.cmbGenderAL.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
+            this.cmbGenderAL.Location = new System.Drawing.Point(318, 344);
+            this.cmbGenderAL.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbGenderAL.Name = "cmbGenderAL";
+            this.cmbGenderAL.Size = new System.Drawing.Size(376, 24);
+            this.cmbGenderAL.TabIndex = 42;
+            // 
+            // txtEnrollAL
+            // 
+            this.txtEnrollAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnrollAL.Location = new System.Drawing.Point(319, 303);
+            this.txtEnrollAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEnrollAL.Name = "txtEnrollAL";
+            this.txtEnrollAL.Size = new System.Drawing.Size(375, 26);
+            this.txtEnrollAL.TabIndex = 41;
+            this.txtEnrollAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAddressAL
+            // 
+            this.txtAddressAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressAL.Location = new System.Drawing.Point(319, 258);
+            this.txtAddressAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddressAL.Name = "txtAddressAL";
+            this.txtAddressAL.Size = new System.Drawing.Size(375, 26);
+            this.txtAddressAL.TabIndex = 40;
+            this.txtAddressAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblGenderAL
+            // 
+            this.lblGenderAL.AutoSize = true;
+            this.lblGenderAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderAL.Location = new System.Drawing.Point(101, 341);
+            this.lblGenderAL.Name = "lblGenderAL";
+            this.lblGenderAL.Size = new System.Drawing.Size(77, 24);
+            this.lblGenderAL.TabIndex = 39;
+            this.lblGenderAL.Text = "Gender";
+            // 
+            // lblEnrollAL
+            // 
+            this.lblEnrollAL.AutoSize = true;
+            this.lblEnrollAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnrollAL.Location = new System.Drawing.Point(101, 305);
+            this.lblEnrollAL.Name = "lblEnrollAL";
+            this.lblEnrollAL.Size = new System.Drawing.Size(65, 24);
+            this.lblEnrollAL.TabIndex = 38;
+            this.lblEnrollAL.Text = "Enroll";
+            // 
+            // lblAddressAL
+            // 
+            this.lblAddressAL.AutoSize = true;
+            this.lblAddressAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressAL.Location = new System.Drawing.Point(101, 261);
+            this.lblAddressAL.Name = "lblAddressAL";
+            this.lblAddressAL.Size = new System.Drawing.Size(84, 24);
+            this.lblAddressAL.TabIndex = 37;
+            this.lblAddressAL.Text = "Address";
             // 
             // btnCancelVLI
             // 
             this.btnCancelVLI.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelVLI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelVLI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelVLI.Location = new System.Drawing.Point(755, 180);
+            this.btnCancelVLI.Location = new System.Drawing.Point(791, 258);
             this.btnCancelVLI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelVLI.Name = "btnCancelVLI";
             this.btnCancelVLI.Size = new System.Drawing.Size(160, 41);
@@ -84,7 +153,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnRemoveVLI.BackColor = System.Drawing.Color.IndianRed;
             this.btnRemoveVLI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemoveVLI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveVLI.Location = new System.Drawing.Point(755, 118);
+            this.btnRemoveVLI.Location = new System.Drawing.Point(791, 197);
             this.btnRemoveVLI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveVLI.Name = "btnRemoveVLI";
             this.btnRemoveVLI.Size = new System.Drawing.Size(160, 41);
@@ -97,7 +166,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnUpdate.BackColor = System.Drawing.Color.IndianRed;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(755, 58);
+            this.btnUpdate.Location = new System.Drawing.Point(791, 137);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(160, 41);
@@ -111,13 +180,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSalaryAL.Location = new System.Drawing.Point(319, 214);
             this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalaryAL.Name = "txtSalaryAL";
-            this.txtSalaryAL.Size = new System.Drawing.Size(376, 26);
+            this.txtSalaryAL.Size = new System.Drawing.Size(375, 26);
             this.txtSalaryAL.TabIndex = 33;
             this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtpDateOfBirthAL
             // 
-            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(320, 172);
+            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(321, 170);
             this.dtpDateOfBirthAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateOfBirthAL.Name = "dtpDateOfBirthAL";
             this.dtpDateOfBirthAL.Size = new System.Drawing.Size(376, 22);
@@ -136,7 +205,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // txtPhoneNumberAL
             // 
             this.txtPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumberAL.Location = new System.Drawing.Point(321, 117);
+            this.txtPhoneNumberAL.Location = new System.Drawing.Point(321, 115);
             this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
             this.txtPhoneNumberAL.Size = new System.Drawing.Size(373, 26);
@@ -203,27 +272,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblPasswordAL.TabIndex = 22;
             this.lblPasswordAL.Text = "Password";
             // 
-            // pnlInfoVLI
-            // 
-            this.pnlInfoVLI.Controls.Add(this.btnCancelVLI);
-            this.pnlInfoVLI.Controls.Add(this.btnRemoveVLI);
-            this.pnlInfoVLI.Controls.Add(this.btnUpdate);
-            this.pnlInfoVLI.Controls.Add(this.txtSalaryAL);
-            this.pnlInfoVLI.Controls.Add(this.dtpDateOfBirthAL);
-            this.pnlInfoVLI.Controls.Add(this.lblSalaryAL);
-            this.pnlInfoVLI.Controls.Add(this.txtPhoneNumberAL);
-            this.pnlInfoVLI.Controls.Add(this.txtEmailAL);
-            this.pnlInfoVLI.Controls.Add(this.txtPasswordAL);
-            this.pnlInfoVLI.Controls.Add(this.lblPhoneNumberAL);
-            this.pnlInfoVLI.Controls.Add(this.lblDateofBirthAL);
-            this.pnlInfoVLI.Controls.Add(this.lblEmailAL);
-            this.pnlInfoVLI.Controls.Add(this.lblPasswordAL);
-            this.pnlInfoVLI.Location = new System.Drawing.Point(5, 550);
-            this.pnlInfoVLI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlInfoVLI.Name = "pnlInfoVLI";
-            this.pnlInfoVLI.Size = new System.Drawing.Size(1028, 254);
-            this.pnlInfoVLI.TabIndex = 9;
-            // 
             // btnRemove
             // 
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -260,7 +308,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // panel3
             // 
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(0, 478);
+            this.panel3.Location = new System.Drawing.Point(0, 476);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1031, 54);
@@ -303,7 +351,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.panel2.Controls.Add(this.btnRefreshViewLibrarian);
             this.panel2.Controls.Add(this.txtSearchViewLibrarian);
             this.panel2.Controls.Add(this.lblLibrarianIDViewLibrarian);
-            this.panel2.Location = new System.Drawing.Point(0, 187);
+            this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1033, 42);
@@ -344,6 +392,33 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlInfoVLI
+            // 
+            this.pnlInfoVLI.Controls.Add(this.cmbGenderAL);
+            this.pnlInfoVLI.Controls.Add(this.txtEnrollAL);
+            this.pnlInfoVLI.Controls.Add(this.txtAddressAL);
+            this.pnlInfoVLI.Controls.Add(this.lblGenderAL);
+            this.pnlInfoVLI.Controls.Add(this.lblEnrollAL);
+            this.pnlInfoVLI.Controls.Add(this.lblAddressAL);
+            this.pnlInfoVLI.Controls.Add(this.btnCancelVLI);
+            this.pnlInfoVLI.Controls.Add(this.btnRemoveVLI);
+            this.pnlInfoVLI.Controls.Add(this.btnUpdate);
+            this.pnlInfoVLI.Controls.Add(this.txtSalaryAL);
+            this.pnlInfoVLI.Controls.Add(this.dtpDateOfBirthAL);
+            this.pnlInfoVLI.Controls.Add(this.lblSalaryAL);
+            this.pnlInfoVLI.Controls.Add(this.txtPhoneNumberAL);
+            this.pnlInfoVLI.Controls.Add(this.txtEmailAL);
+            this.pnlInfoVLI.Controls.Add(this.txtPasswordAL);
+            this.pnlInfoVLI.Controls.Add(this.lblPhoneNumberAL);
+            this.pnlInfoVLI.Controls.Add(this.lblDateofBirthAL);
+            this.pnlInfoVLI.Controls.Add(this.lblEmailAL);
+            this.pnlInfoVLI.Controls.Add(this.lblPasswordAL);
+            this.pnlInfoVLI.Location = new System.Drawing.Point(5, 548);
+            this.pnlInfoVLI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlInfoVLI.Name = "pnlInfoVLI";
+            this.pnlInfoVLI.Size = new System.Drawing.Size(1028, 394);
+            this.pnlInfoVLI.TabIndex = 9;
+            // 
             // dgvViewLibrarian
             // 
             this.dgvViewLibrarian.AllowUserToAddRows = false;
@@ -351,7 +426,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.dgvViewLibrarian.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvViewLibrarian.BackgroundColor = System.Drawing.Color.PeachPuff;
             this.dgvViewLibrarian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViewLibrarian.Location = new System.Drawing.Point(5, 234);
+            this.dgvViewLibrarian.Location = new System.Drawing.Point(5, 232);
             this.dgvViewLibrarian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvViewLibrarian.Name = "dgvViewLibrarian";
             this.dgvViewLibrarian.ReadOnly = true;
@@ -365,7 +440,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1031, 180);
@@ -376,22 +451,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(1037, 807);
-            this.Controls.Add(this.pnlInfoVLI);
+            this.ClientSize = new System.Drawing.Size(1037, 943);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlInfoVLI);
             this.Controls.Add(this.dgvViewLibrarian);
             this.Controls.Add(this.panel1);
             this.Name = "ViewLibrarianInfo";
             this.Text = "ViewLibrarianInfo";
-            this.pnlInfoVLI.ResumeLayout(false);
-            this.pnlInfoVLI.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlInfoVLI.ResumeLayout(false);
+            this.pnlInfoVLI.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewLibrarian)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -401,6 +476,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         #endregion
 
+        private System.Windows.Forms.ComboBox cmbGenderAL;
+        private System.Windows.Forms.TextBox txtEnrollAL;
+        private System.Windows.Forms.TextBox txtAddressAL;
+        private System.Windows.Forms.Label lblGenderAL;
+        private System.Windows.Forms.Label lblEnrollAL;
+        private System.Windows.Forms.Label lblAddressAL;
         private System.Windows.Forms.Button btnCancelVLI;
         private System.Windows.Forms.Button btnRemoveVLI;
         private System.Windows.Forms.Button btnUpdate;
@@ -414,7 +495,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblDateofBirthAL;
         private System.Windows.Forms.Label lblEmailAL;
         private System.Windows.Forms.Label lblPasswordAL;
-        private System.Windows.Forms.Panel pnlInfoVLI;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
@@ -426,6 +506,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlInfoVLI;
         private System.Windows.Forms.DataGridView dgvViewLibrarian;
         private System.Windows.Forms.Panel panel1;
     }

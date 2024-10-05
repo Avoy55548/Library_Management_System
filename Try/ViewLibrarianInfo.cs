@@ -44,38 +44,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void dgvViewLibrarian_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                if (dgvViewLibrarian.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    LibrarianSL = int.Parse(dgvViewLibrarian.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    //MessageBox.Show(dgvViewBooks.Rows[e.RowIndex].Cells[0].Value.ToString());
-                }
-                pnlInfoVLI.Visible = true;
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM Librarian where LibrarianSL = " + LibrarianSL + "";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                rowid = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
-
-                //tx.Text = ds.Tables[0].Rows[0][1].ToString();
-                txtPasswordAL.Text = ds.Tables[0].Rows[0][2].ToString();
-                txtEmailAL.Text = ds.Tables[0].Rows[0][3].ToString();
-                txtPhoneNumberAL.Text = ds.Tables[0].Rows[0][4].ToString();
-                dtpDateOfBirthAL.Text = ds.Tables[0].Rows[0][5].ToString();
-                txtSalaryAL.Text = ds.Tables[0].Rows[0][7].ToString();
-
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("There is an error in your input: " + exc.Message);
-            }
         }
 
         private void btnCancelVLI_Click(object sender, EventArgs e)
@@ -85,34 +54,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void txtSearchViewLibrarian_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchViewLibrarian.Text != "")
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM Librarian where UserID LIKE '" + txtSearchViewLibrarian.Text + "%'";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                dgvViewLibrarian.DataSource = ds.Tables[0];
-            }
-            else
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                cmd.CommandText = "SELECT * FROM Librarian";
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                dgvViewLibrarian.DataSource = ds.Tables[0];
-            }
         }
 
         private void btnRefreshViewLibrarian_Click(object sender, EventArgs e)
@@ -138,58 +80,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
-            // Validate email
-            string email = txtEmailAL.Text;
-            if (!IsValidEmail(email))
-            {
-                MessageBox.Show("Invalid email format. Please enter a valid email address.");
-                return;
-            }
-
-            
-            DateTime dob;
-            if (!DateTime.TryParse(dtpDateOfBirthAL.Text, out dob))
-            {
-                MessageBox.Show("Invalid date of birth. Please enter a valid date.");
-                return;
-            }
-
-            int age = CalculateAge(dob);
-            if (age < 18)
-            {
-                MessageBox.Show("Librarian must be at least 18 years old.");
-                return;
-            }
-            if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                con.Open();
-
-                cmd.CommandText = "update Librarian set Password = @password, Email = @Email,Contact = @Contact, Date_of_birth = @DOB,Salary = @Salary where LibrarianSL = @UserID";
-                cmd.Parameters.AddWithValue("@password", this.txtPasswordAL.Text);
-                cmd.Parameters.AddWithValue("@Email", this.txtEmailAL.Text);
-                cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAL.Text);
-                cmd.Parameters.AddWithValue("@DOB", this.dtpDateOfBirthAL.Value);
-                cmd.Parameters.AddWithValue("@Salary", Convert.ToDouble(this.txtSalaryAL.Text));
-                cmd.Parameters.AddWithValue("@UserID", rowid);
-
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Data Updated Successfully");
-                   
-                    RefreshDataGridView();
-                }
-                else
-                {
-                    MessageBox.Show("Update Failed");
-                }
-            }
         }
         private bool IsValidEmail(string email)
         {
@@ -205,39 +95,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             return age;
         }
         private void btnRemoveVLI_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Data will be Updated. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                con.Open();
-                cmd.CommandText = "delete from Librarian where LibrarianSL = " + rowid + "";
-
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Data Updated Successfully");
-                    
-                    RefreshDataGridView();
-                }
-                else
-                {
-                    MessageBox.Show("Remove Failed");
-                }
-
-
-                con.Close();
-            }
-
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
