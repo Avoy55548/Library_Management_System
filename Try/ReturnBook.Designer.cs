@@ -71,7 +71,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnReturnRB.BackColor = System.Drawing.Color.Peru;
             this.btnReturnRB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReturnRB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnRB.Location = new System.Drawing.Point(616, 60);
+            this.btnReturnRB.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReturnRB.Location = new System.Drawing.Point(616, 57);
             this.btnReturnRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturnRB.Name = "btnReturnRB";
             this.btnReturnRB.Size = new System.Drawing.Size(113, 43);
@@ -102,8 +103,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtBookNameRB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookNameRB.Location = new System.Drawing.Point(267, 17);
             this.txtBookNameRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBookNameRB.Multiline = true;
             this.txtBookNameRB.Name = "txtBookNameRB";
-            this.txtBookNameRB.Size = new System.Drawing.Size(253, 26);
+            this.txtBookNameRB.Size = new System.Drawing.Size(253, 28);
             this.txtBookNameRB.TabIndex = 16;
             this.txtBookNameRB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
