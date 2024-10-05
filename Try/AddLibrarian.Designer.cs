@@ -29,25 +29,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLibrarian));
-            this.pbxPicAB = new System.Windows.Forms.PictureBox();
             this.btnCancelAL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.pnlInfoAB.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pbxPicAB
-            // 
-            this.pbxPicAB.Image = ((System.Drawing.Image)(resources.GetObject("pbxPicAB.Image")));
-            this.pbxPicAB.Location = new System.Drawing.Point(3, -28);
-            this.pbxPicAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbxPicAB.Name = "pbxPicAB";
-            this.pbxPicAB.Size = new System.Drawing.Size(429, 740);
-            this.pbxPicAB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxPicAB.TabIndex = 23;
-            this.pbxPicAB.TabStop = false;
             // 
             // btnCancelAL
             // 
@@ -86,20 +72,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 684);
-            this.Controls.Add(this.pbxPicAB);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlInfoAB);
             this.Name = "AddLibrarian";
             this.Text = "AddLibrarian";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).EndInit();
             this.pnlInfoAB.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pbxPicAB;
         private System.Windows.Forms.Button btnCancelAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlInfoAB;
