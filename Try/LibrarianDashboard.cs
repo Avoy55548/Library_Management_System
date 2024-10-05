@@ -58,11 +58,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             vsi.Show();
         }
 
-        private void AddStudenttoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AddStudentInfo Stu = new AddStudentInfo();
-            Stu.Show();
-        }
+        
 
         private void issueReturnBookInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
