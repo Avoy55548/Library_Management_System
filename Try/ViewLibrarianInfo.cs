@@ -87,7 +87,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnCancelVLI_Click(object sender, EventArgs e)
         {
-            pnlInfoVLI.Visible = false;
+            this.Close();
         }
 
         private void txtSearchViewLibrarian_TextChanged(object sender, EventArgs e)
@@ -254,6 +254,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelVLI_Click_1(object sender, EventArgs e)
         {
 
         }

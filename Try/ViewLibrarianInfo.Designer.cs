@@ -147,6 +147,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnCancelVLI.TabIndex = 36;
             this.btnCancelVLI.Text = "Cancel";
             this.btnCancelVLI.UseVisualStyleBackColor = false;
+            this.btnCancelVLI.Click += new System.EventHandler(this.btnCancelVLI_Click_1);
             // 
             // btnRemoveVLI
             // 
