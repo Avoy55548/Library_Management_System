@@ -42,7 +42,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         String bdate;
         String bname;
-        
+        Int64 rowid;
         private void ReturnBook_Load(object sender, EventArgs e)
         {
             pnlInfoRB.Visible = false;
