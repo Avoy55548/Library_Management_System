@@ -70,7 +70,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
             catch (Exception exc)
             {
-                MessageBox.Show("There is an error in your input: " + exc.Message); 
+                MessageBox.Show("There is an error in your input: " + exc.Message); // error handling
             }
         }
 
