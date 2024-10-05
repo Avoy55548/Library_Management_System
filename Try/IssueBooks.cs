@@ -70,9 +70,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
-                    txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][3].ToString();
-                    txtEmailIsB.Text = ds.Tables[0].Rows[0][4].ToString();
-                    txtAddressIsB.Text = ds.Tables[0].Rows[0][5].ToString();
+                    txtPhoneNumberIsB.Text = ds.Tables[0].Rows[0][4].ToString();
+                    txtEmailIsB.Text = ds.Tables[0].Rows[0][5].ToString();
+                    txtAddressIsB.Text = ds.Tables[0].Rows[0][6].ToString();
                 }
                 else
                 {
