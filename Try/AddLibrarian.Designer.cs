@@ -48,6 +48,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAL = new System.Windows.Forms.TextBox();
             this.txtAddressAL = new System.Windows.Forms.Label();
             this.txtAddreAL = new System.Windows.Forms.TextBox();
+            this.lblDateofBirthAL = new System.Windows.Forms.Label();
+            this.lblGenderAL = new System.Windows.Forms.Label();
+            this.lblPhoneNumberAL = new System.Windows.Forms.Label();
+            this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
+            this.lblSalaryAL = new System.Windows.Forms.Label();
+            this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
+            this.cmbGenderAL = new System.Windows.Forms.ComboBox();
+            this.txtSalaryAL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
@@ -147,9 +155,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnPrintAL);
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
+            this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
+            this.pnlInfoAB.Controls.Add(this.cmbGenderAL);
+            this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
+            this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
+            this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtEmailAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
+            this.pnlInfoAB.Controls.Add(this.lblPhoneNumberAL);
+            this.pnlInfoAB.Controls.Add(this.lblGenderAL);
+            this.pnlInfoAB.Controls.Add(this.lblDateofBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblEmailAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
@@ -274,6 +290,100 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddreAL.TabIndex = 39;
             this.txtAddreAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblDateofBirthAL
+            // 
+            this.lblDateofBirthAL.AutoSize = true;
+            this.lblDateofBirthAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateofBirthAL.Location = new System.Drawing.Point(35, 374);
+            this.lblDateofBirthAL.Name = "lblDateofBirthAL";
+            this.lblDateofBirthAL.Size = new System.Drawing.Size(130, 24);
+            this.lblDateofBirthAL.TabIndex = 4;
+            this.lblDateofBirthAL.Text = "Date of Birth";
+            // 
+            // lblGenderAL
+            // 
+            this.lblGenderAL.AutoSize = true;
+            this.lblGenderAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderAL.Location = new System.Drawing.Point(35, 446);
+            this.lblGenderAL.Name = "lblGenderAL";
+            this.lblGenderAL.Size = new System.Drawing.Size(79, 24);
+            this.lblGenderAL.TabIndex = 5;
+            this.lblGenderAL.Text = "Gender";
+            // 
+            // lblPhoneNumberAL
+            // 
+            this.lblPhoneNumberAL.AutoSize = true;
+            this.lblPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumberAL.Location = new System.Drawing.Point(33, 305);
+            this.lblPhoneNumberAL.Name = "lblPhoneNumberAL";
+            this.lblPhoneNumberAL.Size = new System.Drawing.Size(149, 24);
+            this.lblPhoneNumberAL.TabIndex = 6;
+            this.lblPhoneNumberAL.Text = "Phone Number";
+            // 
+            // txtPhoneNumberAL
+            // 
+            this.txtPhoneNumberAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumberAL.Location = new System.Drawing.Point(223, 304);
+            this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
+            this.txtPhoneNumberAL.Size = new System.Drawing.Size(263, 26);
+            this.txtPhoneNumberAL.TabIndex = 11;
+            this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblSalaryAL
+            // 
+            this.lblSalaryAL.AutoSize = true;
+            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryAL.Location = new System.Drawing.Point(35, 501);
+            this.lblSalaryAL.Name = "lblSalaryAL";
+            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
+            this.lblSalaryAL.TabIndex = 18;
+            this.lblSalaryAL.Text = "Salary";
+            // 
+            // dtpDateOfBirthAL
+            // 
+            this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(223, 373);
+            this.dtpDateOfBirthAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDateOfBirthAL.Name = "dtpDateOfBirthAL";
+            this.dtpDateOfBirthAL.Size = new System.Drawing.Size(261, 22);
+            this.dtpDateOfBirthAL.TabIndex = 19;
+            // 
+            // cmbGenderAL
+            // 
+            this.cmbGenderAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbGenderAL.FormattingEnabled = true;
+            this.cmbGenderAL.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "None"});
+            this.cmbGenderAL.Location = new System.Drawing.Point(223, 434);
+            this.cmbGenderAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbGenderAL.Name = "cmbGenderAL";
+            this.cmbGenderAL.Size = new System.Drawing.Size(261, 24);
+            this.cmbGenderAL.TabIndex = 20;
+            this.cmbGenderAL.Text = "Please Select";
+            // 
+            // txtSalaryAL
+            // 
+            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
+            this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalaryAL.Name = "txtSalaryAL";
+            this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
+            this.txtSalaryAL.TabIndex = 21;
+            this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -313,5 +423,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblEmailAL;
         private System.Windows.Forms.TextBox txtAddreAL;
         private System.Windows.Forms.Label txtAddressAL;
+        private System.Windows.Forms.TextBox txtSalaryAL;
+        private System.Windows.Forms.ComboBox cmbGenderAL;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
+        private System.Windows.Forms.Label lblSalaryAL;
+        private System.Windows.Forms.TextBox txtPhoneNumberAL;
+        private System.Windows.Forms.Label lblPhoneNumberAL;
+        private System.Windows.Forms.Label lblGenderAL;
+        private System.Windows.Forms.Label lblDateofBirthAL;
     }
 }
