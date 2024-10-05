@@ -31,10 +31,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLibrarian));
             this.pbxPicAB = new System.Windows.Forms.PictureBox();
-            this.btnClearAL = new System.Windows.Forms.Button();
-            this.btnPrintAL = new System.Windows.Forms.Button();
             this.btnCancelAL = new System.Windows.Forms.Button();
-            this.btnSaveAL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
@@ -54,32 +51,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pbxPicAB.TabIndex = 23;
             this.pbxPicAB.TabStop = false;
             // 
-            // btnClearAL
-            // 
-            this.btnClearAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnClearAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClearAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAL.Location = new System.Drawing.Point(365, 564);
-            this.btnClearAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClearAL.Name = "btnClearAL";
-            this.btnClearAL.Size = new System.Drawing.Size(136, 38);
-            this.btnClearAL.TabIndex = 35;
-            this.btnClearAL.Text = "Clear";
-            this.btnClearAL.UseVisualStyleBackColor = false;
-            // 
-            // btnPrintAL
-            // 
-            this.btnPrintAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnPrintAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrintAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintAL.Location = new System.Drawing.Point(193, 564);
-            this.btnPrintAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPrintAL.Name = "btnPrintAL";
-            this.btnPrintAL.Size = new System.Drawing.Size(135, 38);
-            this.btnPrintAL.TabIndex = 34;
-            this.btnPrintAL.Text = "Print";
-            this.btnPrintAL.UseVisualStyleBackColor = false;
-            // 
             // btnCancelAL
             // 
             this.btnCancelAL.BackColor = System.Drawing.Color.IndianRed;
@@ -92,19 +63,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnCancelAL.TabIndex = 23;
             this.btnCancelAL.Text = "Cancel";
             this.btnCancelAL.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveAL
-            // 
-            this.btnSaveAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnSaveAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAL.Location = new System.Drawing.Point(5, 564);
-            this.btnSaveAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSaveAL.Name = "btnSaveAL";
-            this.btnSaveAL.Size = new System.Drawing.Size(135, 38);
-            this.btnSaveAL.TabIndex = 22;
-            this.btnSaveAL.Text = "Save";
-            this.btnSaveAL.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -129,10 +87,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // pnlInfoAB
             // 
             this.pnlInfoAB.BackColor = System.Drawing.Color.RosyBrown;
-            this.pnlInfoAB.Controls.Add(this.btnClearAL);
-            this.pnlInfoAB.Controls.Add(this.btnPrintAL);
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
-            this.pnlInfoAB.Controls.Add(this.btnSaveAL);
             this.pnlInfoAB.Location = new System.Drawing.Point(428, 50);
             this.pnlInfoAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlInfoAB.Name = "pnlInfoAB";
@@ -160,10 +115,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         #endregion
 
         private System.Windows.Forms.PictureBox pbxPicAB;
-        private System.Windows.Forms.Button btnClearAL;
-        private System.Windows.Forms.Button btnPrintAL;
         private System.Windows.Forms.Button btnCancelAL;
-        private System.Windows.Forms.Button btnSaveAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
         private System.Windows.Forms.Panel pnlInfoAB;
