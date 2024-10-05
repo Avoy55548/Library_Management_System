@@ -87,7 +87,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-       
+        private void btnRefreshRB_Click(object sender, EventArgs e)
+
+        {
+            this.txtEnrollIsB.Clear();
+        }
+
+        private void btnExitRB_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void btnCancelRB_Click(object sender, EventArgs e)
         {
