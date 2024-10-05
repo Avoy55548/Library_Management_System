@@ -39,8 +39,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
+        private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueBooks ib = new IssueBooks();
+            ib.Show();
+        }
 
-       
 
         private void returnBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
