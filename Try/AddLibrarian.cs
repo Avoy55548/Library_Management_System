@@ -18,13 +18,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
         private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
-
         public AddLibrarian()
         {
             InitializeComponent();
             this.txtEmailAL.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAL_Validating);
             printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
         }
+
 
         private void txtEmailAL_Validating(object sender, CancelEventArgs e)
         {
@@ -35,7 +35,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 e.Cancel = true;
             }
         }
-
 
         private bool IsValidToSave()
         {
@@ -50,6 +49,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 return true;
             }
         }
+
 
 
         private void btnSaveAL_Click(object sender, EventArgs e)
@@ -219,9 +219,5 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddreAL.Clear();
             this.txtEnrollAL.Clear();
         }
-
-
-
-
     }
 }

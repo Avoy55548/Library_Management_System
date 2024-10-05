@@ -15,8 +15,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     {
 
 
-        public string stuBHName = Login.StudentName;
-        public string stuBHPassword = Login.StudentPassword;
+
 
         public BorrowHistory()
         {
@@ -35,7 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.Parameters.AddWithValue("@StudentName", this.stuBHName);
+                cmd.Parameters.AddWithValue("@StudentName", Login.UserName);
 
                 cmd.CommandText = "select Book_Name,Book_issue_date,Book_return_date,Fine  from IRBook where Stu_name=@StudentName";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -45,12 +44,15 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
+                if (Login.Type == 3)
+                {
+                    // Now query for fetching student information
+                    cmd.CommandText = "select  UserName, Enroll from Users where UserName= @Name AND Password= @Password AND UserType=3";
+                    cmd.Parameters.Clear(); // Clear previous parameter
+                    cmd.Parameters.AddWithValue("@Name", Login.UserName);
+                    cmd.Parameters.AddWithValue("@Password", Login.Password);
+                }
 
-                // Now query for fetching student information
-                cmd.CommandText = "select  Name,enroll  from Student where Name= @Name AND Password= @Password";
-                cmd.Parameters.Clear(); // Clear previous parameter
-                cmd.Parameters.AddWithValue("@Name", this.stuBHName);
-                cmd.Parameters.AddWithValue("@Password", this.stuBHPassword);
 
                 // Open the connection to fetch data
                 con.Open();
@@ -60,7 +62,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 if (reader.Read()) // If the student is found
                 {
                     // Set the text boxes with student data
-                    txtNameBH.Text = reader["Name"].ToString();
+                    txtNameBH.Text = reader["UserName"].ToString();
                     txtNameBH.ReadOnly = true;
 
                     txtEnrollBH.Text = reader["enroll"].ToString();
