@@ -34,7 +34,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             vb.Show();
         }
 
-       
+        private void btnLogOut_Click(object sender, EventArgs e)
+
+        {
+            Login l = new Login();
+            l.Show();
+            this.Hide();
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
 
