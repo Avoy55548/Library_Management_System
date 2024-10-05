@@ -28,14 +28,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private int CalculateAge(DateTime birthDate)
         {
-            DateTime today = DateTime.Today; // Get the current date
-            int age = today.Year - birthDate.Year; // Calculate the basic age by subtracting years
-
-
-            // If the user's birthday hasn't occurred yet this year, subtract one from the age
-            if (birthDate.Date > today.AddYears(-age))
-                age--;
-            return age;
+            
         }
 
 
