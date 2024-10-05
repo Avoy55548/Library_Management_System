@@ -46,11 +46,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-        private void returnBooksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ReturnBook rb = new ReturnBook();
-            rb.Show();
-        }
+       
 
         private void ViewStudenttoolStripMenuItem_Click(object sender, EventArgs e)
         {
