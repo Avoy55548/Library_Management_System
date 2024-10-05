@@ -40,11 +40,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblTitleAL = new System.Windows.Forms.Label();
             this.txtPasswordAL = new System.Windows.Forms.TextBox();
             this.txtUserIDAL = new System.Windows.Forms.TextBox();
-            this.lblPhoneNumberAL = new System.Windows.Forms.Label();
             this.lblDateofBirthAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
             this.lblUserIDAL = new System.Windows.Forms.Label();
-            this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
@@ -171,16 +169,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtUserIDAL.TabIndex = 7;
             this.txtUserIDAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblPhoneNumberAL
-            // 
-            this.lblPhoneNumberAL.AutoSize = true;
-            this.lblPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberAL.Location = new System.Drawing.Point(33, 305);
-            this.lblPhoneNumberAL.Name = "lblPhoneNumberAL";
-            this.lblPhoneNumberAL.Size = new System.Drawing.Size(149, 24);
-            this.lblPhoneNumberAL.TabIndex = 6;
-            this.lblPhoneNumberAL.Text = "Phone Number";
-            // 
             // lblDateofBirthAL
             // 
             this.lblDateofBirthAL.AutoSize = true;
@@ -211,19 +199,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblUserIDAL.TabIndex = 1;
             this.lblUserIDAL.Text = "User Name";
             // 
-            // txtPhoneNumberAL
-            // 
-            this.txtPhoneNumberAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumberAL.Location = new System.Drawing.Point(223, 304);
-            this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
-            this.txtPhoneNumberAL.Size = new System.Drawing.Size(263, 26);
-            this.txtPhoneNumberAL.TabIndex = 11;
-            this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pnlInfoAB
             // 
             this.pnlInfoAB.BackColor = System.Drawing.Color.RosyBrown;
@@ -232,10 +207,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
-            this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
-            this.pnlInfoAB.Controls.Add(this.lblPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.lblDateofBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
@@ -276,11 +249,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblTitleAL;
         private System.Windows.Forms.TextBox txtPasswordAL;
         private System.Windows.Forms.TextBox txtUserIDAL;
-        private System.Windows.Forms.Label lblPhoneNumberAL;
         private System.Windows.Forms.Label lblDateofBirthAL;
         private System.Windows.Forms.Label lblPasswordAL;
         private System.Windows.Forms.Label lblUserIDAL;
-        private System.Windows.Forms.TextBox txtPhoneNumberAL;
         private System.Windows.Forms.Panel pnlInfoAB;
     }
 }
