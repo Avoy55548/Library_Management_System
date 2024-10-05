@@ -14,6 +14,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class ViewBookInfo : Form
     {
         public ViewBookInfo()
+
         {
             InitializeComponent();
         }
@@ -21,11 +22,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void ViewBookInfo_Load(object sender, EventArgs e)
         {
             pnlURViewBooks.Visible = false;
+
             if (Login.Type == 3)
+
             {
                 btnUpdateViewBooks.Visible = false; // Hide the Update button for students
                 btnRemoveVBI.Visible = false;       // Hide the Remove button for students
             }
+
             else
             {
                 btnUpdateViewBooks.Visible = true;
@@ -36,7 +40,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         int BookID;
         Int64 rowid;
-
         private void dgvViewBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -66,11 +69,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 txtBookPriceVB.Text = ds.Tables[0].Rows[0][6].ToString();
                 txtBookQuantityVB.Text = ds.Tables[0].Rows[0][5].ToString();
 
+
             }
+
             catch (Exception exc)
             {
                 MessageBox.Show("There is an error in your input: " + exc.Message);
             }
+
         }
 
         private void btnCancelVBI_Click(object sender, EventArgs e)
@@ -80,6 +86,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void txtSearchViewBook_TextChanged(object sender, EventArgs e)
+
         {
             if (txtSearchViewBook.Text != "")
 
@@ -96,6 +103,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 dgvViewBooks.DataSource = ds.Tables[0];
             }
+
             else
             {
                 RefreshDataGridView(); // Refresh data when the search box is cleared
@@ -105,6 +113,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void btnUpdateViewBooks_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Data will be updated. Confirm?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+          
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
@@ -123,11 +132,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                     MessageBox.Show("Book details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error while updating book details: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                finally
+
+             finally
                 {
                     con.Close();
                 }
@@ -145,6 +156,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Connection = con;
 
                 try
+
                 {
                     con.Open();
                     cmd.CommandText = "DELETE FROM Book WHERE BookID = " + rowid;
@@ -155,10 +167,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                     MessageBox.Show("Book removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error while removing book: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 finally
                 {
                     con.Close();
@@ -170,7 +184,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             txtSearchViewBook.Clear();
             pnlURViewBooks.Visible = false;
-            RefreshDataGridView(); // Ensure grid is refreshed after clearing the search
+            RefreshDataGridView(); 
+           // Ensure grid is refreshed after clearing the search
         }
 
         private void RefreshDataGridView()
@@ -190,6 +205,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void pnlURViewBooks_Paint(object sender, PaintEventArgs e)
+
         {
 
         }
