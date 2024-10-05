@@ -57,7 +57,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnCancelRB.BackColor = System.Drawing.Color.Peru;
             this.btnCancelRB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelRB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelRB.Location = new System.Drawing.Point(616, 134);
             this.btnCancelRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelRB.Name = "btnCancelRB";
@@ -70,7 +70,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnReturnRB.BackColor = System.Drawing.Color.Peru;
             this.btnReturnRB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReturnRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnRB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturnRB.Location = new System.Drawing.Point(616, 60);
             this.btnReturnRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturnRB.Name = "btnReturnRB";
@@ -110,30 +110,30 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // lblBookReturnDateRB
             // 
             this.lblBookReturnDateRB.AutoSize = true;
-            this.lblBookReturnDateRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookReturnDateRB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookReturnDateRB.Location = new System.Drawing.Point(65, 142);
             this.lblBookReturnDateRB.Name = "lblBookReturnDateRB";
-            this.lblBookReturnDateRB.Size = new System.Drawing.Size(157, 24);
+            this.lblBookReturnDateRB.Size = new System.Drawing.Size(169, 24);
             this.lblBookReturnDateRB.TabIndex = 2;
             this.lblBookReturnDateRB.Text = "Book Return Date";
             // 
             // lblBookIssueDateRB
             // 
             this.lblBookIssueDateRB.AutoSize = true;
-            this.lblBookIssueDateRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookIssueDateRB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIssueDateRB.Location = new System.Drawing.Point(65, 76);
             this.lblBookIssueDateRB.Name = "lblBookIssueDateRB";
-            this.lblBookIssueDateRB.Size = new System.Drawing.Size(145, 24);
+            this.lblBookIssueDateRB.Size = new System.Drawing.Size(152, 24);
             this.lblBookIssueDateRB.TabIndex = 1;
             this.lblBookIssueDateRB.Text = "Book Issue Date";
             // 
             // lblBookNameRB
             // 
             this.lblBookNameRB.AutoSize = true;
-            this.lblBookNameRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookNameRB.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookNameRB.Location = new System.Drawing.Point(65, 21);
             this.lblBookNameRB.Name = "lblBookNameRB";
-            this.lblBookNameRB.Size = new System.Drawing.Size(109, 24);
+            this.lblBookNameRB.Size = new System.Drawing.Size(115, 24);
             this.lblBookNameRB.TabIndex = 0;
             this.lblBookNameRB.Text = "Book Name";
             // 
@@ -157,7 +157,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnExitRB.BackColor = System.Drawing.Color.Peru;
             this.btnExitRB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExitRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitRB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitRB.Location = new System.Drawing.Point(181, 378);
             this.btnExitRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExitRB.Name = "btnExitRB";
@@ -170,7 +170,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnRefreshRB.BackColor = System.Drawing.Color.Peru;
             this.btnRefreshRB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefreshRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshRB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshRB.Location = new System.Drawing.Point(35, 378);
             this.btnRefreshRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefreshRB.Name = "btnRefreshRB";
@@ -194,8 +194,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnSearchIsB.BackColor = System.Drawing.Color.Peru;
             this.btnSearchIsB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchIsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIsB.Location = new System.Drawing.Point(64, 310);
+            this.btnSearchIsB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchIsB.Location = new System.Drawing.Point(62, 316);
             this.btnSearchIsB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchIsB.Name = "btnSearchIsB";
             this.btnSearchIsB.Size = new System.Drawing.Size(191, 37);
@@ -205,11 +205,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtEnrollIsB
             // 
-            this.txtEnrollIsB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnrollIsB.Location = new System.Drawing.Point(35, 271);
+            this.txtEnrollIsB.Font = new System.Drawing.Font("Book Antiqua", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnrollIsB.Location = new System.Drawing.Point(35, 264);
             this.txtEnrollIsB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEnrollIsB.Name = "txtEnrollIsB";
-            this.txtEnrollIsB.Size = new System.Drawing.Size(253, 26);
+            this.txtEnrollIsB.Size = new System.Drawing.Size(253, 30);
             this.txtEnrollIsB.TabIndex = 16;
             this.txtEnrollIsB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -217,7 +217,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.dgvReturnBook.AllowUserToAddRows = false;
             this.dgvReturnBook.AllowUserToDeleteRows = false;
-            this.dgvReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReturnBook.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvReturnBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -233,10 +233,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // lblEnterIsB
             // 
             this.lblEnterIsB.AutoSize = true;
-            this.lblEnterIsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterIsB.Location = new System.Drawing.Point(31, 230);
+            this.lblEnterIsB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterIsB.Location = new System.Drawing.Point(11, 225);
             this.lblEnterIsB.Name = "lblEnterIsB";
-            this.lblEnterIsB.Size = new System.Drawing.Size(252, 25);
+            this.lblEnterIsB.Size = new System.Drawing.Size(299, 28);
             this.lblEnterIsB.TabIndex = 0;
             this.lblEnterIsB.Text = "Enter Enrollment Number";
             // 
