@@ -35,11 +35,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrintAL = new System.Windows.Forms.Button();
             this.btnCancelAL = new System.Windows.Forms.Button();
             this.btnSaveAL = new System.Windows.Forms.Button();
-            this.txtSalaryAL = new System.Windows.Forms.TextBox();
             this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
-            this.lblSalaryAL = new System.Windows.Forms.Label();
             this.txtPasswordAL = new System.Windows.Forms.TextBox();
             this.txtUserIDAL = new System.Windows.Forms.TextBox();
             this.lblPhoneNumberAL = new System.Windows.Forms.Label();
@@ -116,19 +114,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnSaveAL.Text = "Save";
             this.btnSaveAL.UseVisualStyleBackColor = false;
             // 
-            // txtSalaryAL
-            // 
-            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
-            this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSalaryAL.Name = "txtSalaryAL";
-            this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
-            this.txtSalaryAL.TabIndex = 21;
-            this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dtpDateOfBirthAL
             // 
             this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -159,16 +144,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblTitleAL.Size = new System.Drawing.Size(169, 29);
             this.lblTitleAL.TabIndex = 0;
             this.lblTitleAL.Text = "Add Librarian";
-            // 
-            // lblSalaryAL
-            // 
-            this.lblSalaryAL.AutoSize = true;
-            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalaryAL.Location = new System.Drawing.Point(35, 501);
-            this.lblSalaryAL.Name = "lblSalaryAL";
-            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
-            this.lblSalaryAL.TabIndex = 18;
-            this.lblSalaryAL.Text = "Salary";
             // 
             // txtPasswordAL
             // 
@@ -256,9 +231,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnPrintAL);
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
-            this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
-            this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
             this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
@@ -298,11 +271,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Button btnPrintAL;
         private System.Windows.Forms.Button btnCancelAL;
         private System.Windows.Forms.Button btnSaveAL;
-        private System.Windows.Forms.TextBox txtSalaryAL;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
-        private System.Windows.Forms.Label lblSalaryAL;
         private System.Windows.Forms.TextBox txtPasswordAL;
         private System.Windows.Forms.TextBox txtUserIDAL;
         private System.Windows.Forms.Label lblPhoneNumberAL;
