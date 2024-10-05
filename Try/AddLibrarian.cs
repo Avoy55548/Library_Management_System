@@ -34,15 +34,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
       
       
 
-        private void btnClearAL_Click(object sender, EventArgs e)
-        {
-            this.txtUserIDAL.Clear();
-            this.txtPasswordAL.Clear();
-            this.txtEmailAL.Clear();
-            this.txtPhoneNumberAL.Clear();
-            this.dtpDateOfBirthAL.Text = "";
-            this.cmbGenderAL.Text = "";
-            this.txtSalaryAL.Clear();
-        }
+        
     }
 }
