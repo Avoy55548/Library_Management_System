@@ -32,10 +32,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
        
 
       
-        private void pbxAL_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnClearAL_Click(object sender, EventArgs e)
         {
