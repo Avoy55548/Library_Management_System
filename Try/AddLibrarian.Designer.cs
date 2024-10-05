@@ -33,10 +33,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pbxPicAB = new System.Windows.Forms.PictureBox();
             this.btnCancelAL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTitleAL = new System.Windows.Forms.Label();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
-            this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,22 +65,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel2.Controls.Add(this.lblTitleAL);
             this.panel2.Location = new System.Drawing.Point(0, -28);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(927, 80);
             this.panel2.TabIndex = 22;
-            // 
-            // lblTitleAL
-            // 
-            this.lblTitleAL.AutoSize = true;
-            this.lblTitleAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleAL.Location = new System.Drawing.Point(599, 30);
-            this.lblTitleAL.Name = "lblTitleAL";
-            this.lblTitleAL.Size = new System.Drawing.Size(169, 29);
-            this.lblTitleAL.TabIndex = 0;
-            this.lblTitleAL.Text = "Add Librarian";
             // 
             // pnlInfoAB
             // 
@@ -105,8 +92,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.Name = "AddLibrarian";
             this.Text = "AddLibrarian";
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnlInfoAB.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -117,7 +102,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.PictureBox pbxPicAB;
         private System.Windows.Forms.Button btnCancelAL;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTitleAL;
         private System.Windows.Forms.Panel pnlInfoAB;
     }
 }
