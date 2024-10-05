@@ -18,7 +18,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
         }
-
+        // User input validation
         private bool IsValidToSave()
         {
             if (String.IsNullOrEmpty(this.txtBookPubAB.Text) || String.IsNullOrEmpty(this.txtBookAuthorAB.Text) ||
