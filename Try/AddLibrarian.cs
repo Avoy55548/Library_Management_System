@@ -52,11 +52,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private void btnSaveAL_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private int CalculateAge(DateTime birthDate)
@@ -69,10 +64,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (birthDate.Date > today.AddYears(-age))
                 age--;
             return age;
-        }
-        private void btnCancelAL_Click(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -123,11 +114,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // You can add more textboxes similarly
         }
         private void pbxAL_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintAL_Click(object sender, EventArgs e)
         {
 
         }
