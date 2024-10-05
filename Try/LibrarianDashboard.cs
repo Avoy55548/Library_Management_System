@@ -70,10 +70,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             irbi.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+        
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
