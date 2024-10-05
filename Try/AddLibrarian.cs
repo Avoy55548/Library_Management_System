@@ -16,12 +16,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class AddLibrarian : Form
     {
 
-        public AddLibrarian()
-        {
-            InitializeComponent();
-            this.txtEmailAL.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmailAL_Validating);
-            printDocument1.PrintPage += new PrintPageEventHandler(PrintDocument1_PrintPage);
-        }
+       
 
 
         private void txtEmailAL_Validating(object sender, CancelEventArgs e)
