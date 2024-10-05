@@ -44,32 +44,33 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtBookPriceAB.Clear();
         }
 
+        // 
         private void btnSaveAB_Click(object sender, EventArgs e)
         {
             try
             {
                 if (!IsValidToSave())
                 {
-                    MessageBox.Show("Please fill all the information");
+                    MessageBox.Show("Please fill all the information"); // checking validation
                     return;
                 }
 
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand();  //database connection
                 cmd.Connection = con;
 
                 con.Open();
                 cmd.CommandText = "insert into Book (Name,Author,Publication,ISBN,Quantity,Price) values ('" + this.txtBookNameAB.Text + "','" + this.txtBookAuthorAB.Text + "','" + this.txtBookPubAB.Text + "', '" + this.txtISBNNoAB.Text + "'," + this.txtBookQuantityAB.Text + ", " + this.txtBookPriceAB.Text + " )";
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();   // adding parameter
                 con.Close();
 
                 MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.ClearAll();
+                this.ClearAll();   // success message
             }
             catch (Exception exc)
             {
-                MessageBox.Show("There is an error in your input: " + exc.Message);
+                MessageBox.Show("There is an error in your input: " + exc.Message); 
             }
         }
 
