@@ -35,18 +35,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             
           
-            g.DrawString("Librarian Name:  " + txtUserIDAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Phone Number: " + txtPhoneNumberAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Email: " + txtEmailAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Dath Of Birth: " + dtpDateOfBirthAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Gender: " + cmbGenderAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
-            g.DrawString("Salary: " + txtSalaryAL.Text, font, Brushes.Black, leftMargin, yPos);
-            yPos += 25;
+            
 
 
             // You can add more textboxes similarly
