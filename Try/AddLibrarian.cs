@@ -19,15 +19,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
        
 
 
-        private void txtEmailAL_Validating(object sender, CancelEventArgs e)
-        {
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$"; // Simple email pattern
-            if (!Regex.IsMatch(txtEmailAL.Text, emailPattern))
-            {
-                MessageBox.Show("Please enter a valid email address (e.g. xxxxxx@email.com).", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true;
-            }
-        }
+        
 
         private bool IsValidToSave()
         {
