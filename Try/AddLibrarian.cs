@@ -33,11 +33,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Graphics g = e.Graphics;
-            Font font = new Font("Times New Roman", 20); // Change to Times New Roman
-            float yPos = 100; // Starting position for printing
-            int leftMargin = 50;
-
+            
             // Print the header
             g.DrawString("Congratulation!!!!! You have been apointed", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
             yPos += 40;
