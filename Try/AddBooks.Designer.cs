@@ -58,10 +58,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // pbxPicAB
             // 
             this.pbxPicAB.Image = ((System.Drawing.Image)(resources.GetObject("pbxPicAB.Image")));
-            this.pbxPicAB.Location = new System.Drawing.Point(0, 65);
+            this.pbxPicAB.Location = new System.Drawing.Point(0, 2);
             this.pbxPicAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxPicAB.Name = "pbxPicAB";
-            this.pbxPicAB.Size = new System.Drawing.Size(369, 526);
+            this.pbxPicAB.Size = new System.Drawing.Size(369, 589);
             this.pbxPicAB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxPicAB.TabIndex = 20;
             this.pbxPicAB.TabStop = false;
@@ -83,7 +83,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBookPriceVBI.AutoSize = true;
             this.lblBookPriceVBI.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookPriceVBI.Location = new System.Drawing.Point(59, 300);
+            this.lblBookPriceVBI.Location = new System.Drawing.Point(72, 294);
             this.lblBookPriceVBI.Name = "lblBookPriceVBI";
             this.lblBookPriceVBI.Size = new System.Drawing.Size(105, 23);
             this.lblBookPriceVBI.TabIndex = 41;
@@ -132,7 +132,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBookQuantityAB.AutoSize = true;
             this.lblBookQuantityAB.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookQuantityAB.Location = new System.Drawing.Point(59, 343);
+            this.lblBookQuantityAB.Location = new System.Drawing.Point(72, 337);
             this.lblBookQuantityAB.Name = "lblBookQuantityAB";
             this.lblBookQuantityAB.Size = new System.Drawing.Size(141, 23);
             this.lblBookQuantityAB.TabIndex = 18;
@@ -167,11 +167,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // lblTitleAB
             // 
             this.lblTitleAB.AutoSize = true;
-            this.lblTitleAB.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleAB.Font = new System.Drawing.Font("Book Antiqua", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleAB.ForeColor = System.Drawing.Color.Black;
-            this.lblTitleAB.Location = new System.Drawing.Point(405, 11);
+            this.lblTitleAB.Location = new System.Drawing.Point(491, 21);
             this.lblTitleAB.Name = "lblTitleAB";
-            this.lblTitleAB.Size = new System.Drawing.Size(135, 28);
+            this.lblTitleAB.Size = new System.Drawing.Size(158, 32);
             this.lblTitleAB.TabIndex = 0;
             this.lblTitleAB.Text = "Add Books";
             // 
@@ -189,7 +189,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // pbxTitlePicAB
             // 
             this.pbxTitlePicAB.Image = ((System.Drawing.Image)(resources.GetObject("pbxTitlePicAB.Image")));
-            this.pbxTitlePicAB.Location = new System.Drawing.Point(312, -6);
+            this.pbxTitlePicAB.Location = new System.Drawing.Point(375, 0);
             this.pbxTitlePicAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxTitlePicAB.Name = "pbxTitlePicAB";
             this.pbxTitlePicAB.Size = new System.Drawing.Size(89, 66);
@@ -227,7 +227,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBookPubAB.AutoSize = true;
             this.lblBookPubAB.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookPubAB.Location = new System.Drawing.Point(59, 194);
+            this.lblBookPubAB.Location = new System.Drawing.Point(72, 188);
             this.lblBookPubAB.Name = "lblBookPubAB";
             this.lblBookPubAB.Size = new System.Drawing.Size(163, 23);
             this.lblBookPubAB.TabIndex = 3;
@@ -237,7 +237,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBookAuthorAB.AutoSize = true;
             this.lblBookAuthorAB.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookAuthorAB.Location = new System.Drawing.Point(59, 142);
+            this.lblBookAuthorAB.Location = new System.Drawing.Point(72, 136);
             this.lblBookAuthorAB.Name = "lblBookAuthorAB";
             this.lblBookAuthorAB.Size = new System.Drawing.Size(125, 23);
             this.lblBookAuthorAB.TabIndex = 2;
@@ -247,7 +247,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblBookNameAB.AutoSize = true;
             this.lblBookNameAB.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookNameAB.Location = new System.Drawing.Point(59, 85);
+            this.lblBookNameAB.Location = new System.Drawing.Point(72, 79);
             this.lblBookNameAB.Name = "lblBookNameAB";
             this.lblBookNameAB.Size = new System.Drawing.Size(115, 23);
             this.lblBookNameAB.TabIndex = 1;
@@ -257,7 +257,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblISBNNoAB.AutoSize = true;
             this.lblISBNNoAB.Font = new System.Drawing.Font("Book Antiqua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISBNNoAB.Location = new System.Drawing.Point(59, 254);
+            this.lblISBNNoAB.Location = new System.Drawing.Point(72, 248);
             this.lblISBNNoAB.Name = "lblISBNNoAB";
             this.lblISBNNoAB.Size = new System.Drawing.Size(95, 23);
             this.lblISBNNoAB.TabIndex = 6;
