@@ -23,16 +23,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private bool IsValidToSave()
         {
-            if (String.IsNullOrEmpty(this.txtUserIDAL.Text) || String.IsNullOrEmpty(this.txtPasswordAL.Text) || String.IsNullOrEmpty(this.txtEmailAL.Text) ||
-                String.IsNullOrEmpty(this.txtPhoneNumberAL.Text) || String.IsNullOrEmpty(this.dtpDateOfBirthAL.Text) || String.IsNullOrEmpty(this.cmbGenderAL.Text) ||
-                 String.IsNullOrEmpty(this.txtSalaryAL.Text))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+           
         }
 
 
