@@ -34,10 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             
-            // Print the header
-            g.DrawString("Congratulation!!!!! You have been apointed", new Font("Times New Roman", 26, FontStyle.Bold), Brushes.Black, leftMargin, yPos);
-            yPos += 40;
-
+            
             // Print data from all text boxes
             g.DrawString("Librarian Name:  " + txtUserIDAL.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
