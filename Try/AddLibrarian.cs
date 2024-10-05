@@ -26,10 +26,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
 
 
-        private int CalculateAge(DateTime birthDate)
-        {
-            
-        }
+       
 
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
