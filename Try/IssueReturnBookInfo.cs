@@ -72,7 +72,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.CommandText = "SELECT * FROM IRBook WHERE Book_return_date IS NOT NULL";
                 SqlDataAdapter da1 = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();
-               
+                da1.Fill(ds1);
+                dgvReturnBooksInfo.DataSource = ds1.Tables[0]; // Display the updated table
+                con.Close();
 
             }
 
