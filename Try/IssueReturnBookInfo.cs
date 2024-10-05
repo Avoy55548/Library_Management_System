@@ -29,7 +29,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Connection = con;
 
                 con.Open();
-
+                //open the conn string
 
                 // Get issued book information
                 cmd.CommandText = "SELECT BID, Stu_enroll, Stu_Name, PhoneNo, Email, Address, Book_Name, Book_issue_date, Book_return_date FROM IRBook WHERE Book_return_date IS NOT NULL";
@@ -41,8 +41,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 // Business logic to calculate fine for each book and update the database
                 foreach (DataRow row in ds.Tables[0].Rows)
-
-
                 {
                     DateTime issueDate = DateTime.Parse(row["Book_issue_date"].ToString());
                     DateTime returnDate = DateTime.Parse(row["Book_return_date"].ToString());
@@ -75,6 +73,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 da1.Fill(ds1);
                 dgvReturnBooksInfo.DataSource = ds1.Tables[0]; // Display the updated table
                 con.Close();
+                //close the con string
 
             }
 
