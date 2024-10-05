@@ -78,9 +78,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             ReturnBook_Load(this, null);
         }
 
-        
-       
-        
+        private void txtEnrollIsB_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEnrollIsB.Text == " ")
+            {
+                pnlInfoRB.Visible = false;
+                dgvReturnBook.DataSource = null;
+            }
+        }
+
+
 
         private void btnRefreshRB_Click(object sender, EventArgs e)
 
