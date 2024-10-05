@@ -177,7 +177,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Connection = con;
                 con.Open();
 
-                cmd.CommandText = " UPDATE Users SET  Password = @Password,  Email = @Email,  Contact = @Contact, DOB=@DOB, Enroll = @Enroll,  Address = @Address,  Gender = @Gender WHERE Id = @UserID; UPDATE Librarian  SET   Salary = @Salary     WHERE LibrarianSL = @UserID;";
+                cmd.CommandText = " UPDATE Users SET  Password = @Password,  Email = @Email,  Contact = @Contact, DOB=@DOB, Enroll = @Enroll,  Address = @Address,  Gender = @Gender WHERE Id = @UserID; UPDATE Librarian  SET   Salary = @Salary     WHERE Id = @UserID;";
                 cmd.Parameters.AddWithValue("@password", this.txtPasswordAL.Text);
                 cmd.Parameters.AddWithValue("@Email", this.txtEmailAL.Text);
                 cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAL.Text);
