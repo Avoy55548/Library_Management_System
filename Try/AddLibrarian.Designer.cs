@@ -44,6 +44,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblUserIDAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
             this.lblENrollAL = new System.Windows.Forms.Label();
+            this.lblEmailAL = new System.Windows.Forms.Label();
+            this.txtEmailAL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
@@ -141,8 +143,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnPrintAL);
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
+            this.pnlInfoAB.Controls.Add(this.txtEmailAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
+            this.pnlInfoAB.Controls.Add(this.lblEmailAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
             this.pnlInfoAB.Location = new System.Drawing.Point(428, 50);
@@ -220,6 +224,29 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblENrollAL.TabIndex = 37;
             this.lblENrollAL.Text = "Enroll";
             // 
+            // lblEmailAL
+            // 
+            this.lblEmailAL.AutoSize = true;
+            this.lblEmailAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAL.Location = new System.Drawing.Point(40, 191);
+            this.lblEmailAL.Name = "lblEmailAL";
+            this.lblEmailAL.Size = new System.Drawing.Size(64, 24);
+            this.lblEmailAL.TabIndex = 3;
+            this.lblEmailAL.Text = "Email";
+            // 
+            // txtEmailAL
+            // 
+            this.txtEmailAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmailAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAL.Location = new System.Drawing.Point(224, 191);
+            this.txtEmailAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmailAL.Name = "txtEmailAL";
+            this.txtEmailAL.Size = new System.Drawing.Size(263, 26);
+            this.txtEmailAL.TabIndex = 9;
+            this.txtEmailAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,5 +282,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox txtUserIDAL;
         private System.Windows.Forms.Label lblPasswordAL;
         private System.Windows.Forms.Label lblUserIDAL;
+        private System.Windows.Forms.TextBox txtEmailAL;
+        private System.Windows.Forms.Label lblEmailAL;
     }
 }
