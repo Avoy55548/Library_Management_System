@@ -30,15 +30,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-        private void LogouttoolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to log out??", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-                Login lg = new Login();
-                lg.Show();
-            }
-        }
+       
 
         private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
