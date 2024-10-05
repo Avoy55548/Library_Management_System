@@ -32,7 +32,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
            
-            // Print data from all text boxes
+            
             e.Graphics.DrawString("Librarian Name: " + txtUserIDAL.Text, printFont, printBrush, 100, 100);
             e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAL.Text, printFont, printBrush, 100, 130);
             e.Graphics.DrawString("Email: " + txtEmailAL.Text, printFont, printBrush, 100, 160);
