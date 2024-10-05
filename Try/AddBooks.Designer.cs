@@ -68,8 +68,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtBookPriceAB
             // 
-            this.txtBookPriceAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtBookPriceAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookPriceAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookPriceAB.Location = new System.Drawing.Point(241, 290);
@@ -93,8 +93,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnCancelAB.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelAB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelAB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelAB.Location = new System.Drawing.Point(395, 426);
+            this.btnCancelAB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelAB.Location = new System.Drawing.Point(388, 415);
             this.btnCancelAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelAB.Name = "btnCancelAB";
             this.btnCancelAB.Size = new System.Drawing.Size(117, 41);
@@ -106,8 +106,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnSaveAB.BackColor = System.Drawing.Color.IndianRed;
             this.btnSaveAB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveAB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAB.Location = new System.Drawing.Point(209, 426);
+            this.btnSaveAB.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAB.Location = new System.Drawing.Point(214, 415);
             this.btnSaveAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveAB.Name = "btnSaveAB";
             this.btnSaveAB.Size = new System.Drawing.Size(125, 41);
@@ -117,8 +117,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtBookQuantityAB
             // 
-            this.txtBookQuantityAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtBookQuantityAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookQuantityAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookQuantityAB.Location = new System.Drawing.Point(241, 340);
@@ -140,8 +140,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtISBNNoAB
             // 
-            this.txtISBNNoAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtISBNNoAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtISBNNoAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBNNoAB.Location = new System.Drawing.Point(241, 244);
@@ -153,8 +153,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtBookPubAB
             // 
-            this.txtBookPubAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtBookPubAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookPubAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookPubAB.Location = new System.Drawing.Point(241, 194);
@@ -199,8 +199,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtBookAuthorAB
             // 
-            this.txtBookAuthorAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtBookAuthorAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookAuthorAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookAuthorAB.Location = new System.Drawing.Point(241, 135);
@@ -212,8 +212,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtBookNameAB
             // 
-            this.txtBookNameAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtBookNameAB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBookNameAB.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookNameAB.Location = new System.Drawing.Point(241, 79);
