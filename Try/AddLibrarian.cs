@@ -34,8 +34,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
            
             
             
-            e.Graphics.DrawString("Email: " + txtEmailAL.Text, printFont, printBrush, 100, 160);
-            e.Graphics.DrawString("Date Of Birth: " + dtpDateOfBirthAL.Text, printFont, printBrush, 100, 190);
             e.Graphics.DrawString("Gender: " + cmbGenderAL.Text, printFont, printBrush, 100, 220);
             e.Graphics.DrawString("Salary: " + txtSalaryAL.Text, printFont, printBrush, 100, 250);
 
