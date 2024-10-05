@@ -16,8 +16,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
     public partial class AddLibrarian : Form
     {
 
-        private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
-        private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
         public AddLibrarian()
         {
             InitializeComponent();
