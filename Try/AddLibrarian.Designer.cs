@@ -35,12 +35,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrintAL = new System.Windows.Forms.Button();
             this.btnCancelAL = new System.Windows.Forms.Button();
             this.btnSaveAL = new System.Windows.Forms.Button();
-            this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
             this.txtPasswordAL = new System.Windows.Forms.TextBox();
             this.txtUserIDAL = new System.Windows.Forms.TextBox();
-            this.lblDateofBirthAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
             this.lblUserIDAL = new System.Windows.Forms.Label();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
@@ -112,17 +110,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnSaveAL.Text = "Save";
             this.btnSaveAL.UseVisualStyleBackColor = false;
             // 
-            // dtpDateOfBirthAL
-            // 
-            this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(223, 373);
-            this.dtpDateOfBirthAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpDateOfBirthAL.Name = "dtpDateOfBirthAL";
-            this.dtpDateOfBirthAL.Size = new System.Drawing.Size(261, 22);
-            this.dtpDateOfBirthAL.TabIndex = 19;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
@@ -169,16 +156,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtUserIDAL.TabIndex = 7;
             this.txtUserIDAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblDateofBirthAL
-            // 
-            this.lblDateofBirthAL.AutoSize = true;
-            this.lblDateofBirthAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateofBirthAL.Location = new System.Drawing.Point(35, 374);
-            this.lblDateofBirthAL.Name = "lblDateofBirthAL";
-            this.lblDateofBirthAL.Size = new System.Drawing.Size(130, 24);
-            this.lblDateofBirthAL.TabIndex = 4;
-            this.lblDateofBirthAL.Text = "Date of Birth";
-            // 
             // lblPasswordAL
             // 
             this.lblPasswordAL.AutoSize = true;
@@ -206,10 +183,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnPrintAL);
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
-            this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
-            this.pnlInfoAB.Controls.Add(this.lblDateofBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
             this.pnlInfoAB.Location = new System.Drawing.Point(428, 50);
@@ -244,12 +219,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Button btnPrintAL;
         private System.Windows.Forms.Button btnCancelAL;
         private System.Windows.Forms.Button btnSaveAL;
-        private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
         private System.Windows.Forms.TextBox txtPasswordAL;
         private System.Windows.Forms.TextBox txtUserIDAL;
-        private System.Windows.Forms.Label lblDateofBirthAL;
         private System.Windows.Forms.Label lblPasswordAL;
         private System.Windows.Forms.Label lblUserIDAL;
         private System.Windows.Forms.Panel pnlInfoAB;
