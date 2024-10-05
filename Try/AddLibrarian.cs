@@ -31,15 +31,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
        
 
-        private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            
-          
-            
-
-
-            // You can add more textboxes similarly
-        }
+      
         private void pbxAL_Click(object sender, EventArgs e)
         {
 
