@@ -31,10 +31,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLibrarian));
             this.pbxPicAB = new System.Windows.Forms.PictureBox();
-            this.btnClearAL = new System.Windows.Forms.Button();
-            this.btnPrintAL = new System.Windows.Forms.Button();
-            this.btnCancelAL = new System.Windows.Forms.Button();
-            this.btnSaveAL = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
@@ -52,10 +48,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblGenderAL = new System.Windows.Forms.Label();
             this.lblPhoneNumberAL = new System.Windows.Forms.Label();
             this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
-            this.lblSalaryAL = new System.Windows.Forms.Label();
             this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
             this.cmbGenderAL = new System.Windows.Forms.ComboBox();
-            this.txtSalaryAL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
@@ -71,58 +65,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pbxPicAB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxPicAB.TabIndex = 23;
             this.pbxPicAB.TabStop = false;
-            // 
-            // btnClearAL
-            // 
-            this.btnClearAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnClearAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClearAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAL.Location = new System.Drawing.Point(365, 564);
-            this.btnClearAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClearAL.Name = "btnClearAL";
-            this.btnClearAL.Size = new System.Drawing.Size(136, 38);
-            this.btnClearAL.TabIndex = 35;
-            this.btnClearAL.Text = "Clear";
-            this.btnClearAL.UseVisualStyleBackColor = false;
-            // 
-            // btnPrintAL
-            // 
-            this.btnPrintAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnPrintAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrintAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintAL.Location = new System.Drawing.Point(193, 564);
-            this.btnPrintAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPrintAL.Name = "btnPrintAL";
-            this.btnPrintAL.Size = new System.Drawing.Size(135, 38);
-            this.btnPrintAL.TabIndex = 34;
-            this.btnPrintAL.Text = "Print";
-            this.btnPrintAL.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelAL
-            // 
-            this.btnCancelAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnCancelAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelAL.Location = new System.Drawing.Point(387, 631);
-            this.btnCancelAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancelAL.Name = "btnCancelAL";
-            this.btnCancelAL.Size = new System.Drawing.Size(113, 31);
-            this.btnCancelAL.TabIndex = 23;
-            this.btnCancelAL.Text = "Cancel";
-            this.btnCancelAL.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveAL
-            // 
-            this.btnSaveAL.BackColor = System.Drawing.Color.IndianRed;
-            this.btnSaveAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAL.Location = new System.Drawing.Point(5, 564);
-            this.btnSaveAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSaveAL.Name = "btnSaveAL";
-            this.btnSaveAL.Size = new System.Drawing.Size(135, 38);
-            this.btnSaveAL.TabIndex = 22;
-            this.btnSaveAL.Text = "Save";
-            this.btnSaveAL.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -151,14 +93,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.txtAddressAL);
             this.pnlInfoAB.Controls.Add(this.lblENrollAL);
             this.pnlInfoAB.Controls.Add(this.txtEnrollAL);
-            this.pnlInfoAB.Controls.Add(this.btnClearAL);
-            this.pnlInfoAB.Controls.Add(this.btnPrintAL);
-            this.pnlInfoAB.Controls.Add(this.btnCancelAL);
-            this.pnlInfoAB.Controls.Add(this.btnSaveAL);
-            this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
             this.pnlInfoAB.Controls.Add(this.cmbGenderAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
-            this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
             this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtEmailAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
@@ -333,16 +269,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberAL.TabIndex = 11;
             this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblSalaryAL
-            // 
-            this.lblSalaryAL.AutoSize = true;
-            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalaryAL.Location = new System.Drawing.Point(35, 501);
-            this.lblSalaryAL.Name = "lblSalaryAL";
-            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
-            this.lblSalaryAL.TabIndex = 18;
-            this.lblSalaryAL.Text = "Salary";
-            // 
             // dtpDateOfBirthAL
             // 
             this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -371,19 +297,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbGenderAL.TabIndex = 20;
             this.cmbGenderAL.Text = "Please Select";
             // 
-            // txtSalaryAL
-            // 
-            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
-            this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSalaryAL.Name = "txtSalaryAL";
-            this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
-            this.txtSalaryAL.TabIndex = 21;
-            this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,10 +319,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         #endregion
 
         private System.Windows.Forms.PictureBox pbxPicAB;
-        private System.Windows.Forms.Button btnClearAL;
-        private System.Windows.Forms.Button btnPrintAL;
-        private System.Windows.Forms.Button btnCancelAL;
-        private System.Windows.Forms.Button btnSaveAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
         private System.Windows.Forms.Panel pnlInfoAB;
@@ -423,10 +332,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblEmailAL;
         private System.Windows.Forms.TextBox txtAddreAL;
         private System.Windows.Forms.Label txtAddressAL;
-        private System.Windows.Forms.TextBox txtSalaryAL;
         private System.Windows.Forms.ComboBox cmbGenderAL;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
-        private System.Windows.Forms.Label lblSalaryAL;
         private System.Windows.Forms.TextBox txtPhoneNumberAL;
         private System.Windows.Forms.Label lblPhoneNumberAL;
         private System.Windows.Forms.Label lblGenderAL;
