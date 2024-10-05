@@ -34,8 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             
-            
-            // Print data from all text boxes
+          
             g.DrawString("Librarian Name:  " + txtUserIDAL.Text, font, Brushes.Black, leftMargin, yPos);
             yPos += 25;
             g.DrawString("Phone Number: " + txtPhoneNumberAL.Text, font, Brushes.Black, leftMargin, yPos);
