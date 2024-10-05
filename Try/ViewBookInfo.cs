@@ -26,7 +26,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 btnUpdateViewBooks.Visible = false; // Hide the Update button for students
                 btnRemoveVBI.Visible = false;       // Hide the Remove button for students
             }
-          
+            else
+            {
+                btnUpdateViewBooks.Visible = true;
+                btnRemoveVBI.Visible = true;
+            }
             RefreshDataGridView(); // Load data into the grid view on form load
         }
 
