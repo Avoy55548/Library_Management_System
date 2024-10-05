@@ -70,10 +70,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             irbi.Show();
         }
 
-        
 
-       
+//accounts
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Accounts ac = new Accounts();
+            ac.Show();
+        }
 
-       
+
     }
 }
