@@ -21,12 +21,22 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private void IssueReturnBookInfo_Load(object sender, EventArgs e)
 
         {
-          njhijnk
-                mccnjdnc
-                ncjldnjfvnn
-                njnvcjncdnjon
-                ncjdnnklcjodw
+            try
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-8PBDEDF\SQLEXPRESS;Initial Catalog=saif;Integrated Security=True;Encrypt=False";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
 
+                con.Open();
+
+
+                // Get issued book information
+                cmd.CommandText = "SELECT BID, Stu_enroll, Stu_Name, PhoneNo, Email, Address, Book_Name, Book_issue_date, Book_return_date FROM IRBook WHERE Book_return_date IS NOT NULL";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dgvIssueBooksInfo.DataSource = ds.Tables[0];
 
 
                 // Business logic to calculate fine for each book and update the database
