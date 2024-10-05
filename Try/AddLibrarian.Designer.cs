@@ -81,7 +81,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtAddreAL.Location = new System.Drawing.Point(224, 254);
             this.txtAddreAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddreAL.Name = "txtAddreAL";
-            this.txtAddreAL.Size = new System.Drawing.Size(263, 26);
+            this.txtAddreAL.Size = new System.Drawing.Size(269, 26);
             this.txtAddreAL.TabIndex = 39;
             this.txtAddreAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -114,7 +114,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEnrollAL.Location = new System.Drawing.Point(223, 132);
             this.txtEnrollAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEnrollAL.Name = "txtEnrollAL";
-            this.txtEnrollAL.Size = new System.Drawing.Size(263, 26);
+            this.txtEnrollAL.Size = new System.Drawing.Size(269, 26);
             this.txtEnrollAL.TabIndex = 36;
             this.txtEnrollAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -122,7 +122,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnClearAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnClearAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClearAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAL.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearAL.Location = new System.Drawing.Point(365, 564);
             this.btnClearAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearAL.Name = "btnClearAL";
@@ -135,7 +135,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnPrintAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnPrintAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrintAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintAL.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintAL.Location = new System.Drawing.Point(193, 564);
             this.btnPrintAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintAL.Name = "btnPrintAL";
@@ -148,8 +148,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnCancelAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelAL.Location = new System.Drawing.Point(387, 631);
+            this.btnCancelAL.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelAL.Location = new System.Drawing.Point(376, 621);
             this.btnCancelAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelAL.Name = "btnCancelAL";
             this.btnCancelAL.Size = new System.Drawing.Size(113, 31);
@@ -161,8 +161,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.btnSaveAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnSaveAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAL.Location = new System.Drawing.Point(5, 564);
+            this.btnSaveAL.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAL.Location = new System.Drawing.Point(13, 564);
             this.btnSaveAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveAL.Name = "btnSaveAL";
             this.btnSaveAL.Size = new System.Drawing.Size(135, 38);
@@ -179,7 +179,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
             this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalaryAL.Name = "txtSalaryAL";
-            this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
+            this.txtSalaryAL.Size = new System.Drawing.Size(269, 26);
             this.txtSalaryAL.TabIndex = 21;
             this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -196,7 +196,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbGenderAL.Location = new System.Drawing.Point(223, 434);
             this.cmbGenderAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGenderAL.Name = "cmbGenderAL";
-            this.cmbGenderAL.Size = new System.Drawing.Size(261, 24);
+            this.cmbGenderAL.Size = new System.Drawing.Size(267, 24);
             this.cmbGenderAL.TabIndex = 20;
             this.cmbGenderAL.Text = "Please Select";
             // 
@@ -208,7 +208,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.dtpDateOfBirthAL.Location = new System.Drawing.Point(223, 373);
             this.dtpDateOfBirthAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateOfBirthAL.Name = "dtpDateOfBirthAL";
-            this.dtpDateOfBirthAL.Size = new System.Drawing.Size(261, 22);
+            this.dtpDateOfBirthAL.Size = new System.Drawing.Size(267, 22);
             this.dtpDateOfBirthAL.TabIndex = 19;
             // 
             // panel2
@@ -218,16 +218,16 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.panel2.Location = new System.Drawing.Point(0, -28);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 80);
+            this.panel2.Size = new System.Drawing.Size(934, 80);
             this.panel2.TabIndex = 22;
             // 
             // lblTitleAL
             // 
             this.lblTitleAL.AutoSize = true;
-            this.lblTitleAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleAL.Location = new System.Drawing.Point(599, 30);
+            this.lblTitleAL.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleAL.Location = new System.Drawing.Point(599, 37);
             this.lblTitleAL.Name = "lblTitleAL";
-            this.lblTitleAL.Size = new System.Drawing.Size(169, 29);
+            this.lblTitleAL.Size = new System.Drawing.Size(170, 28);
             this.lblTitleAL.TabIndex = 0;
             this.lblTitleAL.Text = "Add Librarian";
             // 
@@ -250,7 +250,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtEmailAL.Location = new System.Drawing.Point(224, 191);
             this.txtEmailAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailAL.Name = "txtEmailAL";
-            this.txtEmailAL.Size = new System.Drawing.Size(263, 26);
+            this.txtEmailAL.Size = new System.Drawing.Size(269, 26);
             this.txtEmailAL.TabIndex = 9;
             this.txtEmailAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -263,7 +263,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPasswordAL.Location = new System.Drawing.Point(223, 70);
             this.txtPasswordAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPasswordAL.Name = "txtPasswordAL";
-            this.txtPasswordAL.Size = new System.Drawing.Size(263, 26);
+            this.txtPasswordAL.Size = new System.Drawing.Size(269, 26);
             this.txtPasswordAL.TabIndex = 8;
             this.txtPasswordAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -276,7 +276,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtUserIDAL.Location = new System.Drawing.Point(223, 7);
             this.txtUserIDAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserIDAL.Name = "txtUserIDAL";
-            this.txtUserIDAL.Size = new System.Drawing.Size(263, 26);
+            this.txtUserIDAL.Size = new System.Drawing.Size(269, 26);
             this.txtUserIDAL.TabIndex = 7;
             this.txtUserIDAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -349,7 +349,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberAL.Location = new System.Drawing.Point(223, 304);
             this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
-            this.txtPhoneNumberAL.Size = new System.Drawing.Size(263, 26);
+            this.txtPhoneNumberAL.Size = new System.Drawing.Size(269, 26);
             this.txtPhoneNumberAL.TabIndex = 11;
             this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -381,14 +381,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Location = new System.Drawing.Point(428, 50);
             this.pnlInfoAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlInfoAB.Name = "pnlInfoAB";
-            this.pnlInfoAB.Size = new System.Drawing.Size(500, 662);
+            this.pnlInfoAB.Size = new System.Drawing.Size(506, 662);
             this.pnlInfoAB.TabIndex = 21;
             // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 713);
+            this.ClientSize = new System.Drawing.Size(934, 713);
             this.Controls.Add(this.pbxPicAB);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlInfoAB);
