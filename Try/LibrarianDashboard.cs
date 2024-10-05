@@ -72,11 +72,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Accounts ac = new Accounts();
-            ac.Show();
-        }
+       
 
        
     }
