@@ -31,10 +31,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Define font and brush for printing
-            Font printFont = new Font("Arial", 12);
-            Brush printBrush = Brushes.Black;
-
+           
             // Print data from all text boxes
             e.Graphics.DrawString("Librarian Name: " + txtUserIDAL.Text, printFont, printBrush, 100, 100);
             e.Graphics.DrawString("Phone Number: " + txtPhoneNumberAL.Text, printFont, printBrush, 100, 130);
