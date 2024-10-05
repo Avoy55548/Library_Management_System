@@ -34,15 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             }
         }
 
-        private void ClearAll()
-        {
-            this.txtBookPubAB.Clear();
-            this.txtBookAuthorAB.Clear();
-            this.txtBookNameAB.Clear();
-            this.txtISBNNoAB.Clear();
-            this.txtBookQuantityAB.Clear();
-            this.txtBookPriceAB.Clear();
-        }
+        
 
         private void btnSaveAB_Click(object sender, EventArgs e)
         {
