@@ -53,7 +53,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         // Method to cancel and hide panel
         private void btnCancelViewStudent_Click(object sender, EventArgs e)
         {
-            pnlURViewStudent.Visible = false;
+            if (MessageBox.Show("Are you sure you want to close?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close(); // Closes the form if 'Yes' is clicked
+            }
         }
 
         private void dgvViewStudent_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -271,7 +274,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         }
 
-        
+        private void btnCancelViewStudent_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

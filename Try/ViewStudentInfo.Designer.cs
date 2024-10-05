@@ -175,6 +175,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnCancelViewStudent.TabIndex = 27;
             this.btnCancelViewStudent.Text = "Cancel";
             this.btnCancelViewStudent.UseVisualStyleBackColor = false;
+            this.btnCancelViewStudent.Click += new System.EventHandler(this.btnCancelViewStudent_Click_1);
             // 
             // btnRemoveViewStudent
             // 
