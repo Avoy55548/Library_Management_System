@@ -75,8 +75,3 @@ CREATE TABLE [dbo].[Accounts](
 SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2;
 
 SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2 AND U.Id=5;
-
-SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2 AND UserName LIKE '" + txtSearchViewLibrarian.Text + "%';
-
-
- UPDATE Users SET  UserName = @UserName,  Password = @Password,  Email = @Email,  Contact = @Contact,  Date_of_birth = @Enroll = @Enroll,  Address = @Address,  Gender = @Gender WHERE Id = @UserID; UPDATE Librarian  SET   Salary = @Salary,     WHERE LibrarianSL = @UserID;";
