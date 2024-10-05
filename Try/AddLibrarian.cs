@@ -34,11 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
            
             
             
-            e.Graphics.DrawString("Gender: " + cmbGenderAL.Text, printFont, printBrush, 100, 220);
-            e.Graphics.DrawString("Salary: " + txtSalaryAL.Text, printFont, printBrush, 100, 250);
-
-
-            // If you have more textboxes, print them similarly with e.Graphics.DrawString
+          
         }
 
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
