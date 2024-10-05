@@ -50,6 +50,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
             this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
             this.cmbGenderAL = new System.Windows.Forms.ComboBox();
+            this.lblSalaryAL = new System.Windows.Forms.Label();
+            this.txtSalaryAL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
@@ -93,8 +95,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.txtAddressAL);
             this.pnlInfoAB.Controls.Add(this.lblENrollAL);
             this.pnlInfoAB.Controls.Add(this.txtEnrollAL);
+            this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
             this.pnlInfoAB.Controls.Add(this.cmbGenderAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
+            this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
             this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtEmailAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
@@ -297,6 +301,29 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbGenderAL.TabIndex = 20;
             this.cmbGenderAL.Text = "Please Select";
             // 
+            // lblSalaryAL
+            // 
+            this.lblSalaryAL.AutoSize = true;
+            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryAL.Location = new System.Drawing.Point(35, 501);
+            this.lblSalaryAL.Name = "lblSalaryAL";
+            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
+            this.lblSalaryAL.TabIndex = 18;
+            this.lblSalaryAL.Text = "Salary";
+            // 
+            // txtSalaryAL
+            // 
+            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
+            this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalaryAL.Name = "txtSalaryAL";
+            this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
+            this.txtSalaryAL.TabIndex = 21;
+            this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -338,5 +365,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblPhoneNumberAL;
         private System.Windows.Forms.Label lblGenderAL;
         private System.Windows.Forms.Label lblDateofBirthAL;
+        private System.Windows.Forms.TextBox txtSalaryAL;
+        private System.Windows.Forms.Label lblSalaryAL;
     }
 }
