@@ -36,7 +36,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnCancelAL = new System.Windows.Forms.Button();
             this.btnSaveAL = new System.Windows.Forms.Button();
             this.txtSalaryAL = new System.Windows.Forms.TextBox();
-            this.cmbGenderAL = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtPasswordAL = new System.Windows.Forms.TextBox();
             this.txtUserIDAL = new System.Windows.Forms.TextBox();
             this.lblPhoneNumberAL = new System.Windows.Forms.Label();
-            this.lblGenderAL = new System.Windows.Forms.Label();
             this.lblDateofBirthAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
             this.lblUserIDAL = new System.Windows.Forms.Label();
@@ -131,23 +129,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSalaryAL.TabIndex = 21;
             this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cmbGenderAL
-            // 
-            this.cmbGenderAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbGenderAL.FormattingEnabled = true;
-            this.cmbGenderAL.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "None"});
-            this.cmbGenderAL.Location = new System.Drawing.Point(223, 434);
-            this.cmbGenderAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbGenderAL.Name = "cmbGenderAL";
-            this.cmbGenderAL.Size = new System.Drawing.Size(261, 24);
-            this.cmbGenderAL.TabIndex = 20;
-            this.cmbGenderAL.Text = "Please Select";
-            // 
             // dtpDateOfBirthAL
             // 
             this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -225,16 +206,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblPhoneNumberAL.TabIndex = 6;
             this.lblPhoneNumberAL.Text = "Phone Number";
             // 
-            // lblGenderAL
-            // 
-            this.lblGenderAL.AutoSize = true;
-            this.lblGenderAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderAL.Location = new System.Drawing.Point(35, 446);
-            this.lblGenderAL.Name = "lblGenderAL";
-            this.lblGenderAL.Size = new System.Drawing.Size(79, 24);
-            this.lblGenderAL.TabIndex = 5;
-            this.lblGenderAL.Text = "Gender";
-            // 
             // lblDateofBirthAL
             // 
             this.lblDateofBirthAL.AutoSize = true;
@@ -286,14 +257,12 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.btnCancelAL);
             this.pnlInfoAB.Controls.Add(this.btnSaveAL);
             this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
-            this.pnlInfoAB.Controls.Add(this.cmbGenderAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
             this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
             this.pnlInfoAB.Controls.Add(this.lblPhoneNumberAL);
-            this.pnlInfoAB.Controls.Add(this.lblGenderAL);
             this.pnlInfoAB.Controls.Add(this.lblDateofBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
@@ -330,7 +299,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Button btnCancelAL;
         private System.Windows.Forms.Button btnSaveAL;
         private System.Windows.Forms.TextBox txtSalaryAL;
-        private System.Windows.Forms.ComboBox cmbGenderAL;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
@@ -338,7 +306,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox txtPasswordAL;
         private System.Windows.Forms.TextBox txtUserIDAL;
         private System.Windows.Forms.Label lblPhoneNumberAL;
-        private System.Windows.Forms.Label lblGenderAL;
         private System.Windows.Forms.Label lblDateofBirthAL;
         private System.Windows.Forms.Label lblPasswordAL;
         private System.Windows.Forms.Label lblUserIDAL;
