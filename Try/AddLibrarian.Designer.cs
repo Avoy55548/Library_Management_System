@@ -38,19 +38,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSalaryAL = new System.Windows.Forms.TextBox();
             this.cmbGenderAL = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirthAL = new System.Windows.Forms.DateTimePicker();
-            this.lblSalaryAL = new System.Windows.Forms.Label();
-            this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitleAL = new System.Windows.Forms.Label();
-            this.txtEmailAL = new System.Windows.Forms.TextBox();
+            this.lblSalaryAL = new System.Windows.Forms.Label();
+            this.txtPasswordAL = new System.Windows.Forms.TextBox();
             this.txtUserIDAL = new System.Windows.Forms.TextBox();
             this.lblPhoneNumberAL = new System.Windows.Forms.Label();
             this.lblGenderAL = new System.Windows.Forms.Label();
             this.lblDateofBirthAL = new System.Windows.Forms.Label();
-            this.lblEmailAL = new System.Windows.Forms.Label();
             this.lblPasswordAL = new System.Windows.Forms.Label();
             this.lblUserIDAL = new System.Windows.Forms.Label();
-            this.txtPasswordAL = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumberAL = new System.Windows.Forms.TextBox();
             this.pnlInfoAB = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,10 +58,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // pbxPicAB
             // 
             this.pbxPicAB.Image = ((System.Drawing.Image)(resources.GetObject("pbxPicAB.Image")));
-            this.pbxPicAB.Location = new System.Drawing.Point(3, 1);
+            this.pbxPicAB.Location = new System.Drawing.Point(3, -28);
             this.pbxPicAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxPicAB.Name = "pbxPicAB";
-            this.pbxPicAB.Size = new System.Drawing.Size(429, 682);
+            this.pbxPicAB.Size = new System.Drawing.Size(429, 740);
             this.pbxPicAB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxPicAB.TabIndex = 23;
             this.pbxPicAB.TabStop = false;
@@ -73,7 +71,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnClearAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnClearAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClearAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAL.Location = new System.Drawing.Point(363, 503);
+            this.btnClearAL.Location = new System.Drawing.Point(365, 564);
             this.btnClearAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearAL.Name = "btnClearAL";
             this.btnClearAL.Size = new System.Drawing.Size(136, 38);
@@ -86,7 +84,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnPrintAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnPrintAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrintAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintAL.Location = new System.Drawing.Point(191, 503);
+            this.btnPrintAL.Location = new System.Drawing.Point(193, 564);
             this.btnPrintAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintAL.Name = "btnPrintAL";
             this.btnPrintAL.Size = new System.Drawing.Size(135, 38);
@@ -99,7 +97,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnCancelAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelAL.Location = new System.Drawing.Point(384, 571);
+            this.btnCancelAL.Location = new System.Drawing.Point(387, 631);
             this.btnCancelAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelAL.Name = "btnCancelAL";
             this.btnCancelAL.Size = new System.Drawing.Size(113, 31);
@@ -112,7 +110,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnSaveAL.BackColor = System.Drawing.Color.IndianRed;
             this.btnSaveAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAL.Location = new System.Drawing.Point(3, 503);
+            this.btnSaveAL.Location = new System.Drawing.Point(5, 564);
             this.btnSaveAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveAL.Name = "btnSaveAL";
             this.btnSaveAL.Size = new System.Drawing.Size(135, 38);
@@ -122,11 +120,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtSalaryAL
             // 
-            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtSalaryAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalaryAL.Location = new System.Drawing.Point(221, 428);
+            this.txtSalaryAL.Location = new System.Drawing.Point(223, 500);
             this.txtSalaryAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalaryAL.Name = "txtSalaryAL";
             this.txtSalaryAL.Size = new System.Drawing.Size(263, 26);
@@ -135,15 +133,15 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // cmbGenderAL
             // 
-            this.cmbGenderAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.cmbGenderAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbGenderAL.FormattingEnabled = true;
             this.cmbGenderAL.Items.AddRange(new object[] {
             "Male",
             "Female",
             "None"});
-            this.cmbGenderAL.Location = new System.Drawing.Point(221, 363);
+            this.cmbGenderAL.Location = new System.Drawing.Point(223, 434);
             this.cmbGenderAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGenderAL.Name = "cmbGenderAL";
             this.cmbGenderAL.Size = new System.Drawing.Size(261, 24);
@@ -152,43 +150,20 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // dtpDateOfBirthAL
             // 
-            this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dtpDateOfBirthAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(221, 302);
+            this.dtpDateOfBirthAL.Location = new System.Drawing.Point(223, 373);
             this.dtpDateOfBirthAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateOfBirthAL.Name = "dtpDateOfBirthAL";
             this.dtpDateOfBirthAL.Size = new System.Drawing.Size(261, 22);
             this.dtpDateOfBirthAL.TabIndex = 19;
             // 
-            // lblSalaryAL
-            // 
-            this.lblSalaryAL.AutoSize = true;
-            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalaryAL.Location = new System.Drawing.Point(33, 430);
-            this.lblSalaryAL.Name = "lblSalaryAL";
-            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
-            this.lblSalaryAL.TabIndex = 18;
-            this.lblSalaryAL.Text = "Salary";
-            // 
-            // txtPhoneNumberAL
-            // 
-            this.txtPhoneNumberAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumberAL.Location = new System.Drawing.Point(223, 241);
-            this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
-            this.txtPhoneNumberAL.Size = new System.Drawing.Size(263, 26);
-            this.txtPhoneNumberAL.TabIndex = 11;
-            this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
             this.panel2.Controls.Add(this.lblTitleAL);
-            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Location = new System.Drawing.Point(0, -28);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(927, 80);
@@ -204,26 +179,36 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.lblTitleAL.TabIndex = 0;
             this.lblTitleAL.Text = "Add Librarian";
             // 
-            // txtEmailAL
+            // lblSalaryAL
             // 
-            this.txtEmailAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblSalaryAL.AutoSize = true;
+            this.lblSalaryAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryAL.Location = new System.Drawing.Point(35, 501);
+            this.lblSalaryAL.Name = "lblSalaryAL";
+            this.lblSalaryAL.Size = new System.Drawing.Size(68, 24);
+            this.lblSalaryAL.TabIndex = 18;
+            this.lblSalaryAL.Text = "Salary";
+            // 
+            // txtPasswordAL
+            // 
+            this.txtPasswordAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailAL.Location = new System.Drawing.Point(223, 176);
-            this.txtEmailAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmailAL.Name = "txtEmailAL";
-            this.txtEmailAL.Size = new System.Drawing.Size(263, 26);
-            this.txtEmailAL.TabIndex = 9;
-            this.txtEmailAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPasswordAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordAL.Location = new System.Drawing.Point(223, 70);
+            this.txtPasswordAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPasswordAL.Name = "txtPasswordAL";
+            this.txtPasswordAL.Size = new System.Drawing.Size(263, 26);
+            this.txtPasswordAL.TabIndex = 8;
+            this.txtPasswordAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUserIDAL
             // 
-            this.txtUserIDAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtUserIDAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserIDAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserIDAL.Location = new System.Drawing.Point(221, 60);
+            this.txtUserIDAL.Location = new System.Drawing.Point(223, 7);
             this.txtUserIDAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserIDAL.Name = "txtUserIDAL";
             this.txtUserIDAL.Size = new System.Drawing.Size(263, 26);
@@ -234,7 +219,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblPhoneNumberAL.AutoSize = true;
             this.lblPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberAL.Location = new System.Drawing.Point(33, 242);
+            this.lblPhoneNumberAL.Location = new System.Drawing.Point(33, 305);
             this.lblPhoneNumberAL.Name = "lblPhoneNumberAL";
             this.lblPhoneNumberAL.Size = new System.Drawing.Size(149, 24);
             this.lblPhoneNumberAL.TabIndex = 6;
@@ -244,7 +229,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblGenderAL.AutoSize = true;
             this.lblGenderAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderAL.Location = new System.Drawing.Point(33, 374);
+            this.lblGenderAL.Location = new System.Drawing.Point(35, 446);
             this.lblGenderAL.Name = "lblGenderAL";
             this.lblGenderAL.Size = new System.Drawing.Size(79, 24);
             this.lblGenderAL.TabIndex = 5;
@@ -254,27 +239,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblDateofBirthAL.AutoSize = true;
             this.lblDateofBirthAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateofBirthAL.Location = new System.Drawing.Point(33, 303);
+            this.lblDateofBirthAL.Location = new System.Drawing.Point(35, 374);
             this.lblDateofBirthAL.Name = "lblDateofBirthAL";
             this.lblDateofBirthAL.Size = new System.Drawing.Size(130, 24);
             this.lblDateofBirthAL.TabIndex = 4;
             this.lblDateofBirthAL.Text = "Date of Birth";
             // 
-            // lblEmailAL
-            // 
-            this.lblEmailAL.AutoSize = true;
-            this.lblEmailAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAL.Location = new System.Drawing.Point(39, 176);
-            this.lblEmailAL.Name = "lblEmailAL";
-            this.lblEmailAL.Size = new System.Drawing.Size(64, 24);
-            this.lblEmailAL.TabIndex = 3;
-            this.lblEmailAL.Text = "Email";
-            // 
             // lblPasswordAL
             // 
             this.lblPasswordAL.AutoSize = true;
             this.lblPasswordAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordAL.Location = new System.Drawing.Point(33, 123);
+            this.lblPasswordAL.Location = new System.Drawing.Point(35, 71);
             this.lblPasswordAL.Name = "lblPasswordAL";
             this.lblPasswordAL.Size = new System.Drawing.Size(98, 24);
             this.lblPasswordAL.TabIndex = 2;
@@ -284,24 +259,24 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblUserIDAL.AutoSize = true;
             this.lblUserIDAL.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIDAL.Location = new System.Drawing.Point(33, 62);
+            this.lblUserIDAL.Location = new System.Drawing.Point(35, 9);
             this.lblUserIDAL.Name = "lblUserIDAL";
-            this.lblUserIDAL.Size = new System.Drawing.Size(83, 24);
+            this.lblUserIDAL.Size = new System.Drawing.Size(113, 24);
             this.lblUserIDAL.TabIndex = 1;
-            this.lblUserIDAL.Text = "User ID";
+            this.lblUserIDAL.Text = "User Name";
             // 
-            // txtPasswordAL
+            // txtPhoneNumberAL
             // 
-            this.txtPasswordAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtPhoneNumberAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPasswordAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordAL.Location = new System.Drawing.Point(221, 122);
-            this.txtPasswordAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPasswordAL.Name = "txtPasswordAL";
-            this.txtPasswordAL.Size = new System.Drawing.Size(263, 26);
-            this.txtPasswordAL.TabIndex = 8;
-            this.txtPasswordAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPhoneNumberAL.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumberAL.Location = new System.Drawing.Point(223, 304);
+            this.txtPhoneNumberAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumberAL.Name = "txtPhoneNumberAL";
+            this.txtPhoneNumberAL.Size = new System.Drawing.Size(263, 26);
+            this.txtPhoneNumberAL.TabIndex = 11;
+            this.txtPhoneNumberAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pnlInfoAB
             // 
@@ -315,19 +290,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
             this.pnlInfoAB.Controls.Add(this.lblSalaryAL);
             this.pnlInfoAB.Controls.Add(this.txtPhoneNumberAL);
-            this.pnlInfoAB.Controls.Add(this.txtEmailAL);
             this.pnlInfoAB.Controls.Add(this.txtPasswordAL);
             this.pnlInfoAB.Controls.Add(this.txtUserIDAL);
             this.pnlInfoAB.Controls.Add(this.lblPhoneNumberAL);
             this.pnlInfoAB.Controls.Add(this.lblGenderAL);
             this.pnlInfoAB.Controls.Add(this.lblDateofBirthAL);
-            this.pnlInfoAB.Controls.Add(this.lblEmailAL);
             this.pnlInfoAB.Controls.Add(this.lblPasswordAL);
             this.pnlInfoAB.Controls.Add(this.lblUserIDAL);
-            this.pnlInfoAB.Location = new System.Drawing.Point(428, 79);
+            this.pnlInfoAB.Location = new System.Drawing.Point(428, 50);
             this.pnlInfoAB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlInfoAB.Name = "pnlInfoAB";
-            this.pnlInfoAB.Size = new System.Drawing.Size(500, 604);
+            this.pnlInfoAB.Size = new System.Drawing.Size(500, 662);
             this.pnlInfoAB.TabIndex = 21;
             // 
             // AddLibrarian
@@ -359,19 +332,17 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox txtSalaryAL;
         private System.Windows.Forms.ComboBox cmbGenderAL;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirthAL;
-        private System.Windows.Forms.Label lblSalaryAL;
-        private System.Windows.Forms.TextBox txtPhoneNumberAL;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitleAL;
-        private System.Windows.Forms.TextBox txtEmailAL;
+        private System.Windows.Forms.Label lblSalaryAL;
+        private System.Windows.Forms.TextBox txtPasswordAL;
         private System.Windows.Forms.TextBox txtUserIDAL;
         private System.Windows.Forms.Label lblPhoneNumberAL;
         private System.Windows.Forms.Label lblGenderAL;
         private System.Windows.Forms.Label lblDateofBirthAL;
-        private System.Windows.Forms.Label lblEmailAL;
         private System.Windows.Forms.Label lblPasswordAL;
         private System.Windows.Forms.Label lblUserIDAL;
-        private System.Windows.Forms.TextBox txtPasswordAL;
+        private System.Windows.Forms.TextBox txtPhoneNumberAL;
         private System.Windows.Forms.Panel pnlInfoAB;
     }
 }

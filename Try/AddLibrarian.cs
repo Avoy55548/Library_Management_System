@@ -54,43 +54,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnSaveAL_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (!IsValidToSave())
-                {
-                    MessageBox.Show("Please fill all the information");
-                    return;
-                }
 
-                // ======= New Code Added for Age Validation ======= //
-                // Check if age is above 18
-                DateTime dateOfBirth = DateTime.Parse(dtpDateOfBirthAL.Text); // Get the date of birth from DatePicker
-                int age = CalculateAge(dateOfBirth); // Calculate the age based on the birth date
-
-
-                if (age < 18) // If the age is less than 18
-                {
-                    MessageBox.Show("You are underage. Age must be 18 or above.", "Underage", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Stop the saving process
-                }
-                // ================================================ //
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-
-                con.Open();
-                cmd.CommandText = "insert into Librarian (UserID,Password,Email,Contact,Date_of_birth,Gender,Salary) values ('" + this.txtUserIDAL.Text + "','" + this.txtPasswordAL.Text + "','" + this.txtEmailAL.Text + "','" + this.txtPhoneNumberAL.Text + "', '" + this.dtpDateOfBirthAL.Text + "','" + this.cmbGenderAL.Text + "'," + this.txtSalaryAL.Text + ")";
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show("There is an error in your input: " + exc.Message);
-            }
         }
 
 
@@ -108,10 +72,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
         private void btnCancelAL_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("This will Remove you all unsaved data", "Are you sure to perform this??", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                this.Close();
-            }
+
         }
 
 
@@ -168,21 +129,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnPrintAL_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1; // Set the document to the PrintPreviewDialog
-            printPreviewDialog1.ShowDialog(); // Show the print preview
 
-            // If user confirms from preview, proceed to print
-            if (printPreviewDialog1.DialogResult == DialogResult.OK)
-            {
-                PrintDialog printDialog = new PrintDialog();
-                printDialog.Document = printDocument1;
-
-                // Show print dialog
-                if (printDialog.ShowDialog() == DialogResult.OK)
-                {
-                    printDocument1.Print();
-                }
-            }
         }
 
         private void btnClearAL_Click(object sender, EventArgs e)
