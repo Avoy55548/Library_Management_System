@@ -52,6 +52,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.cmbGenderAL = new System.Windows.Forms.ComboBox();
             this.lblSalaryAL = new System.Windows.Forms.Label();
             this.txtSalaryAL = new System.Windows.Forms.TextBox();
+            this.btnSaveAL = new System.Windows.Forms.Button();
+            this.btnCancelAL = new System.Windows.Forms.Button();
+            this.btnPrintAL = new System.Windows.Forms.Button();
+            this.btnClearAL = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPicAB)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInfoAB.SuspendLayout();
@@ -95,6 +99,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlInfoAB.Controls.Add(this.txtAddressAL);
             this.pnlInfoAB.Controls.Add(this.lblENrollAL);
             this.pnlInfoAB.Controls.Add(this.txtEnrollAL);
+            this.pnlInfoAB.Controls.Add(this.btnClearAL);
+            this.pnlInfoAB.Controls.Add(this.btnPrintAL);
+            this.pnlInfoAB.Controls.Add(this.btnCancelAL);
+            this.pnlInfoAB.Controls.Add(this.btnSaveAL);
             this.pnlInfoAB.Controls.Add(this.txtSalaryAL);
             this.pnlInfoAB.Controls.Add(this.cmbGenderAL);
             this.pnlInfoAB.Controls.Add(this.dtpDateOfBirthAL);
@@ -324,6 +332,58 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSalaryAL.TabIndex = 21;
             this.txtSalaryAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnSaveAL
+            // 
+            this.btnSaveAL.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSaveAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAL.Location = new System.Drawing.Point(5, 564);
+            this.btnSaveAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSaveAL.Name = "btnSaveAL";
+            this.btnSaveAL.Size = new System.Drawing.Size(135, 38);
+            this.btnSaveAL.TabIndex = 22;
+            this.btnSaveAL.Text = "Save";
+            this.btnSaveAL.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelAL
+            // 
+            this.btnCancelAL.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancelAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelAL.Location = new System.Drawing.Point(387, 631);
+            this.btnCancelAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelAL.Name = "btnCancelAL";
+            this.btnCancelAL.Size = new System.Drawing.Size(113, 31);
+            this.btnCancelAL.TabIndex = 23;
+            this.btnCancelAL.Text = "Cancel";
+            this.btnCancelAL.UseVisualStyleBackColor = false;
+            // 
+            // btnPrintAL
+            // 
+            this.btnPrintAL.BackColor = System.Drawing.Color.IndianRed;
+            this.btnPrintAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrintAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintAL.Location = new System.Drawing.Point(193, 564);
+            this.btnPrintAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintAL.Name = "btnPrintAL";
+            this.btnPrintAL.Size = new System.Drawing.Size(135, 38);
+            this.btnPrintAL.TabIndex = 34;
+            this.btnPrintAL.Text = "Print";
+            this.btnPrintAL.UseVisualStyleBackColor = false;
+            // 
+            // btnClearAL
+            // 
+            this.btnClearAL.BackColor = System.Drawing.Color.IndianRed;
+            this.btnClearAL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClearAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAL.Location = new System.Drawing.Point(365, 564);
+            this.btnClearAL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearAL.Name = "btnClearAL";
+            this.btnClearAL.Size = new System.Drawing.Size(136, 38);
+            this.btnClearAL.TabIndex = 35;
+            this.btnClearAL.Text = "Clear";
+            this.btnClearAL.UseVisualStyleBackColor = false;
+            // 
             // AddLibrarian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -367,5 +427,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label lblDateofBirthAL;
         private System.Windows.Forms.TextBox txtSalaryAL;
         private System.Windows.Forms.Label lblSalaryAL;
+        private System.Windows.Forms.Button btnClearAL;
+        private System.Windows.Forms.Button btnPrintAL;
+        private System.Windows.Forms.Button btnCancelAL;
+        private System.Windows.Forms.Button btnSaveAL;
     }
 }
