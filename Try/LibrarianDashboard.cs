@@ -16,13 +16,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         {
             InitializeComponent();
         }
-
+        // show add book
         private void addBooksToolStripMenuIte_Click_1(object sender, EventArgs e)
         {
             AddBooks ab = new AddBooks();
             ab.Show();
         }
-
+        // show view book
         private void ViewBooksToolStripMenuIte_Click(object sender, EventArgs e)
         {
             ViewBookInfo vbi = new ViewBookInfo();
@@ -34,11 +34,11 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             if (MessageBox.Show("Are you sure you want to log out??", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
-                Login lg = new Login();
+                Login lg = new Login();    //Log out
                 lg.Show();
             }
         }
-
+        // Issue book
         private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             IssueBooks ib = new IssueBooks();
