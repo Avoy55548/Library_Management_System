@@ -18,17 +18,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-        private void addBooksToolStripMenuIte_Click_1(object sender, EventArgs e)
-        {
-            AddBooks ab = new AddBooks();
-            ab.Show();
-        }
-
-        private void ViewBooksToolStripMenuIte_Click(object sender, EventArgs e)
-        {
-            ViewBookInfo vbi = new ViewBookInfo();
-            vbi.Show();
-        }
+       
 
         private void LogouttoolStripMenuItem_Click(object sender, EventArgs e)
         {
