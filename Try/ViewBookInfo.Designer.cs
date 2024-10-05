@@ -227,7 +227,7 @@
             // 
             this.btnRefreshViewBook.BackColor = System.Drawing.Color.IndianRed;
             this.btnRefreshViewBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefreshViewBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshViewBook.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshViewBook.Location = new System.Drawing.Point(649, 7);
             this.btnRefreshViewBook.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefreshViewBook.Name = "btnRefreshViewBook";
@@ -248,10 +248,10 @@
             // lblBookIDViewBook
             // 
             this.lblBookIDViewBook.AutoSize = true;
-            this.lblBookIDViewBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookIDViewBook.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookIDViewBook.Location = new System.Drawing.Point(176, 12);
             this.lblBookIDViewBook.Name = "lblBookIDViewBook";
-            this.lblBookIDViewBook.Size = new System.Drawing.Size(123, 25);
+            this.lblBookIDViewBook.Size = new System.Drawing.Size(117, 24);
             this.lblBookIDViewBook.TabIndex = 0;
             this.lblBookIDViewBook.Text = "Book Name";
             // 
@@ -362,10 +362,9 @@
             this.Controls.Add(this.dgvViewBooks);
             this.Controls.Add(this.pnlURViewBooks);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewBookInfo";
             this.Text = "ViewBookInfo";
-            //this.Load += new System.EventHandler(this.ViewBookInfo_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
