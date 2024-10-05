@@ -29,13 +29,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
        
 
 
-        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {
-           
-            
-            
-          
-        }
+       
 
         private void PrintDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
