@@ -35,6 +35,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.label3 = new System.Windows.Forms.Label();
             this.txtPasswordAS = new System.Windows.Forms.MaskedTextBox();
             this.pnlURViewStudent = new System.Windows.Forms.Panel();
+            this.cmbGenderAS = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelViewStudent = new System.Windows.Forms.Button();
             this.btnRemoveViewStudent = new System.Windows.Forms.Button();
@@ -58,8 +60,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.txtSearchViewStudent = new System.Windows.Forms.TextBox();
             this.lblNameViewStudentInfo = new System.Windows.Forms.Label();
             this.dgvViewStudent = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbGenderAS = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlURViewStudent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,7 +80,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             // txtDateOfBirth
             // 
-            this.txtDateOfBirth.Location = new System.Drawing.Point(723, 166);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(723, 153);
             this.txtDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(248, 22);
@@ -90,7 +90,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(568, 175);
+            this.label3.Location = new System.Drawing.Point(568, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 25);
             this.label3.TabIndex = 32;
@@ -130,6 +130,28 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.pnlURViewStudent.Name = "pnlURViewStudent";
             this.pnlURViewStudent.Size = new System.Drawing.Size(1001, 314);
             this.pnlURViewStudent.TabIndex = 13;
+            // 
+            // cmbGenderAS
+            // 
+            this.cmbGenderAS.FormattingEnabled = true;
+            this.cmbGenderAS.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
+            this.cmbGenderAS.Location = new System.Drawing.Point(200, 269);
+            this.cmbGenderAS.Name = "cmbGenderAS";
+            this.cmbGenderAS.Size = new System.Drawing.Size(256, 24);
+            this.cmbGenderAS.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 269);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 25);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Gender";
             // 
             // label2
             // 
@@ -193,7 +215,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // txtAddressAS
             // 
             this.txtAddressAS.Font = new System.Drawing.Font("Book Antiqua", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressAS.Location = new System.Drawing.Point(719, 97);
+            this.txtAddressAS.Location = new System.Drawing.Point(718, 92);
             this.txtAddressAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressAS.Name = "txtAddressAS";
             this.txtAddressAS.Size = new System.Drawing.Size(253, 26);
@@ -234,7 +256,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.lblAddressAS.AutoSize = true;
             this.lblAddressAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressAS.Location = new System.Drawing.Point(568, 103);
+            this.lblAddressAS.Location = new System.Drawing.Point(568, 91);
             this.lblAddressAS.Name = "lblAddressAS";
             this.lblAddressAS.Size = new System.Drawing.Size(85, 25);
             this.lblAddressAS.TabIndex = 19;
@@ -381,28 +403,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.dgvViewStudent.RowTemplate.Height = 28;
             this.dgvViewStudent.Size = new System.Drawing.Size(1001, 294);
             this.dgvViewStudent.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 269);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 25);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Gender";
-            // 
-            // cmbGenderAS
-            // 
-            this.cmbGenderAS.FormattingEnabled = true;
-            this.cmbGenderAS.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Others"});
-            this.cmbGenderAS.Location = new System.Drawing.Point(200, 269);
-            this.cmbGenderAS.Name = "cmbGenderAS";
-            this.cmbGenderAS.Size = new System.Drawing.Size(256, 24);
-            this.cmbGenderAS.TabIndex = 37;
             // 
             // ViewStudentInfo
             // 

@@ -66,7 +66,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(63, 436);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 34);
@@ -224,7 +224,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnExitIsB.BackColor = System.Drawing.Color.Peru;
             this.btnExitIsB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExitIsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitIsB.Location = new System.Drawing.Point(205, 378);
+            this.btnExitIsB.Location = new System.Drawing.Point(212, 401);
             this.btnExitIsB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExitIsB.Name = "btnExitIsB";
             this.btnExitIsB.Size = new System.Drawing.Size(111, 39);
@@ -237,7 +237,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnSearchIsB.BackColor = System.Drawing.Color.Peru;
             this.btnSearchIsB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchIsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchIsB.Location = new System.Drawing.Point(87, 311);
+            this.btnSearchIsB.Location = new System.Drawing.Point(87, 320);
             this.btnSearchIsB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchIsB.Name = "btnSearchIsB";
             this.btnSearchIsB.Size = new System.Drawing.Size(191, 37);
@@ -250,7 +250,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             this.btnRefreshIsB.BackColor = System.Drawing.Color.Peru;
             this.btnRefreshIsB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefreshIsB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshIsB.Location = new System.Drawing.Point(37, 378);
+            this.btnRefreshIsB.Location = new System.Drawing.Point(37, 401);
             this.btnRefreshIsB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefreshIsB.Name = "btnRefreshIsB";
             this.btnRefreshIsB.Size = new System.Drawing.Size(109, 39);
