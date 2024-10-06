@@ -54,8 +54,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     
                     if (userType == 1)
                     {
-                        UserName = user["UserName"].ToString();   
-                        Password = user["Password"].ToString();   
                         Type = userType;                          
                         AdminDashboard ad = new AdminDashboard();
                         ad.Show();
@@ -63,8 +61,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                     }
                     else if (userType == 2)
                     {
-                        UserName = user["UserName"].ToString();   // Store UserName
-                        Password = user["Password"].ToString();   // Store Password
+                        
                         Type = userType;                          // Store UserType
                         LibrarianDashboard ld = new LibrarianDashboard();
                         ld.Show();
