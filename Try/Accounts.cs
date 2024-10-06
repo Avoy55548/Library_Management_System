@@ -168,8 +168,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 con.Open();
 
 
-                SqlCommand cmdBook = new SqlCommand("SELECT Price FROM Book WHERE Name = @BookName", con);
-                cmdBook.Parameters.AddWithValue("@BookName", selectedBook);
+                SqlCommand cmdBook = new SqlCommand("SELECT Name, Price FROM Book WHERE BookID = @BID", con);
+                cmdBook.Parameters.AddWithValue("@BID", BID);
                 SqlDataReader sdrBook = cmdBook.ExecuteReader();
 
 
