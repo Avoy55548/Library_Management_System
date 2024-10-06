@@ -278,8 +278,13 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 con.Open();
 
+                // Changed: Insert UserID from Users table
+                cmd.CommandText = @"
+                INSERT INTO Accounts (UserID, Customer_Name, PhoneNo, Email, Address, Book, Price) 
+                VALUES (@UserID, @Name, @Phone, @Email, @Address, @Book, @Price);";
 
-                cmd.CommandText = "INSERT INTO Accounts (Stu_Name, PhoneNo,email, address,Book, Price ) VALUES (@Name, @Phone, @Email,@Address, @book, @Price)";
+                cmd.Parameters.AddWithValue("@UserID", UserID);  // Use the stored UserID
+
                 cmd.Parameters.AddWithValue("@Name", this.txtStudentNameIsB.Text);
                 cmd.Parameters.AddWithValue("@Phone", this.txtPhoneNumberIsB.Text);
                 cmd.Parameters.AddWithValue("@Email", this.txtEmailIsB.Text);
