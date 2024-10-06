@@ -40,7 +40,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Parameters.AddWithValue("@UserID", this.tbxUNLogin.Text.Trim());
                 cmd.Parameters.AddWithValue("@Password", this.tbxPassLogin.Text.Trim());
 
-                cmd.CommandText = "SELECT * FROM [Users] WHERE UserName = @UserID AND Password = @Password";
+                cmd.CommandText = "SELECT * FROM Users WHERE UserName = @UserID AND Password = @Password";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -49,14 +49,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     DataRow user = ds.Tables[0].Rows[0];
-                    int userType = Convert.ToInt32(user["UserType"]); // Get the UserType from the User table
+                    int userType = Convert.ToInt32(user["UserType"]); 
 
-                    // Based on UserType, open the corresponding dashboard
+                    
                     if (userType == 1)
                     {
-                        UserName = user["UserName"].ToString();   // Store UserName
-                        Password = user["Password"].ToString();   // Store Password
-                        Type = userType;                          // Store UserType
+                        UserName = user["UserName"].ToString();   
+                        Password = user["Password"].ToString();   
+                        Type = userType;                          
                         AdminDashboard ad = new AdminDashboard();
                         ad.Show();
                         this.Hide();
