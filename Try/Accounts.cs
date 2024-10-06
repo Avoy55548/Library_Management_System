@@ -50,11 +50,21 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             con.Open();
             cmd = new SqlCommand("select Name from Book", con);
             SqlDataReader sdr = cmd.ExecuteReader();
+
+
+
+            //changed
+            List<string> addedBooks = new List<string>(); // List to track added book names
+
             while (sdr.Read())
             {
-                for (int i = 0; i < sdr.FieldCount; i++)
+                //changed
+                string bookName = sdr.GetString(1); // Get the book name
+                                                    // Check if the book name is already in the list
+                if (!addedBooks.Contains(bookName)) // Only add if it hasn't been added before
                 {
-                    cmbBookNameIsB.Items.Add(sdr.GetString(i));
+                    cmbBookNameIsB.Items.Add(new { BookID = sdr.GetInt32(0), Name = bookName });
+                    addedBooks.Add(bookName); // Add the book name to the list
                 }
             }
             sdr.Close();
