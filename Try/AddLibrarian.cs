@@ -75,7 +75,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 }
                 // ================================================ //
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -83,8 +83,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.CommandText = @"
             INSERT INTO Users (UserName, Password, Enroll, Contact, Email, Address, DOB, Gender,UserType) 
             VALUES (@UserName, @Password, @Enroll, @Contact, @Email, @Address, @DOB, @Gender,2);
-            
-            INSERT INTO Librarian (Id, Salary) 
+            INSERT INTO Librarian (UserId, Salary) 
             VALUES (SCOPE_IDENTITY(), @Salary);";
 
                 // Adding parameters
@@ -103,7 +102,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 con.Close();
 
                 MessageBox.Show("Data Saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             catch (Exception exc)
             {
@@ -112,12 +110,10 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
 
-
         private int CalculateAge(DateTime birthDate)
         {
             DateTime today = DateTime.Today; // Get the current date
             int age = today.Year - birthDate.Year; // Calculate the basic age by subtracting years
-
 
             // If the user's birthday hasn't occurred yet this year, subtract one from the age
             if (birthDate.Date > today.AddYears(-age))
