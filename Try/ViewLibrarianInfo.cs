@@ -34,7 +34,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2";
+            cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.UserId WHERE U.UserType = 2";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -60,7 +60,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2 AND U.Id='" + LibrarianSL + "'";
+                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.UserId WHERE U.UserType = 2 AND U.Id='" + LibrarianSL + "'";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -87,6 +87,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
         private void btnCancelVLI_Click(object sender, EventArgs e)
         {
+            pnlInfoVLI.Visible = false;
             this.Close();
         }
 
@@ -99,7 +100,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2 AND UserName LIKE '" + txtSearchViewLibrarian.Text + "%';";
+                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.UserId WHERE U.UserType = 2 AND UserName LIKE '" + txtSearchViewLibrarian.Text + "%';";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -110,10 +111,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-HQ509SI\SQLEXPRESS01;Initial Catalog=Library_Management_System;Integrated Security=True";
-                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2";
+                cmd.CommandText = "SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.UserId WHERE U.UserType = 2";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -135,7 +135,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.Id WHERE U.UserType = 2", con);
+                SqlCommand cmd = new SqlCommand("SELECT U.*, L.Salary FROM Users U INNER JOIN Librarian L ON U.Id = L.UserId WHERE U.UserType = 2", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -177,7 +177,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Connection = con;
                 con.Open();
 
-                cmd.CommandText = " UPDATE Users SET  Password = @Password,  Email = @Email,  Contact = @Contact, DOB=@DOB, Enroll = @Enroll,  Address = @Address,  Gender = @Gender WHERE Id = @UserID; UPDATE Librarian  SET   Salary = @Salary     WHERE Id = @UserID;";
+                cmd.CommandText = " UPDATE Users SET  Password = @Password,  Email = @Email,  Contact = @Contact, DOB=@DOB, Enroll = @Enroll,  Address = @Address,  Gender = @Gender WHERE Id = @UserID; UPDATE Librarian  SET   Salary = @Salary     WHERE UserId = @UserID;";
                 cmd.Parameters.AddWithValue("@password", this.txtPasswordAL.Text);
                 cmd.Parameters.AddWithValue("@Email", this.txtEmailAL.Text);
                 cmd.Parameters.AddWithValue("@Contact", this.txtPhoneNumberAL.Text);
@@ -227,7 +227,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 cmd.Connection = con;
 
                 con.Open();
-                cmd.CommandText = @" DELETE FROM Librarian WHERE Id = @UserID; DELETE FROM Users WHERE Id = @UserID;";
+                cmd.CommandText = @" DELETE FROM Librarian WHERE UserId = @UserID; DELETE FROM Users WHERE Id = @UserID;";
 
                 cmd.Parameters.AddWithValue("@UserID", rowid);
 
@@ -254,11 +254,6 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelVLI_Click_1(object sender, EventArgs e)
         {
 
         }
