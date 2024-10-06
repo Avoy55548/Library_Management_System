@@ -14,7 +14,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class Accounts : Form
     {
-
+        private int UserID; // New field to store UserID
         private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
         private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
         public Accounts()
