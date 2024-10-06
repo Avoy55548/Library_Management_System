@@ -14,9 +14,14 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 {
     public partial class Accounts : Form
     {
-        private int UserID; // New field to store UserID
+
         private PrintDocument printDocument1 = new PrintDocument(); // PrintDocument instance
         private PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog(); // PrintPreviewDialog instance
+
+        //changed
+        private int UserID; // New field to store UserID
+
+
         public Accounts()
         {
             InitializeComponent();
@@ -48,9 +53,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             cmd.Connection = con;
 
             con.Open();
-            cmd = new SqlCommand("select Name from Book", con);
+            cmd = new SqlCommand("select BookID, Name from Book", con);
             SqlDataReader sdr = cmd.ExecuteReader();
-
 
 
             //changed
@@ -93,7 +97,9 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 if (ds.Tables[0].Rows.Count != 0)
                 {
+                    // Changed: Store UserID
                     UserID = Convert.ToInt32(ds.Tables[0].Rows[0]["ID"]); // Store UserID
+
 
                     txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
                     txtStudentNameIsB.ReadOnly = true;
@@ -155,7 +161,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             try
             {
 
-
+                //changed
                 var selectedBook = (dynamic)cmbBookNameIsB.SelectedItem;
                 int BID = selectedBook.BookID; // Get BookID from the selected item
 
@@ -167,7 +173,7 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
                 con.ConnectionString = @"Data Source=DESKTOP-94N3HCQ\SQLEXPRESS;Initial Catalog=new;Integrated Security=True";
                 con.Open();
 
-
+                //changed
                 SqlCommand cmdBook = new SqlCommand("SELECT Name, Price FROM Book WHERE BookID = @BID", con);
                 cmdBook.Parameters.AddWithValue("@BID", BID);
                 SqlDataReader sdrBook = cmdBook.ExecuteReader();
