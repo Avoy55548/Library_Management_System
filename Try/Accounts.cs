@@ -93,6 +93,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
 
                 if (ds.Tables[0].Rows.Count != 0)
                 {
+                    UserID = Convert.ToInt32(ds.Tables[0].Rows[0]["ID"]); // Store UserID
+
                     txtStudentNameIsB.Text = ds.Tables[0].Rows[0][1].ToString();
                     txtStudentNameIsB.ReadOnly = true;
 
@@ -154,7 +156,8 @@ namespace LIBRARY_MANAGEMENT_SYSTEM
             {
 
 
-                string selectedBook = cmbBookNameIsB.SelectedItem.ToString();
+                var selectedBook = (dynamic)cmbBookNameIsB.SelectedItem;
+                int BID = selectedBook.BookID; // Get BookID from the selected item
 
                 double price = 0;
 
